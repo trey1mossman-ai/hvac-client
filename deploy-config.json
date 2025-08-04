@@ -1,0 +1,90 @@
+{
+  "deployment": {
+    "name": "SupplySide Flooring Website",
+    "description": "Hostinger-optimized FTP deployment configuration",
+    "protocol": "ftp",
+    "connection": {
+      "passive": true,
+      "secure": false,
+      "secureOptions": null,
+      "timeout": 300000,
+      "keepalive": 30000,
+      "connTimeout": 60000,
+      "pasvTimeout": 60000,
+      "dataTimeout": 120000
+    },
+    "concurrency": {
+      "maxConnections": 3,
+      "connectionDelay": 2000,
+      "uploadDelay": 1000,
+      "batchSize": 5
+    },
+    "retry": {
+      "attempts": 5,
+      "delay": 15000,
+      "backoffMultiplier": 1.5,
+      "maxDelay": 60000
+    },
+    "paths": {
+      "localRoot": "./",
+      "remoteRoot": "/public_html",
+      "exclude": [
+        "node_modules/**",
+        ".git/**",
+        ".env",
+        ".env.local",
+        ".DS_Store",
+        "*.log",
+        "deploy.js",
+        "deploy-config.json",
+        "package*.json",
+        "ftp_*.py",
+        "test_*.py",
+        "*.sh"
+      ],
+      "include": [
+        "index.html",
+        "about.html",
+        "css/**",
+        "js/**",
+        "styles/**",
+        "scripts/**",
+        "images/**",
+        "fonts/**",
+        "favicon.ico",
+        "robots.txt",
+        "sitemap.xml"
+      ]
+    },
+    "fileHandling": {
+      "deleteRemote": false,
+      "forcePasv": true,
+      "autoReconnect": true,
+      "preserveTimestamps": false,
+      "atomicUploads": true,
+      "tempExtension": ".tmp"
+    },
+    "logging": {
+      "verbose": true,
+      "logFile": "deployment.log",
+      "showProgress": true,
+      "timestamps": true
+    }
+  },
+  "hostingerSpecific": {
+    "notes": [
+      "Always use FTP IP from hPanel, not domain name",
+      "Passive mode is required",
+      "Maximum 8 concurrent connections per IP",
+      "Use port 21 for FTP, 65002 for SFTP (Premium only)",
+      "Connection may drop after 20 seconds of inactivity"
+    ],
+    "errorHandling": {
+      "530": "Authentication failed - check username/password format",
+      "421": "Too many connections - reduce maxConnections",
+      "425": "Can't open data connection - ensure passive mode",
+      "550": "File/directory not found - check remote path",
+      "timeout": "Increase timeout values and check firewall"
+    }
+  }
+}

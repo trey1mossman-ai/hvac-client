@@ -2,7 +2,7 @@
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, var(--primary-navy) 0%, #2B4A67 100%);
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 73, 94, 0.9) 100%), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&h=600&fit=crop') center/cover;
     color: var(--white);
     padding: var(--spacing-xl) 0;
     text-align: center;
@@ -16,7 +16,7 @@
 
 .page-hero p {
     font-size: 1.25rem;
-    color: var(--accent-chicago-blue);
+    color: var(--chicago-blue);
 }
 
 /* Our Story Section */
@@ -32,19 +32,19 @@
 }
 
 .story-text h2 {
-    color: var(--primary-navy);
+    color: var(--primary-charcoal);
     margin-bottom: var(--spacing-md);
 }
 
 .story-text p {
     font-size: 1.125rem;
     line-height: 1.8;
-    color: var(--text-dark);
+    color: var(--text-gray);
     margin-bottom: var(--spacing-md);
 }
 
 .story-text strong {
-    color: var(--secondary-oak);
+    color: var(--chicago-blue);
 }
 
 .founder-quote {

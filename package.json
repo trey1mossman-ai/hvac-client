@@ -1,0 +1,30 @@
+{
+  "name": "supplyside-website",
+  "version": "1.0.0",
+  "description": "Professional website for SupplySide Flooring Installation Chicago, built with a trust-first approach emphasizing reliability, professionalism, and 40+ years of experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node deploy.js",
+    "deploy:check": "node deploy.js --check",
+    "deploy:verbose": "DEBUG_MODE=true node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trey1mossman-ai/SupplySide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/trey1mossman-ai/SupplySide/issues"
+  },
+  "homepage": "https://github.com/trey1mossman-ai/SupplySide#readme",
+  "devDependencies": {
+    "basic-ftp": "^5.0.5",
+    "chalk": "^4.1.2",
+    "dotenv": "^17.2.1",
+    "ora": "^8.2.0"
+  }
+}
