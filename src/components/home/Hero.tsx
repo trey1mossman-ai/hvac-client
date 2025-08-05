@@ -98,7 +98,7 @@ export default function Hero() {
                 href="#services"
                 className="border-2 border-olive-green text-olive-green px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-olive-green hover:text-crisp-white transition-all duration-300 inline-flex items-center justify-center"
               >
-                See Our Work
+                View Services
               </a>
             </div>
             
