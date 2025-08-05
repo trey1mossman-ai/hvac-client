@@ -1,18 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import About from './pages/About'
-import TileInstallation from './pages/services/TileInstallation'
+import Contact from './pages/Contact'
+import ServiceDetail from './pages/services/ServiceDetail'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services">
-          <Route path="tile-installation-chicago-il" element={<TileInstallation />} />
-        </Route>
+        <Route path="contact" element={<Contact />} />
+        <Route path="services/:slug" element={<ServiceDetail />} />
       </Route>
     </Routes>
   )
