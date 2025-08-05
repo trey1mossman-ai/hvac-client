@@ -339,6 +339,79 @@
             color: var(--cool-gray);
             line-height: 1.6;
         }
+        
+        /* Pricing CTA Section Styles */
+        .pricing-cta-section {
+            background: var(--crisp-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .pricing-cta-header {
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            color: var(--crisp-white);
+            padding: var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .pricing-cta-title {
+            font-size: 1.75rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .pricing-cta-subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-cta-content {
+            padding: var(--spacing-xl);
+        }
+        
+        .cta-benefits {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .cta-benefit {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+            color: var(--deep-navy);
+        }
+        
+        .cta-benefit svg {
+            color: var(--olive-green);
+            flex-shrink: 0;
+        }
+        
+        .cta-action {
+            text-align: center;
+        }
+        
+        .btn-xlarge {
+            padding: var(--spacing-lg) var(--spacing-2xl);
+            font-size: 1.2rem;
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: var(--border-radius-md);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-urgency {
+            margin-top: var(--spacing-md);
+            font-size: 0.95rem;
+            color: var(--cool-gray);
+            font-style: italic;
+        }
 
         /* Service FAQ Section */
         .service-faq {
@@ -403,24 +476,12 @@
                 {
                     "@type": "Offer",
                     "name": "Luxury Vinyl Plank (LVP)",
-                    "description": "Wood-look waterproof planks",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "3.50-7.00",
-                        "priceCurrency": "USD",
-                        "unitText": "per square foot installed"
-                    }
+                    "description": "Wood-look waterproof planks - custom pricing based on project requirements"
                 },
                 {
                     "@type": "Offer",
                     "name": "Luxury Vinyl Tile (LVT)",
-                    "description": "Stone-look waterproof tiles",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "4.00-8.00",
-                        "priceCurrency": "USD",
-                        "unitText": "per square foot installed"
-                    }
+                    "description": "Stone-look waterproof tiles - custom pricing based on project requirements"
                 }
             ]
         }
@@ -778,47 +839,49 @@
                     <p class="section-subtitle">No hidden fees, no surprises</p>
                 </div>
                 
-                <div class="pricing-table">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Luxury Vinyl Installation Costs</h3>
-                        <p class="pricing-subtitle">Average pricing for Chicago area homes</p>
+                <div class="pricing-cta-section">
+                    <div class="pricing-cta-header">
+                        <h3 class="pricing-cta-title">Get Your Custom Luxury Vinyl Flooring Quote</h3>
+                        <p class="pricing-cta-subtitle">Every project is unique - let us provide a personalized estimate</p>
                     </div>
                     
-                    <div class="pricing-content">
-                        <div class="pricing-row">
-                            <span class="pricing-label">Basic Vinyl Plank (LVP)</span>
-                            <span class="pricing-value">$3.50 - $5.00/sq ft</span>
+                    <div class="pricing-cta-content">
+                        <div class="cta-benefits">
+                            <div class="cta-benefit">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                                <span>Free, no-obligation consultation</span>
+                            </div>
+                            <div class="cta-benefit">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                                <span>Detailed project assessment</span>
+                            </div>
+                            <div class="cta-benefit">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                                <span>Transparent pricing breakdown</span>
+                            </div>
+                            <div class="cta-benefit">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                                <span>Expert recommendations for your space</span>
+                            </div>
                         </div>
                         
-                        <div class="pricing-row">
-                            <span class="pricing-label">Premium Vinyl Plank (LVP)</span>
-                            <span class="pricing-value">$5.00 - $7.00/sq ft</span>
-                        </div>
-                        
-                        <div class="pricing-row">
-                            <span class="pricing-label">Luxury Vinyl Tile (LVT)</span>
-                            <span class="pricing-value">$4.00 - $8.00/sq ft</span>
-                        </div>
-                        
-                        <div class="pricing-row">
-                            <span class="pricing-label">Removal of Old Flooring</span>
-                            <span class="pricing-value">$1.00 - $2.00/sq ft</span>
-                        </div>
-                        
-                        <div class="pricing-row">
-                            <span class="pricing-label">Subfloor Preparation</span>
-                            <span class="pricing-value">$0.50 - $2.00/sq ft</span>
-                        </div>
-                        
-                        <div class="pricing-row">
-                            <span class="pricing-label">Transitions & Trim</span>
-                            <span class="pricing-value">$5.00 - $10.00/linear ft</span>
-                        </div>
-                        
-                        <div class="pricing-note">
-                            <strong>What's Included:</strong> All prices include professional installation, disposal of old flooring, 
-                            basic subfloor prep, and our 5-year installation warranty. Stairs, complex patterns, and extensive 
-                            subfloor repairs may incur additional costs. We provide detailed, written estimates before any work begins.
+                        <div class="cta-action">
+                            <a href="#service-form" class="btn btn-primary btn-xlarge">
+                                Book Your Free Quote Today
+                            </a>
+                            <p class="cta-urgency">Limited appointments available this week</p>
                         </div>
                     </div>
                 </div>

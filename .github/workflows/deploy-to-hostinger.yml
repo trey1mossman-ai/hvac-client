@@ -1,0 +1,48 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Deploy to Hostinger via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: 21
+        protocol: ftp
+        # Deploy to root directory since u921052894.SupplySide connects directly to public_html
+        server-dir: /
+        # Files to exclude from deployment
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.github/**
+          **/.env*
+          **/*.md
+          **/deployment/**
+          **/package*.json
+          **/.vscode/**
+          **/*.log
+          **/.DS_Store
+          **/Thumbs.db
+          **/backups/**
+          **/scripts/**
+        # Dangerous mode - deletes files on server that don't exist locally
+        # Set to false for safety - you can change to true if needed
+        dangerous-clean-slate: false
+        # Retry failed uploads
+        retry: 3
+        # Log level for debugging
+        log-level: standard

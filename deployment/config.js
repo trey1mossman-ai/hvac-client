@@ -29,13 +29,15 @@ module.exports = {
     include: [
       'index.html',
       'about.html',
+      'services/**/*.html',
       'css/**/*',
       'js/**/*',
       'images/**/*',
       'fonts/**/*',
       'favicon.ico',
       'robots.txt',
-      'sitemap.xml'
+      'sitemap.xml',
+      'test-deployment.html'
     ],
     
     // Files to exclude
