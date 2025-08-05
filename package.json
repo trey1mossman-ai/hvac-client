@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:ci": "tsc && vite build --config vite.config.cjs",
     "preview": "vite preview",
     "type-check": "tsc --noEmit"
   },
@@ -74,5 +73,6 @@
   "homepage": "https://mediumblue-chamois-837591.hostingersite.com",
   "bugs": {
     "url": "mailto:contact@supplyside-flooring.com"
-  }
+  },
+  "type": "module"
 }
