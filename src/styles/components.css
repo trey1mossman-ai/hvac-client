@@ -252,24 +252,23 @@
 
 /* Rotating Text Fix */
 .rotating-words-container {
-  display: inline-flex;
-  height: 1.5em; /* Match line height of parent text */
+  display: inline-block;
+  height: 40px;
   overflow: hidden;
-  vertical-align: baseline; /* Align with text baseline */
+  vertical-align: bottom;
   position: relative;
-  min-width: 200px;
+  min-width: 180px; /* Adjust to fit longest word */
+  width: auto;
 }
 
 .rotating-words-inner {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .rotating-word {
-  height: 1.5em; /* Match container height */
-  line-height: 1.5; /* Match parent line height */
-  display: flex;
-  align-items: center;
+  height: 40px;
+  line-height: 40px;
+  display: block;
 }
 

@@ -103,19 +103,19 @@ export default function Hero() {
             </div>
             
             {/* Rotating Text */}
-            <div className="mt-8">
+            <div className="mt-8 flex items-baseline">
               <span className="text-lg md:text-xl font-inter font-medium text-warm-wood">
                 We are{' '}
               </span>
               <div className="rotating-words-container">
                 <div
                   className="rotating-words-inner"
-                  style={{ transform: `translateY(-${rotatingText * 1.5}em)` }}
+                  style={{ transform: `translateY(-${rotatingText * 40}px)` }}
                 >
                   {rotatingWords.map((word) => (
                     <span
                       key={word}
-                      className="rotating-word text-lg md:text-xl font-inter font-medium text-warm-wood"
+                      className="rotating-word text-lg md:text-xl font-inter font-medium text-warm-wood whitespace-nowrap"
                     >
                       {word}
                     </span>
