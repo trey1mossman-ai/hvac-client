@@ -21,9 +21,7 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
         protocol: ftp
-        # Deploy to root directory since u921052894.SupplySide connects directly to public_html
-        server-dir: /
-        # Files to exclude from deployment
+        server-dir: ./
         exclude: |
           **/.git*
           **/.git*/**
@@ -39,10 +37,5 @@ jobs:
           **/Thumbs.db
           **/backups/**
           **/scripts/**
-        # Dangerous mode - deletes files on server that don't exist locally
-        # Set to false for safety - you can change to true if needed
         dangerous-clean-slate: false
-        # Retry failed uploads
-        retry: 3
-        # Log level for debugging
         log-level: standard
