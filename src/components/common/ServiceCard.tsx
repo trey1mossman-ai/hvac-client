@@ -11,7 +11,14 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       to={service.url}
       className="block group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
     >
-      <div className="bg-crisp-white rounded-lg shadow-md h-full">
+      <div className="bg-crisp-white rounded-lg shadow-md h-full overflow-hidden">
+        <div className="h-48 overflow-hidden">
+          <img 
+            src={service.image} 
+            alt={service.name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
         <div className="p-6">
           <h3 className="text-xl font-bold mb-3 text-deep-navy uppercase tracking-wider">
             {service.name}

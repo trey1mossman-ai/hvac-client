@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/home/Hero';
 import Services from '../components/home/Services';
+import About from '../components/home/About';
 import Testimonials from '../components/home/Testimonials';
 import FAQ from '../components/home/FAQ';
 import ContactForm from '../components/common/ContactForm';
+import GoogleMap from '../components/common/GoogleMap';
 import { localBusinessSchema } from '../data/company';
 
 export default function Home() {
@@ -25,9 +27,11 @@ export default function Home() {
 
       <Hero />
       <Services />
+      <About />
       <Testimonials />
       <FAQ />
       <ContactForm />
+      <GoogleMap />
     </>
   );
 }

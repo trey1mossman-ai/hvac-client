@@ -36,8 +36,17 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-cream py-16 md:py-20">
-      <div className="container mx-auto px-4">
+    <section 
+      className="bg-cream py-16 md:py-20 relative"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1600&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay',
+      }}
+    >
+      <div className="absolute inset-0 bg-cream/90"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
           {/* Left Side - 60% */}
           <div>
@@ -89,14 +98,16 @@ export default function Hero() {
             {/* Rotating Text */}
             <div className="text-3xl md:text-4xl font-black text-warm-wood">
               WE ARE{' '}
-              <span className="inline-block overflow-hidden h-12 relative">
+              <span className="inline-block relative h-12" style={{ minWidth: '300px' }}>
                 {rotatingWords.map((word, index) => (
                   <span
                     key={word}
-                    className={`absolute left-0 transition-all duration-500 ${
+                    className={`absolute left-0 top-0 transition-all duration-500 ${
                       index === rotatingText
                         ? 'opacity-100 transform translate-y-0'
-                        : 'opacity-0 transform -translate-y-full'
+                        : index < rotatingText
+                        ? 'opacity-0 transform -translate-y-full'
+                        : 'opacity-0 transform translate-y-full'
                     }`}
                   >
                     {word}

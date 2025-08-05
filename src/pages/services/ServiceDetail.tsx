@@ -60,8 +60,17 @@ export default function ServiceDetail() {
       </Helmet>
 
       {/* Hero Section with 60/40 Split */}
-      <section className="bg-cream py-16">
-        <div className="container mx-auto px-4">
+      <section 
+        className="bg-cream py-16 relative"
+        style={{
+          backgroundImage: `url(${service.image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'overlay',
+        }}
+      >
+        <div className="absolute inset-0 bg-cream/90"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* Left Side - Service Content */}
             <div>

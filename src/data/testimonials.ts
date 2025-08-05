@@ -10,50 +10,26 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Sarah M.',
-    location: 'Lincoln Park, Chicago',
+    name: 'Ziggy',
+    location: 'Property Manager, Refined Realty',
     rating: 5,
-    review: 'SupplySide installed luxury vinyl throughout our first floor. They showed up on time every day and finished ahead of schedule. The floors look amazing!',
-    service: 'Luxury Vinyl Flooring'
+    review: 'We use SupplySide for residential and commercial flooring installations at our Chicago properties. They are always professional, reliable, transparent, and very fairly priced. Matt and Don operate at the highest level.',
+    service: 'Residential & Commercial Flooring'
   },
   {
     id: '2',
-    name: 'Mike R.',
-    location: 'Wicker Park, Chicago',
+    name: 'Rebecca Maxwell',
+    location: 'Owner, TR Contracting',
     rating: 5,
-    review: 'Professional team that knows their stuff. They helped us choose the perfect tile for our bathroom renovation. Clean work and fair pricing.',
-    service: 'Tile Installation'
+    review: 'I work with flooring installers across Chicago almost every day, and SupplySide is consistently the most professional that we deal with. Their pricing is very fair, and they do great work, job after job.',
+    service: 'Professional Flooring Installation'
   },
   {
     id: '3',
-    name: 'Jennifer L.',
-    location: 'Oak Park, IL',
+    name: 'Pam Williams',
+    location: 'Homeowner',
     rating: 5,
-    review: 'After getting multiple quotes, SupplySide was the most honest and straightforward. They refinished our 100-year-old hardwood floors beautifully.',
-    service: 'Hardwood Flooring'
-  },
-  {
-    id: '4',
-    name: 'David K.',
-    location: 'Evanston, IL',
-    rating: 5,
-    review: 'They installed carpet tiles in our office space. Very minimal disruption to our business and the result looks fantastic. Highly recommend!',
-    service: 'Carpet Tile Installation'
-  },
-  {
-    id: '5',
-    name: 'Lisa T.',
-    location: 'River North, Chicago',
-    rating: 5,
-    review: 'The team did an incredible job on our kitchen backsplash. They were meticulous with the pattern and the grout lines are perfect.',
-    service: 'Backsplash Installation'
-  },
-  {
-    id: '6',
-    name: 'Robert H.',
-    location: 'Naperville, IL',
-    rating: 5,
-    review: 'Complete master bathroom shower renovation. They handled everything from waterproofing to the final grout seal. Couldn\'t be happier!',
+    review: 'I hired SupplySide to re-tile our shower as we prepared the house to go on the market. Don did fantastic work. He helped us conceptualize the design from the beginning, and did a beautiful job executing on the design! My husband and I are very pleased, and highly recommend SupplySide for any tilework.',
     service: 'Shower Tile Installation'
   }
 ];
