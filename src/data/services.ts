@@ -5,7 +5,6 @@ export interface Service {
   name: string;
   description: string;
   features: string[];
-  startingPrice: string;
   image: string;
   detailedDescription?: string;
 }
@@ -18,8 +17,7 @@ export const services: Service[] = [
     name: 'Luxury Vinyl Plank & Tile',
     description: 'Waterproof flooring perfect for Chicago homes. Looks like real wood or stone.',
     features: ['100% Waterproof', 'Pet-Friendly', '25-Year Warranty', 'Scratch Resistant'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    image: '/images/services/vinyl-preview.jpg',
     detailedDescription: 'Transform your space with luxury vinyl plank (LVP) or luxury vinyl tile (LVT). Perfect for kitchens, bathrooms, and basements.'
   },
   {
@@ -29,8 +27,7 @@ export const services: Service[] = [
     name: 'Tile Installation',
     description: 'Ceramic, porcelain, and natural stone tile for kitchens, bathrooms, and floors.',
     features: ['Waterproof', 'Easy to Clean', 'Timeless Style', 'Increases Home Value'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1564540583246-934409427776?w=800&q=80',
+    image: '/images/services/tile-preview.jpg',
     detailedDescription: 'Professional tile installation for floors, walls, backsplashes, and showers. We handle everything from subway tile to large format porcelain.'
   },
   {
@@ -40,8 +37,7 @@ export const services: Service[] = [
     name: 'Hardwood Flooring',
     description: 'Beautiful solid and engineered hardwood installation, refinishing, and repair.',
     features: ['Timeless Beauty', 'Adds Home Value', 'Can Be Refinished', 'Lasts Decades'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=800&q=80',
+    image: '/images/services/hardwood-preview.jpg',
     detailedDescription: 'From classic oak to exotic species, we install and refinish all types of hardwood flooring with precision and care.'
   },
   {
@@ -49,11 +45,10 @@ export const services: Service[] = [
     slug: 'laminate-flooring-installation-chicago-il',
     url: '/laminate-flooring-installation-chicago-il',
     name: 'Laminate Flooring',
-    description: 'Durable, cost-effective laminate that looks like real wood or stone.',
+    description: 'Durable laminate flooring that beautifully mimics real wood or stone.',
     features: ['Budget-Friendly', 'Scratch Resistant', 'Easy Maintenance', 'Quick Installation'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80',
-    detailedDescription: 'Modern laminate flooring offers the look of hardwood at a fraction of the cost. Perfect for busy households.'
+    image: '/images/services/laminate-preview.jpg',
+    detailedDescription: 'Modern laminate flooring offers the authentic look of hardwood with enhanced durability. Perfect for busy households.'
   },
   {
     id: 'carpet-tile',
@@ -62,8 +57,7 @@ export const services: Service[] = [
     name: 'Carpet Tile Installation',
     description: 'Commercial-grade carpet tiles for offices and high-traffic areas.',
     features: ['Easy to Replace', 'Durable', 'Sound Absorbing', 'Professional Look'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80',
+    image: '/images/services/carpet-tile-preview.jpg',
     detailedDescription: 'Modular carpet tiles are perfect for commercial spaces and basements. Easy to maintain and replace individual tiles as needed.'
   },
   {
@@ -73,8 +67,7 @@ export const services: Service[] = [
     name: 'Backsplash Installation',
     description: 'Transform your kitchen with a beautiful tile backsplash.',
     features: ['Protects Walls', 'Easy to Clean', 'Adds Style', 'Quick Installation'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=800&q=80',
+    image: '/images/services/backsplash-preview.jpg',
     detailedDescription: 'From classic subway tile to intricate mosaics, we create stunning backsplashes that protect your walls and enhance your kitchen.'
   },
   {
@@ -84,8 +77,7 @@ export const services: Service[] = [
     name: 'Shower Tile Installation',
     description: 'Waterproof shower installations with beautiful tile work.',
     features: ['Fully Waterproof', 'Custom Designs', 'Built-in Shelves', 'Lifetime Warranty'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80',
+    image: '/images/services/shower-preview.jpg',
     detailedDescription: 'Complete shower renovations with proper waterproofing and stunning tile designs. We handle everything from simple updates to luxury spa showers.'
   },
   {
@@ -95,8 +87,7 @@ export const services: Service[] = [
     name: 'Natural Stone Installation',
     description: 'Marble, granite, travertine, and slate installation by experts.',
     features: ['Natural Beauty', 'Unique Patterns', 'Extremely Durable', 'Luxury Appeal'],
-    startingPrice: 'Free Quote',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+    image: '/images/services/stone-preview.jpg',
     detailedDescription: 'Natural stone flooring adds unmatched elegance to any space. We expertly install and seal all types of natural stone.'
   }
 ];

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Service } from '../../data/services';
+import LazyImage from './LazyImage';
 
 interface ServiceCardProps {
   service: Service;
@@ -9,33 +10,33 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Link 
       to={service.url}
-      className="block group service-card hover:shadow-2xl transition-all duration-300"
+      className="block group service-card shadow-hover transition-all duration-300"
     >
-      <div className="bg-crisp-white rounded-lg shadow-md h-full overflow-hidden flex flex-col">
+      <div className="bg-crisp-white rounded-xl shadow-sm h-full overflow-hidden flex flex-col">
         <div className="h-48 overflow-hidden">
-          <img 
+          <LazyImage 
             src={service.image} 
             alt={service.name}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           />
         </div>
-        <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-xl font-montserrat font-bold mb-3 text-deep-navy uppercase tracking-header">
+        <div className="p-8 flex flex-col flex-grow">
+          <h3 className="text-lg font-inter font-medium mb-4 text-deep-navy">
             {service.name}
           </h3>
-          <p className="text-cool-gray mb-4 font-light">
+          <p className="text-cool-gray mb-6 font-light leading-relaxed">
             {service.description}
           </p>
-          <ul className="space-y-2 mb-6">
+          <ul className="space-y-3 mb-8">
             {service.features.slice(0, 3).map((feature, index) => (
               <li key={index} className="flex items-center text-sm text-cool-gray">
-                <span className="text-olive-green mr-2 font-bold">✓</span>
+                <span className="text-olive-green mr-3 font-medium">✓</span>
                 {feature}
               </li>
             ))}
           </ul>
-          <button className="w-full bg-olive-green text-crisp-white py-3 rounded-lg font-montserrat font-bold text-sm hover:bg-sage transition-all duration-300 uppercase tracking-header mt-auto cta-button">
-            Get Free {service.name} Quote
+          <button className="w-full bg-olive-green text-crisp-white py-2.5 rounded-md font-inter font-medium text-sm hover:bg-opacity-90 transition-all duration-300 mt-auto">
+            Get Free Estimate
           </button>
         </div>
       </div>

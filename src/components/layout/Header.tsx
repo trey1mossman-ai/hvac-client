@@ -47,9 +47,13 @@ export default function Header() {
     <header className="bg-deep-navy shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-3xl font-black text-crisp-white font-montserrat uppercase tracking-header">
+          <a 
+            href="#hero"
+            onClick={(e) => handleSmoothScroll(e, 'hero')}
+            className="text-3xl font-black text-crisp-white font-montserrat uppercase tracking-header hover:text-sage transition cursor-pointer"
+          >
             SupplySide
-          </Link>
+          </a>
           
           <nav className="hidden lg:flex items-center space-x-6">
             {navigationItems.map((item) => (
@@ -58,7 +62,7 @@ export default function Header() {
                   key={item.name}
                   href={item.url}
                   onClick={(e) => handleSmoothScroll(e, item.url.substring(1))}
-                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header nav-item"
+                  className="text-crisp-white hover:text-sage transition font-inter font-medium text-sm nav-item"
                 >
                   {item.name}
                 </a>
@@ -66,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header nav-item"
+                  className="text-crisp-white hover:text-sage transition font-inter font-medium text-sm nav-item"
                 >
                   {item.name}
                 </Link>
@@ -75,13 +79,13 @@ export default function Header() {
             <a
               href="#hero-form"
               onClick={(e) => handleSmoothScroll(e, 'hero-form')}
-              className="bg-olive-green text-crisp-white px-6 py-2 rounded-lg hover:bg-sage transition font-montserrat font-bold text-sm uppercase tracking-header"
+              className="bg-olive-green text-crisp-white px-6 py-2.5 rounded-md hover:bg-opacity-90 transition-all duration-300 font-inter font-medium text-sm"
             >
               Get Free Estimate
             </a>
             <a 
               href={`tel:${companyInfo.phone}`} 
-              className="flex items-center gap-2 text-sage hover:text-light-oak transition font-montserrat font-bold"
+              className="flex items-center gap-2 text-sage hover:text-light-oak transition font-inter font-medium"
             >
               <Phone size={18} />
               {companyInfo.phone}
@@ -111,7 +115,7 @@ export default function Header() {
                     handleSmoothScroll(e, item.url.substring(1));
                     setIsOpen(false);
                   }}
-                  className="block py-2 text-crisp-white hover:text-sage font-montserrat font-semibold uppercase tracking-wider"
+                  className="block py-2 text-crisp-white hover:text-sage font-inter font-medium"
                 >
                   {item.name}
                 </a>
@@ -119,7 +123,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="block py-2 text-crisp-white hover:text-sage font-montserrat font-semibold uppercase tracking-wider"
+                  className="block py-2 text-crisp-white hover:text-sage font-inter font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -132,13 +136,13 @@ export default function Header() {
                 handleSmoothScroll(e, 'hero-form');
                 setIsOpen(false);
               }}
-              className="block py-2 text-olive-green font-montserrat font-bold uppercase tracking-wider"
+              className="block py-2 text-olive-green font-inter font-medium"
             >
               Get Free Estimate
             </a>
             <a 
               href={`tel:${companyInfo.phone}`} 
-              className="block py-3 text-sage font-montserrat font-bold text-lg"
+              className="block py-3 text-sage font-inter font-medium text-lg"
             >
               Call: {companyInfo.phone}
             </a>

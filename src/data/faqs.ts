@@ -47,7 +47,7 @@ export const serviceFAQs: ServiceFAQs[] = [
       },
       {
         question: 'Can you install heated floors under tile?',
-        answer: 'Yes! Radiant floor heating is a popular option for tile installations, especially in bathrooms. It adds comfort and can help reduce heating costs.'
+        answer: 'Yes! Radiant floor heating is a popular option for tile installations, especially in bathrooms. It adds comfort and energy efficiency to your home.'
       },
       {
         question: 'How long does tile installation take?',
@@ -80,7 +80,7 @@ export const serviceFAQs: ServiceFAQs[] = [
       },
       {
         question: 'What\'s the most durable hardwood species?',
-        answer: 'Oak, maple, and hickory are among the hardest domestic woods. Brazilian cherry and other exotic species offer extreme durability but at a higher cost.'
+        answer: 'Oak, maple, and hickory are among the hardest domestic woods. Brazilian cherry and other exotic species offer extreme durability. We\'ll help you choose based on your needs and budget.'
       }
     ]
   },
@@ -121,8 +121,8 @@ export const serviceFAQs: ServiceFAQs[] = [
         answer: 'Individual planks can often be replaced without redoing the entire floor. We use click-lock systems that make repairs more manageable.'
       },
       {
-        question: 'How does laminate compare to hardwood in cost?',
-        answer: 'Laminate typically costs 50-70% less than hardwood, including installation. It offers the look of wood at a fraction of the price.'
+        question: 'How does laminate compare to hardwood?',
+        answer: 'Laminate offers the look of real wood with enhanced durability and water resistance. It\'s more budget-friendly than hardwood and easier to maintain, making it ideal for busy households.'
       },
       {
         question: 'Is laminate flooring noisy?',

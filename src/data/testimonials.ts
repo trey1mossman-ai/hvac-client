@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     name: 'Ziggy',
     location: 'Property Manager, Refined Realty',
     rating: 5,
-    review: 'We use SupplySide for residential and commercial flooring installations at our Chicago properties. They are always professional, reliable, transparent, and very fairly priced. Matt and Don operate at the highest level.',
+    review: 'We use SupplySide for residential and commercial flooring installations at our Chicago properties. They are always professional, reliable, and transparent. Matt and Don operate at the highest level.',
     service: 'Residential & Commercial Flooring'
   },
   {
@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
     name: 'Rebecca Maxwell',
     location: 'Owner, TR Contracting',
     rating: 5,
-    review: 'I work with flooring installers across Chicago almost every day, and SupplySide is consistently the most professional that we deal with. Their pricing is very fair, and they do great work, job after job.',
+    review: 'I work with flooring installers across Chicago almost every day, and SupplySide is consistently the most professional that we deal with. They do great work, job after job, and always deliver on their promises.',
     service: 'Professional Flooring Installation'
   },
   {

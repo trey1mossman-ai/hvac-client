@@ -1,38 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* Consistent section spacing */
-  section {
-    @apply py-20;
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
   }
   
-
-  html {
-    font-family: 'Montserrat', sans-serif;
+  /* Consistent section spacing */
+  section {
+    @apply py-24 md:py-32;
   }
   
   body {
-    @apply bg-soft-taupe text-cool-gray font-montserrat font-normal;
+    @apply bg-soft-taupe text-cool-gray font-normal;
   }
   
   h1 {
-    @apply text-deep-navy font-extrabold uppercase tracking-header;
+    @apply text-deep-navy font-semibold;
   }
   
   h2 {
-    @apply text-deep-navy font-extrabold uppercase tracking-header;
+    @apply text-deep-navy font-medium;
   }
   
   h3, h4, h5, h6 {
-    @apply text-deep-navy font-bold uppercase tracking-wider;
+    @apply text-deep-navy font-medium;
   }
   
   button {
-    @apply font-montserrat font-bold;
+    @apply font-medium;
   }
   
   .logo {
@@ -41,6 +42,28 @@
   
   /* Container styles */
   .container {
-    @apply max-w-7xl;
+    @apply max-w-7xl mx-auto px-6;
+  }
+  
+  /* Selection color */
+  ::selection {
+    @apply bg-olive-green text-white;
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-olive-green rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-sage;
   }
 }

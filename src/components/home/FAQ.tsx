@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import FAQAccordion from '../common/FAQAccordion';
 
 const faqs = [
   {
@@ -7,12 +6,12 @@ const faqs = [
     answer: 'For Chicago\'s climate, we recommend waterproof luxury vinyl for basements, porcelain tile for entryways and bathrooms, and engineered hardwood for main living areas. Each handles our temperature and humidity changes well.'
   },
   {
-    question: 'How much does flooring installation cost?',
-    answer: 'Costs vary by material and project size. Vinyl starts around $2.99/sq ft, laminate from $3.49/sq ft, and hardwood from $6.99/sq ft installed. We provide free, detailed quotes with no hidden fees.'
+    question: 'How do I get an accurate quote?',
+    answer: 'We provide free in-home consultations where we measure your space, discuss material options, and provide a detailed quote. Every project is unique, so we customize our quotes to your specific needs.'
   },
   {
     question: 'Do you offer financing?',
-    answer: 'Yes! We offer 0% interest financing for 12 months with approved credit, plus longer-term options. Many projects can be completed for less than $100/month.'
+    answer: 'Yes! We offer flexible financing options with approved credit, including 0% interest plans. We\'ll discuss all available payment options during your consultation.'
   },
   {
     question: 'How long does installation take?',
@@ -27,52 +26,25 @@ const faqs = [
     answer: 'We offer a 5-year installation warranty covering any installation-related issues. This is in addition to manufacturer warranties which typically range from 15-30 years.'
   },
   {
-    question: 'Can you match flooring from big box stores?',
-    answer: 'Yes! We can install flooring you\'ve purchased elsewhere, though we also offer competitive pricing on premium materials with better warranties than retail stores.'
+    question: 'Can you install flooring I purchase elsewhere?',
+    answer: 'Yes! We can install flooring you\'ve purchased from other suppliers. We also offer a wide selection of premium materials with excellent manufacturer warranties.'
   },
   {
     question: 'Are you licensed and insured?',
-    answer: 'Yes, we\'re fully licensed, bonded, and insured. We carry $2 million in liability insurance and all our installers are covered by workers\' compensation.'
+    answer: 'Yes, we\'re fully licensed, bonded, and insured with comprehensive liability coverage. All our installers are covered by workers\' compensation for your protection.'
   }
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <section id="faq" className="py-20 bg-soft-taupe">
+    <section id="faq" className="py-24 md:py-32 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-montserrat font-extrabold text-center mb-12 text-deep-navy uppercase tracking-header">
+          <h2 className="text-3xl md:text-4xl font-inter font-medium text-center mb-16 text-deep-navy">
             Frequently Asked Questions
           </h2>
           
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-crisp-white rounded-lg shadow-md overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-cream transition"
-                >
-                  <span className="font-bold text-deep-navy">{faq.question}</span>
-                  {openIndex === index ? (
-                    <ChevronUp className="text-olive-green" />
-                  ) : (
-                    <ChevronDown className="text-olive-green" />
-                  )}
-                </button>
-                
-                {openIndex === index && (
-                  <div className="px-6 py-4 border-t border-sage/20 bg-cream">
-                    <p className="text-cool-gray font-light">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </div>
     </section>

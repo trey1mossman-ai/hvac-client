@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
             <p className="text-sm text-sage/80">
               Licensed & Insured<br />
-              BBB Accredited
+              Family Owned & Operated
             </p>
           </div>
 

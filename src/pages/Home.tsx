@@ -26,9 +26,9 @@ export default function Home() {
       </Helmet>
 
       <Hero />
+      <Testimonials />
       <Services />
       <About />
-      <Testimonials />
       <FAQ />
       <ContactForm />
       <GoogleMap />

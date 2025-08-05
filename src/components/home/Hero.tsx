@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CheckCircle, Clock, Shield, ArrowRight } from 'lucide-react';
+import { CheckCircle, Clock, Shield } from 'lucide-react';
 import { companyInfo } from '../../data/company';
 import { services } from '../../data/services';
 
@@ -11,6 +11,7 @@ export default function Hero() {
     zipCode: '',
     serviceType: ''
   });
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
 
   const [rotatingText, setRotatingText] = useState(0);
   const rotatingWords = ['RELIABLE', 'PROFESSIONAL', 'COURTEOUS', 'EXPERIENCED'];
@@ -19,6 +20,12 @@ export default function Hero() {
     const interval = setInterval(() => {
       setRotatingText((prev) => (prev + 1) % rotatingWords.length);
     }, 2000);
+    
+    // Preload hero image
+    const img = new Image();
+    img.src = '/images/hero/homepage-hero.jpg';
+    img.onload = () => setHeroImageLoaded(true);
+    
     return () => clearInterval(interval);
   }, []);
 
@@ -37,29 +44,30 @@ export default function Hero() {
 
   return (
     <section 
-      className="bg-cream py-16 md:py-20 relative"
+      id="hero"
+      className={`bg-cream py-24 md:py-32 relative transition-opacity duration-700 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1600&q=80)',
+        backgroundImage: 'url(/images/hero/homepage-hero.jpg)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center bottom',
         backgroundBlendMode: 'overlay',
       }}
     >
       <div className="absolute inset-0 bg-cream/90"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
+        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center hero-grid">
           {/* Left Side - 60% */}
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep-navy mb-4 leading-tight font-montserrat uppercase tracking-header">
-              CHICAGO'S MOST RELIABLE<br />
-              FLOORING INSTALLATION
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-deep-navy mb-6 leading-relaxed font-inter">
+              Chicago's Most Reliable<br />
+              Flooring Installation
             </h1>
-            <p className="text-xl md:text-2xl text-cool-gray mb-6 font-montserrat font-light">
+            <p className="text-lg md:text-xl text-cool-gray mb-8 font-inter font-light leading-relaxed">
               Combined 80+ Years of Professional Installation Across Chicagoland
             </p>
             
             {/* Trust Bar */}
-            <div className="flex flex-wrap gap-4 mb-8 text-warm-wood font-semibold">
+            <div className="flex flex-wrap gap-4 mb-10 text-warm-wood font-medium">
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
                 Licensed
@@ -79,17 +87,16 @@ export default function Hero() {
             </div>
             
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 hero-cta-group">
               <a
                 href="#hero-form"
-                className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-sage transition transform hover:scale-105 inline-flex items-center justify-center gap-2 uppercase tracking-header"
+                className="bg-olive-green text-crisp-white px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Get Free Estimate
-                <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#services"
-                className="bg-sage text-deep-navy px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-olive-green hover:text-crisp-white transition inline-flex items-center justify-center gap-2 uppercase tracking-header"
+                className="border-2 border-olive-green text-olive-green px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-olive-green hover:text-crisp-white transition-all duration-300 inline-flex items-center justify-center"
               >
                 See Our Work
               </a>
@@ -97,8 +104,8 @@ export default function Hero() {
             
             {/* Rotating Text */}
             <div className="mt-8">
-              <span className="text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider">
-                WE ARE{' '}
+              <span className="text-xl md:text-2xl font-inter font-medium text-warm-wood">
+                We are{' '}
               </span>
               <div className="rotating-words-container">
                 <div
@@ -108,7 +115,7 @@ export default function Hero() {
                   {rotatingWords.map((word) => (
                     <span
                       key={word}
-                      className="rotating-word text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider"
+                      className="rotating-word text-xl md:text-2xl font-inter font-medium text-warm-wood"
                     >
                       {word}
                     </span>
@@ -119,12 +126,12 @@ export default function Hero() {
           </div>
 
           {/* Right Side - 40% Form */}
-          <div id="hero-form" className="bg-crisp-white p-8 rounded-2xl shadow-xl">
-            <h2 className="text-2xl font-montserrat font-bold text-deep-navy mb-6 text-center uppercase tracking-header">
+          <div id="hero-form" className="bg-crisp-white p-10 rounded-2xl shadow-lg hero-form-wrapper glass-effect">
+            <h2 className="text-xl font-inter font-medium text-deep-navy mb-8 text-center">
               Get Your Free Estimate
             </h2>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <input
                   type="text"
@@ -133,7 +140,7 @@ export default function Hero() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -145,7 +152,7 @@ export default function Hero() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -157,7 +164,7 @@ export default function Hero() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -169,7 +176,7 @@ export default function Hero() {
                   required
                   value={formData.zipCode}
                   onChange={handleChange}
-                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -179,7 +186,7 @@ export default function Hero() {
                   required
                   value={formData.serviceType}
                   onChange={handleChange}
-                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 >
                   <option value="">Select Service Type *</option>
                   {services.slice(0, 5).map((service) => (
@@ -193,9 +200,9 @@ export default function Hero() {
               
               <button
                 type="submit"
-                className="w-full bg-olive-green text-crisp-white py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-sage transition uppercase tracking-header"
+                className="w-full bg-olive-green text-crisp-white py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300"
               >
-                Get Free Quote
+                Get Free Estimate
               </button>
             </form>
             
@@ -203,7 +210,7 @@ export default function Hero() {
               <p className="text-cool-gray mb-2">Or Call:</p>
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="text-2xl font-bold text-olive-green hover:text-sage transition"
+                className="text-xl font-medium text-olive-green hover:text-opacity-80 transition"
               >
                 {companyInfo.phone}
               </a>

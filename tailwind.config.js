@@ -18,7 +18,8 @@ export default {
         'crisp-white': '#FFFFFF',    // Clean & fresh - button text
       },
       fontFamily: {
-        'montserrat': ['Montserrat', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'], // Keep for logo only
       },
       fontWeight: {
         'light': 300,

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone, ArrowRight, Clock, Shield, Award } from 'lucide-react';
+import { CheckCircle, Phone, Clock, Shield, Award } from 'lucide-react';
 import { services } from '../../data/services';
 import { companyInfo } from '../../data/company';
 import { getServiceFAQs } from '../../data/faqs';
+import FAQAccordion from '../../components/common/FAQAccordion';
+import ServiceDetails from '../../components/services/ServiceDetails';
 
 export default function ServiceDetail() {
   const { slug } = useParams();
@@ -89,7 +91,7 @@ export default function ServiceDetail() {
 
       {/* Hero Section with 60/40 Split */}
       <section 
-        className="bg-cream py-16 relative"
+        className="bg-cream py-24 md:py-32 relative"
         style={{
           backgroundImage: `url(${service.image})`,
           backgroundSize: 'cover',
@@ -102,15 +104,15 @@ export default function ServiceDetail() {
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* Left Side - Service Content */}
             <div>
-              <h1 className="text-4xl md:text-5xl font-black text-deep-navy mb-4 uppercase tracking-wider">
+              <h1 className="text-3xl md:text-4xl font-inter font-semibold text-deep-navy mb-6 leading-relaxed">
                 {service.name} Installation<br />
                 in Chicago
               </h1>
-              <p className="text-xl text-cool-gray mb-6 font-light">
+              <p className="text-lg text-cool-gray mb-8 font-light leading-relaxed">
                 {service.description}
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-8 text-warm-wood font-semibold">
+              <div className="flex flex-wrap gap-4 mb-10 text-warm-wood font-medium">
                 <span className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
                   Licensed & Insured
@@ -130,14 +132,13 @@ export default function ServiceDetail() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#service-form"
-                  className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition inline-flex items-center justify-center gap-2 uppercase tracking-wider"
+                  className="bg-olive-green text-crisp-white px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 inline-flex items-center justify-center"
                 >
-                  Get Free Quote
-                  <ArrowRight className="w-5 h-5" />
+                  Get Free Estimate
                 </a>
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="bg-sage text-deep-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-olive-green hover:text-crisp-white transition inline-flex items-center justify-center gap-2"
+                  className="border-2 border-olive-green text-olive-green px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-olive-green hover:text-crisp-white transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
                   {companyInfo.phone}
@@ -146,9 +147,9 @@ export default function ServiceDetail() {
             </div>
 
             {/* Right Side - Form */}
-            <div id="service-form" className="bg-crisp-white p-8 rounded-2xl shadow-xl">
-              <h2 className="text-2xl font-bold text-deep-navy mb-6 text-center uppercase tracking-wider">
-                Get Your Free {service.name} Quote
+            <div id="service-form" className="bg-crisp-white p-10 rounded-2xl shadow-lg">
+              <h2 className="text-xl font-inter font-medium text-deep-navy mb-8 text-center">
+                Get Your Free {service.name} Estimate
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -159,7 +160,7 @@ export default function ServiceDetail() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200"
                 />
                 
                 <input
@@ -169,7 +170,7 @@ export default function ServiceDetail() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200"
                 />
                 
                 <input
@@ -179,7 +180,7 @@ export default function ServiceDetail() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200"
                 />
                 
                 <input
@@ -189,14 +190,14 @@ export default function ServiceDetail() {
                   required
                   value={formData.zipCode}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200"
                 />
                 
                 <button
                   type="submit"
-                  className="w-full bg-olive-green text-crisp-white py-4 rounded-lg font-bold text-lg hover:bg-sage transition uppercase tracking-wider"
+                  className="w-full bg-olive-green text-crisp-white py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300"
                 >
-                  Get Free Quote
+                  Get Free Estimate
                 </button>
               </form>
               
@@ -204,7 +205,7 @@ export default function ServiceDetail() {
                 <p className="text-cool-gray mb-2">Or Call Now:</p>
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="text-2xl font-bold text-olive-green hover:text-sage transition"
+                  className="text-xl font-medium text-olive-green hover:text-opacity-80 transition"
                 >
                   {companyInfo.phone}
                 </a>
@@ -214,26 +215,29 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section className="py-16 bg-soft-taupe">
+      {/* Service Details Section */}
+      <ServiceDetails service={service} />
+
+      {/* Why Choose Section */>
+      <section className="py-24 md:py-32 bg-cream">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-12 text-center uppercase tracking-wider">
+          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-16 text-center">
             Why Choose {service.name}?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="text-center">
               <Award className="w-16 h-16 text-olive-green mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-deep-navy mb-2 uppercase">Premium Quality</h3>
+              <h3 className="text-lg font-inter font-medium text-deep-navy mb-3">Premium Quality</h3>
               <p className="text-cool-gray">We use only the highest quality materials from trusted manufacturers</p>
             </div>
             <div className="text-center">
               <Shield className="w-16 h-16 text-olive-green mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-deep-navy mb-2 uppercase">Lifetime Warranty</h3>
+              <h3 className="text-lg font-inter font-medium text-deep-navy mb-3">Lifetime Warranty</h3>
               <p className="text-cool-gray">Our installations are backed by comprehensive warranty coverage</p>
             </div>
             <div className="text-center">
               <Clock className="w-16 h-16 text-olive-green mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-deep-navy mb-2 uppercase">On-Time Service</h3>
+              <h3 className="text-lg font-inter font-medium text-deep-navy mb-3">On-Time Service</h3>
               <p className="text-cool-gray">We show up on time and complete your project as promised</p>
             </div>
           </div>
@@ -241,18 +245,18 @@ export default function ServiceDetail() {
       </section>
 
       {/* Our Process */}
-      <section className="py-16 bg-cream">
+      <section className="py-24 md:py-32 bg-soft-taupe">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-12 text-center uppercase tracking-wider">
+          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-16 text-center">
             Our Simple Process
           </h2>
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {processsteps.map((step) => (
               <div key={step.step} className="text-center">
                 <div className="w-16 h-16 bg-olive-green text-crisp-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-lg font-bold text-deep-navy mb-2 uppercase">{step.title}</h3>
+                <h3 className="text-lg font-inter font-medium text-deep-navy mb-2">{step.title}</h3>
                 <p className="text-cool-gray text-sm">{step.description}</p>
               </div>
             ))}
@@ -260,16 +264,16 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 bg-soft-taupe">
+      {/* What's Included Section */}
+      <section className="py-24 md:py-32 bg-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-8 uppercase tracking-wider">
-              Transparent Pricing
+            <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-12">
+              What's Included
             </h2>
-            <div className="bg-crisp-white p-8 rounded-2xl shadow-lg">
-              <p className="text-2xl font-bold text-olive-green mb-4">
-                Starting from ${service.startingPrice === 'Free Quote' ? '2.99' : service.startingPrice}/sq ft
+            <div className="bg-crisp-white p-10 rounded-2xl shadow-sm">
+              <p className="text-xl font-inter font-medium text-olive-green mb-6">
+                Complete Installation Service
               </p>
               <ul className="text-left max-w-md mx-auto space-y-3 mb-8">
                 {[
@@ -288,9 +292,9 @@ export default function ServiceDetail() {
               </ul>
               <a
                 href="#service-form"
-                className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition inline-block uppercase tracking-wider"
+                className="bg-olive-green text-crisp-white px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 inline-block"
               >
-                Get Your Exact Quote
+                Get Free Estimate
               </a>
             </div>
           </div>
@@ -298,42 +302,34 @@ export default function ServiceDetail() {
       </section>
 
       {/* FAQs */}
-      <section id="faq" className="py-16 bg-cream">
+      <section id="faq" className="py-24 md:py-32 bg-soft-taupe">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-12 text-center uppercase tracking-wider">
+          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-16 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-crisp-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-bold text-deep-navy mb-2">{faq.question}</h3>
-                <p className="text-cool-gray">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-deep-navy text-crisp-white">
+      <section className="py-24 md:py-32 bg-deep-navy text-crisp-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-wider">
+          <h2 className="text-3xl md:text-4xl font-inter font-medium mb-8">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto font-light">
+          <p className="text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             Join thousands of satisfied Chicago homeowners who trust SupplySide for their flooring needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#service-form"
-              className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition inline-flex items-center justify-center gap-2 uppercase tracking-wider"
+              className="bg-olive-green text-crisp-white px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 inline-flex items-center justify-center"
             >
               Get Free Estimate
-              <ArrowRight className="w-5 h-5" />
             </a>
             <a
               href={`tel:${companyInfo.phone}`}
-              className="bg-transparent border-2 border-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-crisp-white hover:text-deep-navy transition inline-flex items-center justify-center gap-2"
+              className="bg-transparent border-2 border-crisp-white px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-crisp-white hover:text-deep-navy transition-all duration-300 inline-flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Call Now: {companyInfo.phone}
