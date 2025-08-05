@@ -1,17 +1,53 @@
+import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone } from 'lucide-react';
+import { CheckCircle, Phone, ArrowRight, Clock, Shield, Award } from 'lucide-react';
 import { services } from '../../data/services';
 import { companyInfo } from '../../data/company';
-import ContactForm from '../../components/common/ContactForm';
 
 export default function ServiceDetail() {
   const { slug } = useParams();
   const service = services.find(s => s.slug === slug);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    zipCode: '',
+    serviceType: service?.id || ''
+  });
+
   if (!service) {
     return <Navigate to="/" replace />;
   }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    alert('Thank you! We\'ll contact you within 24 hours with your free quote.');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const processsteps = [
+    { step: '1', title: 'Free Consultation', description: 'Schedule your free in-home estimate' },
+    { step: '2', title: 'Professional Measurement', description: 'Accurate measurements for perfect fit' },
+    { step: '3', title: 'Material Selection', description: 'Choose from premium flooring options' },
+    { step: '4', title: 'Expert Installation', description: 'Professional installation with warranty' }
+  ];
+
+  const faqs = [
+    { q: `How long does ${service.name.toLowerCase()} installation take?`, a: 'Most installations are completed in 1-3 days depending on the project size.' },
+    { q: `Is ${service.name.toLowerCase()} good for basements?`, a: 'Yes! Our waterproof options are perfect for Chicago basements.' },
+    { q: 'Do you move furniture?', a: 'Yes, we offer furniture moving services as part of our installation package.' },
+    { q: 'What warranty do you offer?', a: 'We provide a 5-year installation warranty on all flooring projects.' },
+    { q: 'Do you offer financing?', a: 'Yes, we offer flexible financing options with approved credit.' }
+  ];
 
   return (
     <>
@@ -23,101 +59,251 @@ export default function ServiceDetail() {
         />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-16">
+      {/* Hero Section with 60/40 Split */}
+      <section className="bg-cream py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {service.name} in Chicago
-            </h1>
-            <p className="text-xl mb-8 opacity-95">
-              {service.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact-form"
-                className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
-              >
-                Get Free Quote
-              </a>
-              <a
-                href={`tel:${companyInfo.phone}`}
-                className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition"
-              >
-                <Phone className="inline-block mr-2" size={20} />
-                {companyInfo.phone}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Details */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  About Our {service.name} Service
-                </h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  {service.detailedDescription || service.description}
-                </p>
-                <p className="text-gray-700 mb-6">
-                  With over 80 years of combined experience, our team delivers exceptional 
-                  {' ' + service.name.toLowerCase()} services throughout Chicago and surrounding suburbs. 
-                  We use only premium materials and proven installation techniques to ensure 
-                  your floors last for years to come.
-                </p>
+          <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
+            {/* Left Side - Service Content */}
+            <div>
+              <h1 className="text-4xl md:text-5xl font-black text-deep-navy mb-4 uppercase tracking-wider">
+                {service.name} Installation<br />
+                in Chicago
+              </h1>
+              <p className="text-xl text-cool-gray mb-6 font-light">
+                {service.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mb-8 text-warm-wood font-semibold">
+                <span className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  Licensed & Insured
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-2">
+                  <Clock className="w-5 h-5" />
+                  Free Estimates
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-2">
+                  <Shield className="w-5 h-5" />
+                  5-Year Warranty
+                </span>
               </div>
               
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                  Why Choose SupplySide for {service.name}?
-                </h3>
-                <ul className="space-y-4">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="text-primary mt-1 mr-3 flex-shrink-0" size={20} />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary mt-1 mr-3 flex-shrink-0" size={20} />
-                    <span className="text-gray-700">Licensed, bonded & insured professionals</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary mt-1 mr-3 flex-shrink-0" size={20} />
-                    <span className="text-gray-700">Free, detailed estimates</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary mt-1 mr-3 flex-shrink-0" size={20} />
-                    <span className="text-gray-700">Financing options available</span>
-                  </li>
-                </ul>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#service-form"
+                  className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition inline-flex items-center justify-center gap-2 uppercase tracking-wider"
+                >
+                  Get Free Quote
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+                <a
+                  href={`tel:${companyInfo.phone}`}
+                  className="bg-sage text-deep-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-olive-green hover:text-crisp-white transition inline-flex items-center justify-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  {companyInfo.phone}
+                </a>
               </div>
             </div>
 
-            {/* Service Area */}
-            <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                {service.name} Service Areas
-              </h3>
-              <p className="text-gray-700 mb-4">
-                We provide professional {service.name.toLowerCase()} throughout Chicago and the surrounding suburbs including:
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                {companyInfo.serviceArea.map((area, index) => (
-                  <span key={index} className="text-gray-600">• {area}</span>
-                ))}
+            {/* Right Side - Form */}
+            <div id="service-form" className="bg-crisp-white p-8 rounded-2xl shadow-xl">
+              <h2 className="text-2xl font-bold text-deep-navy mb-6 text-center uppercase tracking-wider">
+                Get Your Free {service.name} Quote
+              </h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name *"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                />
+                
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number *"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                />
+                
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address *"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                />
+                
+                <input
+                  type="text"
+                  name="zipCode"
+                  placeholder="Zip Code *"
+                  required
+                  value={formData.zipCode}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                />
+                
+                <button
+                  type="submit"
+                  className="w-full bg-olive-green text-crisp-white py-4 rounded-lg font-bold text-lg hover:bg-sage transition uppercase tracking-wider"
+                >
+                  Get Free Quote
+                </button>
+              </form>
+              
+              <div className="text-center mt-6">
+                <p className="text-cool-gray mb-2">Or Call Now:</p>
+                <a
+                  href={`tel:${companyInfo.phone}`}
+                  className="text-2xl font-bold text-olive-green hover:text-sage transition"
+                >
+                  {companyInfo.phone}
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <ContactForm />
+      {/* Why Choose Section */}
+      <section className="py-16 bg-soft-taupe">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-12 text-center uppercase tracking-wider">
+            Why Choose {service.name}?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <Award className="w-16 h-16 text-olive-green mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-deep-navy mb-2 uppercase">Premium Quality</h3>
+              <p className="text-cool-gray">We use only the highest quality materials from trusted manufacturers</p>
+            </div>
+            <div className="text-center">
+              <Shield className="w-16 h-16 text-olive-green mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-deep-navy mb-2 uppercase">Lifetime Warranty</h3>
+              <p className="text-cool-gray">Our installations are backed by comprehensive warranty coverage</p>
+            </div>
+            <div className="text-center">
+              <Clock className="w-16 h-16 text-olive-green mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-deep-navy mb-2 uppercase">On-Time Service</h3>
+              <p className="text-cool-gray">We show up on time and complete your project as promised</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="py-16 bg-cream">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-12 text-center uppercase tracking-wider">
+            Our Simple Process
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {processsteps.map((step) => (
+              <div key={step.step} className="text-center">
+                <div className="w-16 h-16 bg-olive-green text-crisp-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {step.step}
+                </div>
+                <h3 className="text-lg font-bold text-deep-navy mb-2 uppercase">{step.title}</h3>
+                <p className="text-cool-gray text-sm">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 bg-soft-taupe">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-8 uppercase tracking-wider">
+              Transparent Pricing
+            </h2>
+            <div className="bg-crisp-white p-8 rounded-2xl shadow-lg">
+              <p className="text-2xl font-bold text-olive-green mb-4">
+                Starting from ${service.startingPrice === 'Free Quote' ? '2.99' : service.startingPrice}/sq ft
+              </p>
+              <ul className="text-left max-w-md mx-auto space-y-3 mb-8">
+                {[
+                  'Free in-home consultation',
+                  'Professional measurement',
+                  'Material & labor included',
+                  'Furniture moving available',
+                  'Old flooring removal',
+                  'Clean-up included'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckCircle className="text-olive-green mr-3 flex-shrink-0" size={20} />
+                    <span className="text-cool-gray">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#service-form"
+                className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition inline-block uppercase tracking-wider"
+              >
+                Get Your Exact Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section id="faq" className="py-16 bg-cream">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-12 text-center uppercase tracking-wider">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-crisp-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-bold text-deep-navy mb-2">{faq.q}</h3>
+                <p className="text-cool-gray">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-deep-navy text-crisp-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-wider">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto font-light">
+            Join thousands of satisfied Chicago homeowners who trust SupplySide for their flooring needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#service-form"
+              className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition inline-flex items-center justify-center gap-2 uppercase tracking-wider"
+            >
+              Get Free Estimate
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href={`tel:${companyInfo.phone}`}
+              className="bg-transparent border-2 border-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-crisp-white hover:text-deep-navy transition inline-flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call Now: {companyInfo.phone}
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

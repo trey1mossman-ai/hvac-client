@@ -25,17 +25,17 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact-form" className="py-16 bg-white">
+    <section id="contact-form" className="py-20 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-deep-navy uppercase tracking-wider">
             Get Your Free Quote
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block mb-2 font-medium">Name *</label>
+                <label htmlFor="name" className="block mb-2 font-semibold text-deep-navy">Name *</label>
                 <input
                   type="text"
                   id="name"
@@ -43,12 +43,12 @@ export default function ContactForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block mb-2 font-medium">Email *</label>
+                <label htmlFor="email" className="block mb-2 font-semibold text-deep-navy">Email *</label>
                 <input
                   type="email"
                   id="email"
@@ -56,12 +56,12 @@ export default function ContactForm() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
                 />
               </div>
               
               <div>
-                <label htmlFor="phone" className="block mb-2 font-medium">Phone *</label>
+                <label htmlFor="phone" className="block mb-2 font-semibold text-deep-navy">Phone *</label>
                 <input
                   type="tel"
                   id="phone"
@@ -69,18 +69,18 @@ export default function ContactForm() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
                 />
               </div>
               
               <div>
-                <label htmlFor="service" className="block mb-2 font-medium">Service Needed</label>
+                <label htmlFor="service" className="block mb-2 font-semibold text-deep-navy">Service Needed</label>
                 <select
                   id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
                 >
                   <option value="">Select a service</option>
                   <option value="vinyl">Luxury Vinyl Flooring</option>
@@ -92,60 +92,60 @@ export default function ContactForm() {
               </div>
               
               <div>
-                <label htmlFor="message" className="block mb-2 font-medium">Project Details</label>
+                <label htmlFor="message" className="block mb-2 font-semibold text-deep-navy">Project Details</label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
                   placeholder="Tell us about your project..."
                 />
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+                className="w-full bg-olive-green text-crisp-white py-4 rounded-lg font-bold text-lg hover:bg-sage transition uppercase tracking-wider"
               >
                 Get Free Quote
               </button>
             </form>
             
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Why Choose SupplySide?</h3>
+            <div className="bg-cream p-6 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-deep-navy uppercase tracking-wider">Why Choose SupplySide?</h3>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>80+ years combined experience</span>
+                  <span className="text-olive-green mr-2 font-bold">✓</span>
+                  <span className="text-cool-gray">80+ years combined experience</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Licensed, bonded & insured</span>
+                  <span className="text-olive-green mr-2 font-bold">✓</span>
+                  <span className="text-cool-gray">Licensed, bonded & insured</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>5-year installation warranty</span>
+                  <span className="text-olive-green mr-2 font-bold">✓</span>
+                  <span className="text-cool-gray">5-year installation warranty</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Free, no-obligation quotes</span>
+                  <span className="text-olive-green mr-2 font-bold">✓</span>
+                  <span className="text-cool-gray">Free, no-obligation quotes</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Financing available</span>
+                  <span className="text-olive-green mr-2 font-bold">✓</span>
+                  <span className="text-cool-gray">Financing available</span>
                 </li>
               </ul>
               
-              <div className="border-t pt-6">
-                <h4 className="font-semibold mb-2">Prefer to call?</h4>
+              <div className="border-t border-sage/20 pt-6">
+                <h4 className="font-bold mb-2 text-deep-navy">Prefer to call?</h4>
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="text-2xl font-bold text-primary hover:text-green-700 transition"
+                  className="text-2xl font-bold text-olive-green hover:text-sage transition"
                 >
                   {companyInfo.phone}
                 </a>
-                <p className="text-gray-600 mt-2">
+                <p className="text-cool-gray mt-2">
                   {companyInfo.hours.weekdays}
                 </p>
               </div>

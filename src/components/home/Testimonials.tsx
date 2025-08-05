@@ -3,13 +3,13 @@ import { testimonials } from '../../data/testimonials';
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 bg-white">
+    <section id="testimonials" className="py-20 bg-cream">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-black text-deep-navy mb-4 uppercase tracking-wider">
             What Our Customers Say
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-cool-gray font-light">
             Over 1,000 satisfied customers across Chicagoland
           </p>
         </div>
@@ -18,22 +18,22 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition"
+              className="bg-crisp-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
                     size={20}
-                    className="fill-yellow-400 text-yellow-400"
+                    className="fill-light-oak text-light-oak"
                   />
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{testimonial.review}"</p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                <p className="text-sm text-gray-600">{testimonial.location}</p>
-                <p className="text-sm text-primary mt-1">{testimonial.service}</p>
+              <p className="text-cool-gray mb-4 italic font-light">"{testimonial.review}"</p>
+              <div className="border-t border-sage/20 pt-4">
+                <p className="font-bold text-deep-navy">{testimonial.name}</p>
+                <p className="text-sm text-cool-gray">{testimonial.location}</p>
+                <p className="text-sm text-olive-green mt-1 font-semibold">{testimonial.service}</p>
               </div>
             </div>
           ))}

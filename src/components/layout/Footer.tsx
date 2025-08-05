@@ -5,17 +5,17 @@ import { services } from '../../data/services';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-deep-navy text-crisp-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">SupplySide Flooring</h3>
-            <p className="mb-4 text-gray-300">
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">SupplySide Flooring</h3>
+            <p className="mb-4 text-sage font-light">
               Chicago's most reliable flooring installation company. 
               80+ years of combined experience.
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-sage/80">
               Licensed & Insured<br />
               BBB Accredited
             </p>
@@ -23,13 +23,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Our Services</h3>
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Our Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 4).map(service => (
                 <li key={service.id}>
                   <Link 
-                    to={`/services/${service.slug}`}
-                    className="text-gray-300 hover:text-white transition"
+                    to={service.url}
+                    className="text-sage hover:text-light-oak transition font-light"
                   >
                     {service.name}
                   </Link>
@@ -40,23 +40,23 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Info</h3>
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Contact Info</h3>
             <div className="space-y-3">
               <a 
                 href={`tel:${companyInfo.phone}`}
-                className="flex items-center gap-2 text-gray-300 hover:text-white transition"
+                className="flex items-center gap-2 text-sage hover:text-light-oak transition font-light"
               >
                 <Phone size={18} />
                 {companyInfo.phone}
               </a>
               <a 
                 href={`mailto:${companyInfo.email}`}
-                className="flex items-center gap-2 text-gray-300 hover:text-white transition"
+                className="flex items-center gap-2 text-sage hover:text-light-oak transition font-light"
               >
                 <Mail size={18} />
                 {companyInfo.email}
               </a>
-              <div className="flex items-start gap-2 text-gray-300">
+              <div className="flex items-start gap-2 text-sage font-light">
                 <MapPin size={18} className="mt-1" />
                 <div>
                   {companyInfo.address.street}<br />
@@ -68,8 +68,8 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Hours</h3>
-            <div className="space-y-2 text-gray-300">
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Hours</h3>
+            <div className="space-y-2 text-sage font-light">
               <div className="flex items-center gap-2">
                 <Clock size={18} />
                 <span>Hours of Operation</span>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-sage/20 mt-8 pt-8 text-center text-sage/60">
           <p>&copy; 2025 SupplySide Flooring Installation. All rights reserved.</p>
         </div>
       </div>

@@ -32,10 +32,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="faq" className="py-20 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-deep-navy uppercase tracking-wider">
             Frequently Asked Questions
           </h2>
           
@@ -43,23 +43,23 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+                className="bg-crisp-white rounded-lg shadow-md overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-cream transition"
                 >
-                  <span className="font-semibold text-gray-900">{faq.question}</span>
+                  <span className="font-bold text-deep-navy">{faq.question}</span>
                   {openIndex === index ? (
-                    <ChevronUp className="text-gray-600" />
+                    <ChevronUp className="text-olive-green" />
                   ) : (
-                    <ChevronDown className="text-gray-600" />
+                    <ChevronDown className="text-olive-green" />
                   )}
                 </button>
                 
                 {openIndex === index && (
-                  <div className="px-6 py-4 border-t bg-gray-50">
-                    <p className="text-gray-700">{faq.answer}</p>
+                  <div className="px-6 py-4 border-t border-sage/20 bg-cream">
+                    <p className="text-cool-gray font-light">{faq.answer}</p>
                   </div>
                 )}
               </div>
