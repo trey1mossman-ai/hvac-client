@@ -4,19 +4,21 @@
   "description": "SupplySide Flooring Installation - Chicago's most reliable flooring installation website with bulletproof Hostinger deployment",
   "main": "index.html",
   "scripts": {
-    "deploy": "node deployment/deploy.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack serve --mode development",
+    "start": "npm run dev",
+    "deploy": "npm run build && echo 'Ready to deploy dist folder'",
+    "deploy:old": "node deployment/deploy.js",
     "deploy:setup": "node deployment/setup-wizard.js",
     "deploy:test": "node deployment/test-connection.js",
-    "deploy:verify": "node deployment/verify-setup.js", 
+    "deploy:verify": "node deployment/verify-setup.js",
     "deploy:discover": "node deployment/discover-config.js",
     "deploy:help": "cat DEPLOYMENT.md",
-    "handoff": "node scripts/handoff.js",
-    "start": "python -m http.server 8000",
-    "dev": "python -m http.server 8000"
+    "handoff": "node scripts/handoff.js"
   },
   "keywords": [
     "flooring",
-    "installation", 
+    "installation",
     "chicago",
     "supplyside",
     "hostinger",
@@ -39,7 +41,17 @@
     "glob-promise": "^6.0.7",
     "ora": "^5.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
   "config": {
     "deployment": {
       "host": "185.212.71.198",
@@ -55,5 +67,6 @@
   "homepage": "https://mediumblue-chamois-837591.hostingersite.com",
   "bugs": {
     "url": "mailto:contact@supplyside-flooring.com"
-  }
+  },
+  "type": "commonjs"
 }
