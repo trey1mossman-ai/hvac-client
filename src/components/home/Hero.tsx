@@ -110,7 +110,7 @@ export default function Hero() {
               <div className="rotating-words-container">
                 <div
                   className="rotating-words-inner"
-                  style={{ transform: `translateY(-${rotatingText * 40}px)` }}
+                  style={{ transform: `translateY(-${rotatingText * 1.5}em)` }}
                 >
                   {rotatingWords.map((word) => (
                     <span

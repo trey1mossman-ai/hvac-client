@@ -18,7 +18,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-crisp-white rounded-xl p-10 shadow-sm hover:shadow-lg transition-all duration-300 testimonial-card"
+              className="bg-crisp-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 testimonial-card h-full flex flex-col"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -29,8 +29,8 @@ export default function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-cool-gray mb-6 italic font-light leading-relaxed">"{testimonial.review}"</p>
-              <div className="border-t border-sage/20 pt-6">
+              <p className="text-cool-gray mb-6 italic font-light leading-relaxed flex-grow line-clamp-4">"{testimonial.review}"</p>
+              <div className="border-t border-sage/20 pt-4 mt-auto">
                 <p className="font-medium text-deep-navy">{testimonial.name}</p>
                 <p className="text-sm text-cool-gray">{testimonial.location}</p>
                 <p className="text-sm text-olive-green mt-2 font-medium">{testimonial.service}</p>
