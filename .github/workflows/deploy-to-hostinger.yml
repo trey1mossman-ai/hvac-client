@@ -13,29 +13,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       
-    - name: Deploy to Hostinger via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.FTP_HOST }}
+        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
         port: 21
-        protocol: ftp
-        server-dir: ./
+        local-dir: ./
+        server-dir: public_html/
         exclude: |
           **/.git*
-          **/.git*/**
-          **/node_modules/**
           **/.github/**
-          **/.env*
-          **/*.md
-          **/deployment/**
-          **/package*.json
-          **/.vscode/**
-          **/*.log
           **/.DS_Store
-          **/Thumbs.db
-          **/backups/**
-          **/scripts/**
-        dangerous-clean-slate: false
-        log-level: standard
