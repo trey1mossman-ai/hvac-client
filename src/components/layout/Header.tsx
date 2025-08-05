@@ -47,7 +47,7 @@ export default function Header() {
     <header className="bg-deep-navy shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-crisp-white font-montserrat uppercase tracking-wider">
+          <Link to="/" className="text-3xl font-black text-crisp-white font-montserrat uppercase tracking-header">
             SupplySide
           </Link>
           
@@ -58,7 +58,7 @@ export default function Header() {
                   key={item.name}
                   href={item.url}
                   onClick={(e) => handleSmoothScroll(e, item.url.substring(1))}
-                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-wider"
+                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header"
                 >
                   {item.name}
                 </a>
@@ -66,7 +66,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-wider"
+                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header"
                 >
                   {item.name}
                 </Link>
@@ -75,7 +75,7 @@ export default function Header() {
             <a
               href="#hero-form"
               onClick={(e) => handleSmoothScroll(e, 'hero-form')}
-              className="bg-olive-green text-crisp-white px-6 py-2 rounded-lg hover:bg-sage transition font-montserrat font-semibold text-sm uppercase tracking-wider"
+              className="bg-olive-green text-crisp-white px-6 py-2 rounded-lg hover:bg-sage transition font-montserrat font-bold text-sm uppercase tracking-header"
             >
               Get Free Estimate
             </a>

@@ -35,7 +35,7 @@ export default function FAQ() {
     <section id="faq" className="py-20 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-deep-navy uppercase tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-montserrat font-extrabold text-center mb-12 text-deep-navy uppercase tracking-header">
             Frequently Asked Questions
           </h2>
           

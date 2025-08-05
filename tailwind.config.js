@@ -20,7 +20,17 @@ export default {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
       },
+      fontWeight: {
+        'light': 300,
+        'normal': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
+        'extrabold': 800,
+        'black': 900,
+      },
       letterSpacing: {
+        'header': '0.05em',
         'wider': '0.05em',
       },
     },

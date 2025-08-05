@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
           {/* Left Side - 60% */}
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-deep-navy mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep-navy mb-4 leading-tight font-montserrat uppercase tracking-header">
               CHICAGO'S MOST RELIABLE<br />
               FLOORING INSTALLATION
             </h1>
@@ -82,21 +82,21 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href="#hero-form"
-                className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-sage transition transform hover:scale-105 inline-flex items-center justify-center gap-2 uppercase tracking-wider"
+                className="bg-olive-green text-crisp-white px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-sage transition transform hover:scale-105 inline-flex items-center justify-center gap-2 uppercase tracking-header"
               >
                 Get Free Estimate
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#services"
-                className="bg-sage text-deep-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-olive-green hover:text-crisp-white transition inline-flex items-center justify-center gap-2 uppercase tracking-wider"
+                className="bg-sage text-deep-navy px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-olive-green hover:text-crisp-white transition inline-flex items-center justify-center gap-2 uppercase tracking-header"
               >
                 See Our Work
               </a>
             </div>
             
             {/* Rotating Text */}
-            <div className="text-3xl md:text-4xl font-black text-warm-wood">
+            <div className="text-3xl md:text-4xl font-montserrat font-black text-warm-wood uppercase tracking-wider">
               WE ARE{' '}
               <span className="inline-block relative h-12" style={{ minWidth: '300px' }}>
                 {rotatingWords.map((word, index) => (
@@ -119,7 +119,7 @@ export default function Hero() {
 
           {/* Right Side - 40% Form */}
           <div id="hero-form" className="bg-crisp-white p-8 rounded-2xl shadow-xl">
-            <h2 className="text-2xl font-bold text-deep-navy mb-6 text-center uppercase tracking-wider">
+            <h2 className="text-2xl font-montserrat font-bold text-deep-navy mb-6 text-center uppercase tracking-header">
               Get Your Free Estimate
             </h2>
             
@@ -192,7 +192,7 @@ export default function Hero() {
               
               <button
                 type="submit"
-                className="w-full bg-olive-green text-crisp-white py-4 rounded-lg font-bold text-lg hover:bg-sage transition uppercase tracking-wider"
+                className="w-full bg-olive-green text-crisp-white py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-sage transition uppercase tracking-header"
               >
                 Get Free Quote
               </button>

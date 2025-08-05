@@ -28,7 +28,7 @@ export default function ContactForm() {
     <section id="contact-form" className="py-20 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-deep-navy uppercase tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-montserrat font-extrabold text-center mb-12 text-deep-navy uppercase tracking-header">
             Get Your Free Quote
           </h2>
           

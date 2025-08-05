@@ -6,7 +6,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 bg-cream">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-deep-navy mb-4 uppercase tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-montserrat font-extrabold text-deep-navy mb-4 uppercase tracking-header">
             What Our Customers Say
           </h2>
           <p className="text-xl text-cool-gray font-light">

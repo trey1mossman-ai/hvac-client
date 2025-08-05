@@ -20,7 +20,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           />
         </div>
         <div className="p-6">
-          <h3 className="text-xl font-bold mb-3 text-deep-navy uppercase tracking-wider">
+          <h3 className="text-xl font-montserrat font-bold mb-3 text-deep-navy uppercase tracking-header">
             {service.name}
           </h3>
           <p className="text-cool-gray mb-4 font-light">
@@ -34,7 +34,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
               </li>
             ))}
           </ul>
-          <button className="w-full bg-olive-green text-crisp-white py-3 rounded-lg font-bold text-sm hover:bg-sage transition group-hover:bg-sage uppercase tracking-wider">
+          <button className="w-full bg-olive-green text-crisp-white py-3 rounded-lg font-montserrat font-bold text-sm hover:bg-sage transition group-hover:bg-sage uppercase tracking-header">
             Get Free {service.name} Quote
           </button>
         </div>

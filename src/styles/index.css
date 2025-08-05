@@ -1,15 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-soft-taupe text-cool-gray font-montserrat;
+  html {
+    font-family: 'Montserrat', sans-serif;
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  body {
+    @apply bg-soft-taupe text-cool-gray font-montserrat font-normal;
+  }
+  
+  h1 {
+    @apply text-deep-navy font-extrabold uppercase tracking-header;
+  }
+  
+  h2 {
+    @apply text-deep-navy font-extrabold uppercase tracking-header;
+  }
+  
+  h3, h4, h5, h6 {
     @apply text-deep-navy font-bold uppercase tracking-wider;
+  }
+  
+  button {
+    @apply font-montserrat font-bold;
+  }
+  
+  .logo {
+    @apply font-black;
   }
 }
