@@ -4,10 +4,18 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Phone, ArrowRight, Clock, Shield, Award } from 'lucide-react';
 import { services } from '../../data/services';
 import { companyInfo } from '../../data/company';
+import { getServiceFAQs } from '../../data/faqs';
 
 export default function ServiceDetail() {
   const { slug } = useParams();
-  const service = services.find(s => s.slug === slug);
+  const location = window.location.pathname.slice(1); // Remove leading slash
+  
+  // Try to find service by slug from params or by matching the pathname
+  const service = services.find(s => 
+    s.slug === slug || 
+    s.slug === location || 
+    s.url === window.location.pathname
+  );
 
   const [formData, setFormData] = useState({
     name: '',
@@ -41,13 +49,33 @@ export default function ServiceDetail() {
     { step: '4', title: 'Expert Installation', description: 'Professional installation with warranty' }
   ];
 
-  const faqs = [
-    { q: `How long does ${service.name.toLowerCase()} installation take?`, a: 'Most installations are completed in 1-3 days depending on the project size.' },
-    { q: `Is ${service.name.toLowerCase()} good for basements?`, a: 'Yes! Our waterproof options are perfect for Chicago basements.' },
-    { q: 'Do you move furniture?', a: 'Yes, we offer furniture moving services as part of our installation package.' },
-    { q: 'What warranty do you offer?', a: 'We provide a 5-year installation warranty on all flooring projects.' },
-    { q: 'Do you offer financing?', a: 'Yes, we offer flexible financing options with approved credit.' }
+  const serviceFaqs = getServiceFAQs(service.id);
+  
+  // Fallback FAQs if service doesn't have specific ones
+  const defaultFaqs = [
+    { 
+      question: `How long does ${service.name.toLowerCase()} installation take?`, 
+      answer: 'Most installations are completed in 1-3 days depending on the project size and complexity. We\'ll provide a detailed timeline during your free consultation.' 
+    },
+    { 
+      question: `Is ${service.name.toLowerCase()} suitable for my home?`, 
+      answer: `Our flooring experts will assess your specific needs during a free consultation to ensure ${service.name.toLowerCase()} is the perfect choice for your space and lifestyle.` 
+    },
+    { 
+      question: 'Do you move furniture?', 
+      answer: 'Yes, we offer professional furniture moving services as part of our comprehensive installation package to ensure a smooth, hassle-free experience.' 
+    },
+    { 
+      question: 'What warranty do you offer?', 
+      answer: 'We provide a 5-year installation warranty on all flooring projects, plus manufacturer warranties on materials. Your investment is fully protected.' 
+    },
+    { 
+      question: 'Do you offer financing?', 
+      answer: 'Yes, we offer flexible financing options with approved credit, making it easy to get the beautiful floors you want with manageable monthly payments.' 
+    }
   ];
+  
+  const faqs = serviceFaqs.length > 0 ? serviceFaqs : defaultFaqs;
 
   return (
     <>
@@ -278,8 +306,8 @@ export default function ServiceDetail() {
           <div className="max-w-3xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-crisp-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-bold text-deep-navy mb-2">{faq.q}</h3>
-                <p className="text-cool-gray">{faq.a}</p>
+                <h3 className="text-lg font-bold text-deep-navy mb-2">{faq.question}</h3>
+                <p className="text-cool-gray">{faq.answer}</p>
               </div>
             ))}
           </div>

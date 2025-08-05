@@ -100,18 +100,18 @@ export default function Hero() {
               <span className="text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider">
                 WE ARE{' '}
               </span>
-              <div className="inline-block relative h-10 overflow-hidden align-middle" style={{ minWidth: '280px' }}>
+              <div className="rotating-words-container">
                 <div
-                  className="absolute left-0 transition-transform duration-700 ease-in-out"
-                  style={{ transform: `translateY(-${rotatingText * 100}%)` }}
+                  className="rotating-words-inner"
+                  style={{ transform: `translateY(-${rotatingText * 40}px)` }}
                 >
                   {rotatingWords.map((word) => (
-                    <div
+                    <span
                       key={word}
-                      className="h-10 flex items-center text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider"
+                      className="rotating-word text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider"
                     >
                       {word}
-                    </div>
+                    </span>
                   ))}
                 </div>
               </div>

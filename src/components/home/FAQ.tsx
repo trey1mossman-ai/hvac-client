@@ -3,28 +3,36 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'How long does flooring installation take?',
-    answer: 'Most residential projects take 1-3 days depending on the size and type of flooring. We\'ll provide a detailed timeline during your free consultation.'
+    question: 'What flooring is best for Chicago homes?',
+    answer: 'For Chicago\'s climate, we recommend waterproof luxury vinyl for basements, porcelain tile for entryways and bathrooms, and engineered hardwood for main living areas. Each handles our temperature and humidity changes well.'
+  },
+  {
+    question: 'How much does flooring installation cost?',
+    answer: 'Costs vary by material and project size. Vinyl starts around $2.99/sq ft, laminate from $3.49/sq ft, and hardwood from $6.99/sq ft installed. We provide free, detailed quotes with no hidden fees.'
   },
   {
     question: 'Do you offer financing?',
-    answer: 'Yes, we offer flexible financing options through our partners. We can discuss payment plans during your consultation.'
+    answer: 'Yes! We offer 0% interest financing for 12 months with approved credit, plus longer-term options. Many projects can be completed for less than $100/month.'
+  },
+  {
+    question: 'How long does installation take?',
+    answer: 'Most homes are completed in 1-3 days. We work efficiently to minimize disruption while ensuring perfect installation. Larger projects or intricate patterns may take longer.'
+  },
+  {
+    question: 'Do you move furniture and remove old flooring?',
+    answer: 'Absolutely! Our full-service installation includes furniture moving, old flooring removal, and disposal. We handle everything so you don\'t have to lift a finger.'
+  },
+  {
+    question: 'What warranty do you provide?',
+    answer: 'We offer a 5-year installation warranty covering any installation-related issues. This is in addition to manufacturer warranties which typically range from 15-30 years.'
+  },
+  {
+    question: 'Can you match flooring from big box stores?',
+    answer: 'Yes! We can install flooring you\'ve purchased elsewhere, though we also offer competitive pricing on premium materials with better warranties than retail stores.'
   },
   {
     question: 'Are you licensed and insured?',
-    answer: 'Absolutely! We\'re fully licensed, bonded, and insured. We\'re happy to provide documentation upon request.'
-  },
-  {
-    question: 'Do you remove old flooring?',
-    answer: 'Yes, we handle complete removal and disposal of your old flooring. This service is included in our quotes.'
-  },
-  {
-    question: 'What areas do you serve?',
-    answer: 'We serve Chicago and surrounding suburbs including Oak Park, Evanston, Skokie, Naperville, and more. Call to confirm we serve your area.'
-  },
-  {
-    question: 'Do you offer warranties?',
-    answer: 'Yes! We provide a 5-year installation warranty on all our work, plus manufacturer warranties on materials.'
+    answer: 'Yes, we\'re fully licensed, bonded, and insured. We carry $2 million in liability insurance and all our installers are covered by workers\' compensation.'
   }
 ];
 
