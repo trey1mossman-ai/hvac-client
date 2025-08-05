@@ -9,9 +9,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Link 
       to={service.url}
-      className="block group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+      className="block group service-card hover:shadow-2xl transition-all duration-300"
     >
-      <div className="bg-crisp-white rounded-lg shadow-md h-full overflow-hidden">
+      <div className="bg-crisp-white rounded-lg shadow-md h-full overflow-hidden flex flex-col">
         <div className="h-48 overflow-hidden">
           <img 
             src={service.image} 
@@ -19,7 +19,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           />
         </div>
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-xl font-montserrat font-bold mb-3 text-deep-navy uppercase tracking-header">
             {service.name}
           </h3>
@@ -34,7 +34,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
               </li>
             ))}
           </ul>
-          <button className="w-full bg-olive-green text-crisp-white py-3 rounded-lg font-montserrat font-bold text-sm hover:bg-sage transition group-hover:bg-sage uppercase tracking-header">
+          <button className="w-full bg-olive-green text-crisp-white py-3 rounded-lg font-montserrat font-bold text-sm hover:bg-sage transition-all duration-300 uppercase tracking-header mt-auto cta-button">
             Get Free {service.name} Quote
           </button>
         </div>

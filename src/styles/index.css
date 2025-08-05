@@ -5,6 +5,12 @@
 @tailwind utilities;
 
 @layer base {
+  /* Consistent section spacing */
+  section {
+    @apply py-20;
+  }
+  
+
   html {
     font-family: 'Montserrat', sans-serif;
   }
@@ -31,5 +37,10 @@
   
   .logo {
     @apply font-black;
+  }
+  
+  /* Container styles */
+  .container {
+    @apply max-w-7xl;
   }
 }

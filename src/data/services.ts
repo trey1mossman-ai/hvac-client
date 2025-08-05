@@ -14,7 +14,7 @@ export const services: Service[] = [
   {
     id: 'vinyl-flooring',
     slug: 'luxury-vinyl-flooring-installation-chicago-il',
-    url: '/luxury-vinyl-flooring-installation-chicago-il/',
+    url: '/luxury-vinyl-flooring-installation-chicago-il',
     name: 'Luxury Vinyl Plank & Tile',
     description: 'Waterproof flooring perfect for Chicago homes. Looks like real wood or stone.',
     features: ['100% Waterproof', 'Pet-Friendly', '25-Year Warranty', 'Scratch Resistant'],
@@ -25,7 +25,7 @@ export const services: Service[] = [
   {
     id: 'tile-installation',
     slug: 'tile-installation-chicago-il',
-    url: '/tile-installation-chicago-il/',
+    url: '/tile-installation-chicago-il',
     name: 'Tile Installation',
     description: 'Ceramic, porcelain, and natural stone tile for kitchens, bathrooms, and floors.',
     features: ['Waterproof', 'Easy to Clean', 'Timeless Style', 'Increases Home Value'],
@@ -36,7 +36,7 @@ export const services: Service[] = [
   {
     id: 'hardwood-floors',
     slug: 'hardwood-floor-installation-chicago-il',
-    url: '/hardwood-floor-installation-chicago-il/',
+    url: '/hardwood-floor-installation-chicago-il',
     name: 'Hardwood Flooring',
     description: 'Beautiful solid and engineered hardwood installation, refinishing, and repair.',
     features: ['Timeless Beauty', 'Adds Home Value', 'Can Be Refinished', 'Lasts Decades'],
@@ -47,7 +47,7 @@ export const services: Service[] = [
   {
     id: 'laminate-flooring',
     slug: 'laminate-flooring-installation-chicago-il',
-    url: '/laminate-flooring-installation-chicago-il/',
+    url: '/laminate-flooring-installation-chicago-il',
     name: 'Laminate Flooring',
     description: 'Durable, cost-effective laminate that looks like real wood or stone.',
     features: ['Budget-Friendly', 'Scratch Resistant', 'Easy Maintenance', 'Quick Installation'],
@@ -58,7 +58,7 @@ export const services: Service[] = [
   {
     id: 'carpet-tile',
     slug: 'carpet-tile-installation-chicago-il',
-    url: '/carpet-tile-installation-chicago-il/',
+    url: '/carpet-tile-installation-chicago-il',
     name: 'Carpet Tile Installation',
     description: 'Commercial-grade carpet tiles for offices and high-traffic areas.',
     features: ['Easy to Replace', 'Durable', 'Sound Absorbing', 'Professional Look'],
@@ -69,7 +69,7 @@ export const services: Service[] = [
   {
     id: 'backsplash',
     slug: 'backsplash-installation-chicago-il',
-    url: '/backsplash-installation-chicago-il/',
+    url: '/backsplash-installation-chicago-il',
     name: 'Backsplash Installation',
     description: 'Transform your kitchen with a beautiful tile backsplash.',
     features: ['Protects Walls', 'Easy to Clean', 'Adds Style', 'Quick Installation'],
@@ -80,7 +80,7 @@ export const services: Service[] = [
   {
     id: 'shower-tile',
     slug: 'shower-tile-installation-chicago-il',
-    url: '/shower-tile-installation-chicago-il/',
+    url: '/shower-tile-installation-chicago-il',
     name: 'Shower Tile Installation',
     description: 'Waterproof shower installations with beautiful tile work.',
     features: ['Fully Waterproof', 'Custom Designs', 'Built-in Shelves', 'Lifetime Warranty'],
@@ -91,7 +91,7 @@ export const services: Service[] = [
   {
     id: 'stone-tile',
     slug: 'stone-tile-installation-chicago-il',
-    url: '/stone-tile-installation-chicago-il/',
+    url: '/stone-tile-installation-chicago-il',
     name: 'Natural Stone Installation',
     description: 'Marble, granite, travertine, and slate installation by experts.',
     features: ['Natural Beauty', 'Unique Patterns', 'Extremely Durable', 'Luxury Appeal'],

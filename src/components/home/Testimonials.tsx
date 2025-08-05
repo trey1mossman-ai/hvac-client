@@ -18,7 +18,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-crisp-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-crisp-white rounded-lg p-8 shadow-md hover:shadow-xl transition-all duration-300 testimonial-card"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (

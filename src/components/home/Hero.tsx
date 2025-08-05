@@ -96,24 +96,25 @@ export default function Hero() {
             </div>
             
             {/* Rotating Text */}
-            <div className="text-3xl md:text-4xl font-montserrat font-black text-warm-wood uppercase tracking-wider">
-              WE ARE{' '}
-              <span className="inline-block relative h-12" style={{ minWidth: '300px' }}>
-                {rotatingWords.map((word, index) => (
-                  <span
-                    key={word}
-                    className={`absolute left-0 top-0 transition-all duration-500 ${
-                      index === rotatingText
-                        ? 'opacity-100 transform translate-y-0'
-                        : index < rotatingText
-                        ? 'opacity-0 transform -translate-y-full'
-                        : 'opacity-0 transform translate-y-full'
-                    }`}
-                  >
-                    {word}
-                  </span>
-                ))}
+            <div className="mt-8">
+              <span className="text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider">
+                WE ARE{' '}
               </span>
+              <div className="inline-block relative h-10 overflow-hidden align-middle" style={{ minWidth: '280px' }}>
+                <div
+                  className="absolute left-0 transition-transform duration-700 ease-in-out"
+                  style={{ transform: `translateY(-${rotatingText * 100}%)` }}
+                >
+                  {rotatingWords.map((word, index) => (
+                    <div
+                      key={word}
+                      className="h-10 flex items-center text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider"
+                    >
+                      {word}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -132,7 +133,7 @@ export default function Hero() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -144,7 +145,7 @@ export default function Hero() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -156,7 +157,7 @@ export default function Hero() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -168,7 +169,7 @@ export default function Hero() {
                   required
                   value={formData.zipCode}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 />
               </div>
               
@@ -178,7 +179,7 @@ export default function Hero() {
                   required
                   value={formData.serviceType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent font-montserrat"
+                  className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-montserrat bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 >
                   <option value="">Select Service Type *</option>
                   {services.slice(0, 5).map((service) => (

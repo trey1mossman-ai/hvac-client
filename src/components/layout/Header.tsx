@@ -34,11 +34,11 @@ export default function Header() {
   }, [location]);
 
   const navigationItems = [
-    { name: 'Vinyl', url: '/luxury-vinyl-flooring-installation-chicago-il/' },
-    { name: 'Laminate', url: '/laminate-flooring-installation-chicago-il/' },
-    { name: 'Hardwood', url: '/hardwood-floor-installation-chicago-il/' },
-    { name: 'Tile', url: '/tile-installation-chicago-il/' },
-    { name: 'Showers', url: '/shower-tile-installation-chicago-il/' },
+    { name: 'Vinyl', url: '/luxury-vinyl-flooring-installation-chicago-il' },
+    { name: 'Laminate', url: '/laminate-flooring-installation-chicago-il' },
+    { name: 'Hardwood', url: '/hardwood-floor-installation-chicago-il' },
+    { name: 'Tile', url: '/tile-installation-chicago-il' },
+    { name: 'Showers', url: '/shower-tile-installation-chicago-il' },
     { name: 'About', url: '#about', isAnchor: true },
     { name: 'FAQ', url: '#faq', isAnchor: true },
   ];
@@ -58,7 +58,7 @@ export default function Header() {
                   key={item.name}
                   href={item.url}
                   onClick={(e) => handleSmoothScroll(e, item.url.substring(1))}
-                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header"
+                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header nav-item"
                 >
                   {item.name}
                 </a>
@@ -66,7 +66,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header"
+                  className="text-crisp-white hover:text-sage transition font-montserrat font-semibold text-sm uppercase tracking-header nav-item"
                 >
                   {item.name}
                 </Link>
