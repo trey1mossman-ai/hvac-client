@@ -28,51 +28,25 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.21",
-    "basic-ftp": "^5.0.5",
-    "chalk": "^4.1.2",
-    "dotenv": "^16.4.5",
-    "glob-promise": "^6.0.7",
     "lucide-react": "^0.536.0",
-    "next": "^15.4.5",
-    "ora": "^5.4.1",
-    "postcss": "^8.5.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.7.1",
-    "tailwindcss": "^3.4.17"
+    "react-router-dom": "^7.7.1"
   },
   "devDependencies": {
-    "@types/node": "^24.2.0",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^4.7.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^13.0.0",
-    "html-webpack-plugin": "^5.6.3",
-    "ts-loader": "^9.5.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2",
-    "vite": "^7.0.6",
-    "webpack": "^5.101.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "vite": "^7.0.6"
   },
-  "config": {
-    "deployment": {
-      "host": "185.212.71.198",
-      "remotePath": "/public_html",
-      "localPath": "./",
-      "backupRetention": 7
-    }
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://supplyside-flooring.com"
-  },
-  "homepage": "https://mediumblue-chamois-837591.hostingersite.com",
+  "homepage": "https://supplysideflooringinstallation.com",
   "bugs": {
-    "url": "mailto:contact@supplyside-flooring.com"
+    "url": "https://github.com/trey1mossman-ai/SupplySide/issues"
   },
   "type": "module"
 }

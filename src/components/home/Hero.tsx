@@ -105,7 +105,7 @@ export default function Hero() {
                   className="absolute left-0 transition-transform duration-700 ease-in-out"
                   style={{ transform: `translateY(-${rotatingText * 100}%)` }}
                 >
-                  {rotatingWords.map((word, index) => (
+                  {rotatingWords.map((word) => (
                     <div
                       key={word}
                       className="h-10 flex items-center text-2xl md:text-3xl font-montserrat font-bold text-warm-wood uppercase tracking-wider"
