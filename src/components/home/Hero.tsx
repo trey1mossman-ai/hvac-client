@@ -13,7 +13,7 @@ export default function Hero() {
   });
 
   const [rotatingText, setRotatingText] = useState(0);
-  const rotatingWords = ['RELIABLE', 'PROFESSIONAL', 'COURTEOUS'];
+  const rotatingWords = ['RELIABLE', 'PROFESSIONAL', 'COURTEOUS', 'EXPERIENCED'];
 
   useEffect(() => {
     const interval = setInterval(() => {
