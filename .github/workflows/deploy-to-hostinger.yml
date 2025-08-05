@@ -2,43 +2,50 @@ name: Deploy to Hostinger
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   workflow_dispatch:
+
+concurrency:
+  group: "deploy-prod"
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 15
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Deploy website files only
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        protocol: ftp
-        port: 21
-        local-dir: ./
-        server-dir: /public_html/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/.github/**
-          **/.env*
-          **/*.md
-          **/deployment/**
-          **/backups/**
-          **/scripts/**
-          **/src/**
-          **/.DS_Store
-          **/Thumbs.db
-          **/*.log
-          **/package*.json
-          **/tsconfig.json
-          **/webpack.config.js
-          **/*.ts
-          **/test.html
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Deploy website files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: ${{ secrets.FTP_PORT || 21 }}
+          local-dir: ./
+          server-dir: public_html/
+          state-name: ftp-deploy-sync-state.json
+          log-level: verbose
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/*.log
+            **/.env*
+            **/node_modules/**
+            **/deployment/**
+            **/backups/**
+            **/scripts/**
+            **/*.md
+            **/package*.json
+            **/tsconfig.json
+            **/webpack.config.js
+            **/*.ts
+            **/test.html
+            **/src/**
