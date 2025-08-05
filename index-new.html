@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chicago's most reliable flooring installation. Professional vinyl plank, tile, hardwood, and carpet installation. Combined 80+ years experience. Licensed, insured, bonded. Call 312-210-0606 for free estimate.">
+    <meta name="keywords" content="flooring installation chicago, vinyl plank installation, tile installation chicago, hardwood floors chicago, carpet tile installation, shower installation chicago, backsplash installation">
+    <title>SupplySide Flooring Installation Chicago - Chicago's Most Reliable Flooring Installation</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SupplySide Flooring Installation Chicago - Chicago's Most Reliable">
+    <meta property="og:description" content="80+ years combined experience. Licensed, insured, bonded. We show up on time and do what we say we'll do. Call 312-210-0606 for free estimate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supplysideflooringinstallation.com">
+    <meta property="og:image" content="https://supplysideflooringinstallation.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - Montserrat optimized loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Additional Styles for Complete Homepage -->
+    <style>
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: var(--cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .testimonials-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--deep-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--cool-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .testimonial-card {
+            background: var(--crisp-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-light);
+            transition: all var(--transition-medium);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--cool-gray);
+            margin-bottom: var(--spacing-lg);
+            font-style: italic;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--olive-green);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: 2px;
+        }
+
+        .testimonial-title {
+            font-size: 0.9rem;
+            color: var(--cool-gray);
+        }
+
+        .testimonial-company {
+            font-size: 0.9rem;
+            color: var(--olive-green);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 2px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .star {
+            color: #f39c12;
+            font-size: 1.2rem;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .services-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .service-card {
+            background: var(--crisp-white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            transition: all var(--transition-medium);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            transform: translateX(-100%);
+            transition: transform var(--transition-medium);
+        }
+
+        .service-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--spacing-md);
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--crisp-white);
+            font-size: 1.5rem;
+            transition: all var(--transition-medium);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-name {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .service-description {
+            font-size: 0.95rem;
+            color: var(--cool-gray);
+            line-height: 1.5;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .service-price {
+            font-size: 0.9rem;
+            color: var(--olive-green);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .about-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .about-text {
+            padding-right: var(--spacing-xl);
+        }
+
+        .about-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--deep-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--cool-gray);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .about-features {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .about-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--olive-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--crisp-white);
+            flex-shrink: 0;
+        }
+
+        .about-feature-text {
+            flex: 1;
+        }
+
+        .about-feature-title {
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: 2px;
+        }
+
+        .about-feature-desc {
+            font-size: 0.95rem;
+            color: var(--cool-gray);
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--deep-navy);
+            color: var(--crisp-white);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about-badge-number {
+            font-size: 2rem;
+            font-weight: var(--font-weight-black);
+            display: block;
+        }
+
+        .about-badge-text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .faq-list {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .faq-item {
+            background: var(--crisp-white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        .faq-question {
+            padding: var(--spacing-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all var(--transition-fast);
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            background-color: var(--cream);
+        }
+
+        .faq-icon {
+            transition: transform var(--transition-fast);
+            color: var(--olive-green);
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-lg);
+            max-height: 0;
+            overflow: hidden;
+            transition: all var(--transition-medium);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: var(--deep-navy);
+            color: var(--crisp-white);
+            padding: var(--spacing-2xl) 0 var(--spacing-lg);
+        }
+
+        .footer-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-company {
+            padding-right: var(--spacing-xl);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: var(--font-weight-black);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-md);
+            color: var(--crisp-white);
+        }
+
+        .footer-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        .footer-certifications {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .certification-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            font-size: 0.85rem;
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1rem;
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+            color: var(--light-oak);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-link {
+            color: var(--crisp-white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+            transform: translateX(4px);
+            color: var(--light-oak);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.95rem;
+        }
+
+        .footer-contact-item svg {
+            color: var(--light-oak);
+            flex-shrink: 0;
+        }
+
+        .footer-map {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-md);
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+            color: var(--crisp-white);
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: var(--font-weight-extrabold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .footer-company {
+                grid-column: 1 / -1;
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .about-text {
+                padding-right: 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SupplySide Flooring Installation Chicago",
+        "description": "Chicago's most reliable flooring installation contractor with 80+ years combined experience",
+        "image": "https://supplysideflooringinstallation.com/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1111 W 35th Street",
+            "addressLocality": "Chicago",
+            "addressRegion": "IL",
+            "postalCode": "60609"
+        },
+        "telephone": "312-210-0606",
+        "email": "matt.o.lee@gmail.com",
+        "url": "https://supplysideflooringinstallation.com",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 07:00-19:00, Sa 08:00-17:00",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "127"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.8314",
+            "longitude": "-87.6558"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Chicago"
+            },
+            {
+                "@type": "City",
+                "name": "Evanston"
+            },
+            {
+                "@type": "City",
+                "name": "Oak Park"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Flooring Installation Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Vinyl Plank & Vinyl Tile Installation",
+                        "description": "Waterproof luxury vinyl plank and tile installation for Chicago homes and businesses"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Laminate Flooring Installation",
+                        "description": "Professional laminate flooring installation with moisture-resistant options"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Hardwood Floor Installation",
+                        "description": "Expert hardwood installation and refinishing by certified professionals"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ceramic & Porcelain Tile Installation",
+                        "description": "Professional tile installation for floors, walls, and backsplashes"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Sticky Header -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <div class="header-logo">
+                <span class="logo-text">SUPPLYSIDE</span>
+            </div>
+            
+            <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="nav-link">Vinyl</a>
+                <a href="/laminate-flooring-installation-chicago-il/" class="nav-link">Laminate</a>
+                <a href="/hardwood-floor-installation-chicago-il/" class="nav-link">Hardwood</a>
+                <a href="/tile-installation-chicago-il/" class="nav-link">Tile</a>
+                <a href="/shower-tile-installation-chicago-il/" class="nav-link">Showers</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="tel:3122100606" class="header-phone" aria-label="Call us at 312-210-0606">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    312-210-0606
+                </a>
+                <a href="#estimate-form" class="btn btn-header">Get Free Estimate</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home" role="banner">
+        <div class="hero-background">
+            <div class="hero-image"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Left Side: Content (60%) -->
+                <div class="hero-text">
+                    <h1 class="hero-headline">
+                        CHICAGO'S MOST RELIABLE<br>
+                        FLOORING INSTALLATION
+                    </h1>
+                    
+                    <p class="hero-subheadline">
+                        Combined 80+ Years of Professional Installation Across Chicagoland
+                    </p>
+                    
+                    <div class="trust-signals">
+                        <div class="trust-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                            </svg>
+                            <span>Licensed</span>
+                        </div>
+                        <div class="trust-divider">•</div>
+                        <div class="trust-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span>Insured</span>
+                        </div>
+                        <div class="trust-divider">•</div>
+                        <div class="trust-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                            </svg>
+                            <span>Bonded</span>
+                        </div>
+                        <div class="trust-divider">•</div>
+                        <div class="trust-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM20 22v-6h2.5L20 11.5V9c0-1.1-.9-2-2-2h-3c-1.1 0-2 .9-2 2v2.5L10.5 16H13v6h2v-6h3v6h2zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zm1.5 1.5h1v4.5H9V13h1v3.5h3v-3.5z"/>
+                            </svg>
+                            <span>Family Owned</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta-group">
+                        <a href="#estimate-form" class="btn btn-primary btn-large">
+                            Get Free Estimate
+                        </a>
+                        <a href="#testimonials" class="btn btn-secondary btn-large">
+                            See Our Work
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Form (40%) -->
+                <div class="hero-form-wrapper">
+                    <form id="estimate-form" class="hero-form" novalidate aria-label="Free estimate request form">
+                        <div class="form-header">
+                            <h2 class="form-title">Get Your Free Estimate</h2>
+                            <p class="form-subtitle">Professional installation in 1-2 weeks</p>
+                        </div>
+                        
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name*</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="name-error"
+                                    autocomplete="name"
+                                >
+                                <span class="form-error" id="name-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number*</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="form-input"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="phone-error"
+                                    autocomplete="tel"
+                                >
+                                <span class="form-error" id="phone-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address*</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="email-error"
+                                    autocomplete="email"
+                                >
+                                <span class="form-error" id="email-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="zipcode" class="form-label">Zip Code*</label>
+                                <input 
+                                    type="text" 
+                                    id="zipcode" 
+                                    name="zipcode" 
+                                    class="form-input"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="zipcode-error"
+                                    autocomplete="postal-code"
+                                    maxlength="5"
+                                    pattern="[0-9]{5}"
+                                >
+                                <span class="form-error" id="zipcode-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service-type" class="form-label">Service Type*</label>
+                                <select 
+                                    id="service-type" 
+                                    name="service-type" 
+                                    class="form-select"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="service-error"
+                                >
+                                    <option value="">Select service type</option>
+                                    <option value="vinyl-plank-tile">Vinyl Plank & Vinyl Tile</option>
+                                    <option value="laminate">Laminate Flooring</option>
+                                    <option value="hardwood">Hardwood Installation</option>
+                                    <option value="ceramic-porcelain">Ceramic & Porcelain Tile</option>
+                                    <option value="carpet-tile">Carpet Tile</option>
+                                    <option value="stone-tile">Stone Tile</option>
+                                    <option value="shower-installation">Shower Installation</option>
+                                    <option value="backsplash">Backsplash Installation</option>
+                                </select>
+                                <span class="form-error" id="service-error" role="alert"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-submit btn-large">
+                                <span class="btn-text">Get Free Quote</span>
+                                <span class="btn-loader" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <p class="form-call-text">
+                                Or call now: 
+                                <a href="tel:3122100606" class="form-phone-link">
+                                    312-210-0606
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Scrolling Text Animation -->
+            <div class="hero-footer">
+                <div class="scrolling-text-container">
+                    <div class="scrolling-text" id="scrolling-words" aria-live="polite">
+                        RELIABLE
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <main id="main">
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="testimonials-container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-subtitle">Real reviews from Chicago homeowners and property managers</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-quote">
+                            "Finally, a flooring contractor who actually shows up on time! SupplySide installed vinyl plank throughout our 3-unit building. Professional, clean, and finished ahead of schedule. Matt personally checked in daily. This is how contracting should be done."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Ziggy Durda</div>
+                                <div class="testimonial-title">Property Manager</div>
+                                <div class="testimonial-company">Refined Realty</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-quote">
+                            "As a general contractor, I need reliable subs. SupplySide has become my go-to for all flooring. They handle my clients professionally, keep job sites clean, and most importantly - they answer their phones! Highly recommend for any Chicago project."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Rebecca Maxwell</div>
+                                <div class="testimonial-title">Owner</div>
+                                <div class="testimonial-company">TR Contracting</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-quote">
+                            "Don installed hardwood floors in our Lincoln Park home. His 48 years of experience really shows - perfect cuts, seamless transitions, and beautiful results. Fair pricing and no surprise costs. Will definitely use again!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Pam Williams</div>
+                                <div class="testimonial-title">Homeowner</div>
+                                <div class="testimonial-company">Lincoln Park</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Flooring Services</h2>
+                    <p class="section-subtitle">Professional installation for every type of flooring</p>
+                </div>
+                
+                <div class="services-grid">
+                    <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 4h16v2H4zm0 3h16v2H4zm0 3h16v2H4zm0 3h16v2H4zm0 3h16v2H4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Vinyl Plank & Tile</h3>
+                        <p class="service-description">Waterproof luxury vinyl solutions perfect for Chicago's climate. Durable, stylish, and easy to maintain.</p>
+                        <p class="service-price">Starting from $6,500</p>
+                    </a>
+                    
+                    <a href="/laminate-flooring-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l2 5h5l-4 3.5L17 16l-5-3.5L7 16l2-5.5L5 7h5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Laminate Flooring</h3>
+                        <p class="service-description">Affordable wood-look flooring with superior durability. Scratch-resistant and perfect for busy households.</p>
+                        <p class="service-price">Starting from $5,500</p>
+                    </a>
+                    
+                    <a href="/hardwood-floor-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Hardwood Installation</h3>
+                        <p class="service-description">Classic elegance with expert installation. NWFA certified installers ensure perfect results every time.</p>
+                        <p class="service-price">Starting from $12,000</p>
+                    </a>
+                    
+                    <a href="/tile-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Ceramic & Porcelain</h3>
+                        <p class="service-description">Versatile tile solutions for kitchens, bathrooms, and entryways. Water-resistant and low maintenance.</p>
+                        <p class="service-price">Starting from $8,000</p>
+                    </a>
+                    
+                    <a href="/carpet-tile-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 4v3h4V4h7v7h-3v4h3v7h-7v-3h-4v3H3v-7h3v-4H3V4h7zm4 5h-4v6h4V9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Carpet Tile</h3>
+                        <p class="service-description">Commercial-grade modular carpet perfect for offices and high-traffic areas. Easy to replace individual tiles.</p>
+                        <p class="service-price">Starting from $7,000</p>
+                    </a>
+                    
+                    <a href="/stone-tile-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 9l-7-7-7 7v11h14V9zm-9 8H8v-2h3v2zm0-4H8v-2h3v2zm5 4h-3v-2h3v2zm0-4h-3v-2h3v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Stone Tile</h3>
+                        <p class="service-description">Luxury natural stone including marble, granite, and travertine. Timeless beauty for discerning homeowners.</p>
+                        <p class="service-price">Starting from $15,000</p>
+                    </a>
+                    
+                    <a href="/shower-tile-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 17c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1zm3-1c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm4 0c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm3-13v1H5V3h14m0-2H5c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h1v6h12v-6h1c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Shower Installation</h3>
+                        <p class="service-description">Complete waterproof shower systems with custom tile work. Transform your bathroom into a spa retreat.</p>
+                        <p class="service-price">Starting from $5,000</p>
+                    </a>
+                    
+                    <a href="/backsplash-installation-chicago-il/" class="service-card">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5h2v3H8zm0 7h2v5H8zm4-7h2v5h-2zm0 7h2v3h-2zm4-7h2v3h-2zm0 7h2v5h-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Backsplash</h3>
+                        <p class="service-description">Quick kitchen upgrades with tile or stone backsplashes. Same-day service available for smaller projects.</p>
+                        <p class="service-price">Starting from $2,500</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-title">Family Owned, Chicago Proud</h2>
+                        <p class="about-description">
+                            SupplySide Flooring Installation isn't just another contractor - we're your neighbors. 
+                            With over 80 years of combined experience, our family-operated business has built a 
+                            reputation on one simple promise: We show up on time and do what we say we'll do.
+                        </p>
+                        <p class="about-description">
+                            Led by Matt Lee and master installer Don (48 years experience), we've installed 
+                            flooring in thousands of Chicago homes and businesses. From Lincoln Park luxury 
+                            condos to South Side multi-family buildings, we treat every project like it's our own home.
+                        </p>
+                        
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <div class="about-feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="about-feature-text">
+                                    <div class="about-feature-title">Master Craftsmanship</div>
+                                    <div class="about-feature-desc">NWFA certified installers with decades of experience</div>
+                                </div>
+                            </div>
+                            
+                            <div class="about-feature">
+                                <div class="about-feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <div class="about-feature-text">
+                                    <div class="about-feature-title">On-Time Guarantee</div>
+                                    <div class="about-feature-desc">We show up when promised, every single time</div>
+                                </div>
+                            </div>
+                            
+                            <div class="about-feature">
+                                <div class="about-feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                                    </svg>
+                                </div>
+                                <div class="about-feature-text">
+                                    <div class="about-feature-title">Fully Protected</div>
+                                    <div class="about-feature-desc">Licensed, insured, and bonded for your peace of mind</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="images/team-photo.jpg" alt="SupplySide Flooring Installation team">
+                        <div class="about-badge">
+                            <span class="about-badge-number">80+</span>
+                            <span class="about-badge-text">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="faq-container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know about our flooring installation services</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How quickly can you start my flooring project?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We typically schedule installations within 1-2 weeks of approval. For emergency water damage repairs, we offer 24/7 service and can often start the same day. Our scheduling team will work with you to find the most convenient time for your project.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer financing for flooring projects?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer flexible financing options through our partners. We can help you get approved for 0% interest financing for qualified customers, with terms ranging from 6-24 months. We also accept all major credit cards and offer senior citizen discounts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What makes SupplySide different from other contractors?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our reliability sets us apart. We show up on time, answer our phones, and do exactly what we promise. As a family-owned business with 80+ years combined experience, we treat every project with personal attention. Plus, you get the owner's direct phone number - try finding that with other contractors!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you remove old flooring and handle disposal?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Our quotes include complete removal of existing flooring and proper disposal. We handle all aspects of the project from start to finish, including subfloor preparation, moisture testing, and final cleanup. You won't lift a finger.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What areas of Chicago do you serve?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We serve all 77 Chicago community areas plus surrounding suburbs including Evanston, Skokie, Oak Park, River Forest, Oak Lawn, and Orland Park. Based on the South Side, we're centrally located to reach any Chicago-area project quickly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does installation typically take?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most residential projects take 1-3 days depending on square footage and flooring type. We work efficiently without cutting corners. For example: 1,000 sq ft of vinyl plank typically takes 1-2 days, while the same area of hardwood might take 2-3 days. We'll provide a detailed timeline with your quote.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What warranty do you offer on installations?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We provide a comprehensive 5-year installation warranty on all our work, in addition to manufacturer warranties on materials. If any installation-related issues arise, we'll fix them at no charge. Our reputation depends on standing behind our work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta">
+            <div class="cta-container">
+                <h2 class="cta-title">Ready to Transform Your Floors?</h2>
+                <p class="cta-subtitle">Get your free estimate today. No obligations, no high-pressure sales.</p>
+                <div class="cta-buttons">
+                    <a href="#estimate-form" class="btn btn-secondary btn-large">
+                        Get Free Quote
+                    </a>
+                    <a href="tel:3122100606" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call 312-210-0606
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-company">
+                    <div class="footer-logo">SUPPLYSIDE</div>
+                    <p class="footer-description">
+                        Chicago's most reliable flooring installation contractor. Family owned and operated since 1976, 
+                        we've built our reputation on showing up on time and doing what we say we'll do.
+                    </p>
+                    <div class="footer-certifications">
+                        <span class="certification-badge">Licensed</span>
+                        <span class="certification-badge">Insured</span>
+                        <span class="certification-badge">Bonded</span>
+                        <span class="certification-badge">BBB A+</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <div class="footer-links">
+                        <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="footer-link">Vinyl Plank & Tile</a>
+                        <a href="/laminate-flooring-installation-chicago-il/" class="footer-link">Laminate Flooring</a>
+                        <a href="/hardwood-floor-installation-chicago-il/" class="footer-link">Hardwood Installation</a>
+                        <a href="/tile-installation-chicago-il/" class="footer-link">Ceramic & Porcelain</a>
+                        <a href="/shower-tile-installation-chicago-il/" class="footer-link">Shower Installation</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>1111 W 35th Street<br>Chicago, IL 60609</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:3122100606" style="color: inherit; text-decoration: none;">312-210-0606</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:matt.o.lee@gmail.com" style="color: inherit; text-decoration: none;">matt.o.lee@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <div class="footer-map">
+                        <!-- Google Maps iframe would go here -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.826!2d-87.658!3d41.8314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQ5JzUzLjAiTiA4N8KwMzknMjEuMCJX!5e0!3m2!1sen!2sus!4v1635959531949!5m2!1sen!2sus"
+                            width="100%"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SupplySide Flooring Installation Chicago. All rights reserved. 
+                    <a href="/privacy-policy/" style="color: inherit; margin-left: 1rem;">Privacy Policy</a>
+                    <a href="/terms-of-service/" style="color: inherit; margin-left: 1rem;">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    
+    <!-- Additional JavaScript for new sections -->
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

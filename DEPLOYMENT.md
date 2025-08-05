@@ -1,184 +1,287 @@
-# SupplySide Website Deployment Guide
+# SupplySide Flooring Installation - Deployment Guide
 
 ## 🚀 Quick Start
 
-1. **Get your FTP IP from Hostinger hPanel**:
-   - Log into [Hostinger hPanel](https://hpanel.hostinger.com)
-   - Go to **Files → FTP Accounts**
-   - Click on your FTP account
-   - Copy the **FTP IP address** (NOT the domain name!)
-   - It will look like: `185.28.21.XXX` or similar
-
-2. **Update the .env file**:
-   ```bash
-   # Edit .env and replace FTP_HOST with your actual IP
-   FTP_HOST=YOUR_FTP_IP_HERE
-   ```
-
-3. **Install dependencies** (first time only):
-   ```bash
-   npm install
-   ```
-
-4. **Deploy to Hostinger**:
-   ```bash
-   npm run deploy
-   ```
-
-## 📋 Configuration
-
-### Environment Variables (.env)
-```env
-FTP_HOST=148.135.128.145       # Your FTP IP from hPanel
-FTP_PORT=21                     # Use 21 for FTP, 65002 for SFTP (Premium)
-FTP_USER=u921052894.SupplySide # Your username
-FTP_PASS=your_password          # Your FTP password
-FTP_REMOTE_ROOT=/public_html    # Remote directory
-DEBUG_MODE=true                 # Enable verbose logging
-```
-
-### Important Hostinger Requirements
-- ✅ **MUST use FTP IP address** (not domain name)
-- ✅ **Passive mode is REQUIRED**
-- ✅ **Maximum 8 concurrent connections**
-- ✅ **Timeout after 20 seconds of inactivity**
-
-## 🛠️ Deployment Commands
-
 ```bash
-# Standard deployment
+# First time setup
+npm run deploy:setup
+
+# Deploy to Hostinger
 npm run deploy
 
-# Verbose deployment (with debug info)
-npm run deploy:verbose
-
-# Check configuration without deploying
-npm run deploy:check
+# Lost configuration? Recover it
+npm run deploy:discover
 ```
 
-## 🔧 Troubleshooting
+## 📋 Table of Contents
 
-### Common Issues and Solutions
+1. [Hostinger Configuration](#hostinger-configuration)
+2. [FTP Credentials](#ftp-credentials)
+3. [Deployment Process](#deployment-process)
+4. [Troubleshooting](#troubleshooting)
+5. [Recovery Procedures](#recovery-procedures)
+6. [Testing](#testing)
+7. [Rollback](#rollback)
 
-#### 1. Connection Timeout
+## 🔧 Hostinger Configuration
+
+### Hosting Details
+- **Website URL**: https://mediumblue-chamois-837591.hostingersite.com
+- **Server IP**: 185.212.71.198
+- **Server Name**: server648
+- **Server Location**: North America (USA AZ)
+
+### FTP Access Points
+- **Primary FTP IP**: 185.212.71.198
+- **FTP Hostname**: ftp://mediumblue-chamois-837591.hostingersite.com
+- **FTP Port**: 21
+- **SFTP Port**: 65002 (Premium plans only)
+
+### Directory Structure
 ```
-Error: Timeout (control socket)
+When using username: u921052894.SupplySide
+→ Connects directly to: /public_html
+
+When using username: u921052894.mediumblue-chamois-837591.hostingersite.com
+→ Connects to: /home/u921052894/domains/mediumblue-chamois-837591.hostingersite.com/public_html
 ```
-**Solution**: 
-- Verify you're using the FTP IP (not domain)
-- Check firewall isn't blocking port 21
-- Try increasing timeout in .env
 
-#### 2. Authentication Failed (Error 530)
+## 🔑 FTP Credentials
+
+### Environment Variables Required
+Create a `.env` file with:
+
+```env
+# Hostinger FTP Configuration
+FTP_HOST=185.212.71.198
+FTP_PORT=21
+FTP_USER=u921052894.SupplySide
+FTP_PASS=your_ftp_password_here
+
+# Deployment Settings
+REMOTE_PATH=/public_html
+LOCAL_PATH=./
+DEPLOYMENT_MODE=production
 ```
-Error: 530 Login authentication failed
-```
-**Solution**:
-- Check username format: `u12345678` or `u12345678.domain`
-- Verify password is correct
-- Ensure account is active in hPanel
 
-#### 3. Too Many Connections (Error 421)
-```
-Error: 421 Too many connections from this IP
-```
-**Solution**:
-- Wait 5 minutes and try again
-- Reduce `FTP_MAX_CONNECTIONS` in .env
-- Close any FTP clients (FileZilla, etc.)
+### Getting Credentials from Hostinger
+1. Login to [Hostinger hPanel](https://hpanel.hostinger.com)
+2. Navigate to: **Files → FTP Accounts**
+3. Click on your FTP account
+4. Copy the **FTP IP** (not hostname)
+5. Note the username format
 
-#### 4. Can't Open Data Connection
-```
-Error: 425 Can't open data connection
-```
-**Solution**:
-- Ensure passive mode is enabled (it is by default)
-- Check VPN isn't interfering
-- Try from a different network
+⚠️ **IMPORTANT**: Always use the FTP IP address, not the domain name!
 
-### Getting Your FTP IP
+## 📤 Deployment Process
 
-1. **Via hPanel**:
-   ![FTP Details](https://example.com/ftp-details.png)
-   - Navigate to: Files → FTP Accounts
-   - Click on your account
-   - Copy the IP address shown
-
-2. **Via Command Line** (if you know your domain):
-   ```bash
-   # This gives you possible IPs, but use hPanel for the correct one
-   nslookup ftp.yourdomain.com
-   ```
-
-### Manual FTP Test
-
-Test your credentials manually:
+### Step 1: Verify Setup
 ```bash
-# Using curl
-curl -v ftp://u921052894.SupplySide:yourpassword@148.135.128.145/
+npm run deploy:verify
+```
+This checks:
+- ✓ .env file exists
+- ✓ All required variables set
+- ✓ FTP connection works
+- ✓ Remote directory accessible
 
-# Using ftp command (if available)
-ftp 148.135.128.145
-# Then enter username and password when prompted
+### Step 2: Test Connection
+```bash
+npm run deploy:test
+```
+Tests FTP without deploying anything.
+
+### Step 3: Deploy
+```bash
+npm run deploy
 ```
 
-## 📁 What Gets Deployed
+### What Gets Deployed
+```
+Local → Remote
+./index.html → /public_html/index.html
+./about.html → /public_html/about.html
+./css/* → /public_html/css/*
+./js/* → /public_html/js/*
+./images/* → /public_html/images/*
+./fonts/* → /public_html/fonts/*
+```
 
-### Included Files:
-- ✅ `index.html`, `about.html`
-- ✅ All CSS files (`css/`, `styles/`)
-- ✅ All JavaScript (`js/`, `scripts/`)
-- ✅ Images and fonts
-- ✅ `robots.txt`, `sitemap.xml` (if present)
+### Files Excluded
+- .env, .git, node_modules
+- deployment directory
+- *.md files
+- Configuration files
 
-### Excluded Files:
-- ❌ Node modules
-- ❌ Git files
-- ❌ Environment files (.env)
-- ❌ Deployment scripts
-- ❌ Python files
-- ❌ Log files
+## 🔍 Troubleshooting
 
-## 🆘 Still Having Issues?
+### Common Issues & Solutions
 
-1. **Enable debug mode**:
-   ```bash
-   DEBUG_MODE=true npm run deploy
-   ```
+#### 1. "530 Authentication Failed"
+**Cause**: Wrong username/password format
+**Solution**: 
+- Check username format: `u921052894.SupplySide`
+- Verify password has no extra spaces
+- Ensure account is not suspended
 
-2. **Check Hostinger status**:
-   - Visit [Hostinger Status](https://www.hostinger.com/status)
-   - Check if FTP services are operational
+#### 2. "Connection Timeout"
+**Cause**: Wrong FTP host or firewall
+**Solution**:
+- Use IP (185.212.71.198) not domain
+- Check firewall settings
+- Try passive mode
 
-3. **Contact Hostinger Support**:
-   - Live chat in hPanel
-   - Mention: "FTP connection timeout issues"
-   - Provide your FTP IP and username
+#### 3. "550 No Such Directory"
+**Cause**: Wrong remote path
+**Solution**:
+- With u921052894.SupplySide → use `/public_html`
+- Check current directory after login
 
-4. **Alternative deployment methods**:
-   - Use Hostinger File Manager (manual upload)
-   - Try Git deployment (if available on your plan)
-   - Use SFTP on port 65002 (Premium plans only)
+#### 4. Files Upload But Don't Show on Website
+**Cause**: Hostinger cache
+**Solution**:
+1. Login to hPanel
+2. Go to: **Websites → Dashboard → Cache Manager**
+3. Click **"Purge All"**
+4. Wait 2-5 minutes
+
+### Debug Mode
+```bash
+# Enable verbose logging
+DEBUG=true npm run deploy
+```
+
+## 🔄 Recovery Procedures
+
+### Lost .env File?
+
+1. Run discovery:
+```bash
+npm run deploy:discover
+```
+
+2. Check for backups:
+```bash
+ls -la .env*
+cat .env.example
+```
+
+3. Manual recovery from hPanel:
+- Login to Hostinger
+- Go to: **Files → FTP Accounts**
+- Recreate .env with credentials
+
+### Lost All Configuration?
+
+1. Run setup wizard:
+```bash
+npm run deploy:setup
+```
+
+2. Have ready:
+- Hostinger login
+- FTP password
+- Server IP (185.212.71.198)
+
+### Connection Works But Deploy Fails?
+
+1. Check remote structure:
+```bash
+npm run deploy:test -- --list
+```
+
+2. Try manual FTP:
+```bash
+# Using command line FTP
+ftp 185.212.71.198
+```
+
+## 🧪 Testing
+
+### Pre-Deployment Tests
+```bash
+# Test FTP connection
+npm run deploy:test
+
+# Verify all files present
+npm run deploy:verify
+
+# Dry run (shows what would deploy)
+npm run deploy -- --dry-run
+```
+
+### Post-Deployment Tests
+1. Check main URL: https://mediumblue-chamois-837591.hostingersite.com
+2. Test with cache bypass: Add `?v=timestamp`
+3. Check from incognito mode
+4. Verify all pages load
+
+## ↩️ Rollback
+
+### Quick Rollback
+```bash
+# Deploy previous version
+git checkout HEAD~1
+npm run deploy
+git checkout main
+```
+
+### Manual Rollback via hPanel
+1. Login to Hostinger hPanel
+2. Go to: **Files → File Manager**
+3. Navigate to public_html
+4. Restore from backups or upload previous files
+
+## 📊 Deployment Checklist
+
+Before deploying:
+- [ ] All changes committed to git
+- [ ] Tested locally
+- [ ] Images optimized
+- [ ] CSS/JS minified (if needed)
+- [ ] .env file configured
+- [ ] Connection tested
+
+After deploying:
+- [ ] Clear Hostinger cache
+- [ ] Test all pages
+- [ ] Check mobile responsive
+- [ ] Verify forms work
+- [ ] Test in multiple browsers
+
+## 🆘 Emergency Contacts
+
+### Hostinger Support
+- **Live Chat**: Available in hPanel
+- **Email**: support@hostinger.com
+- **Knowledge Base**: https://support.hostinger.com
+
+### Quick Commands Reference
+```bash
+npm run deploy          # Deploy to production
+npm run deploy:test     # Test connection
+npm run deploy:verify   # Check setup
+npm run deploy:setup    # Initial setup
+npm run deploy:discover # Find lost config
+npm run deploy:help     # Show this guide
+```
 
 ## 🔐 Security Notes
 
-- Never commit `.env` file to Git
-- Rotate FTP password regularly
-- Use strong passwords (min 12 chars)
-- Consider IP whitelisting in hPanel
+1. **Never commit .env file** - It's in .gitignore
+2. **Use strong FTP passwords** - Min 12 chars, mixed case, numbers, symbols
+3. **Rotate credentials regularly** - Every 90 days
+4. **Use SFTP when available** - Port 65002 on Premium plans
 
-## 📊 Deployment Stats
+## 📝 Notes for Future Sessions
 
-After successful deployment, you'll see:
-```
-Deployment Summary:
-✓ Files uploaded: 42
-ℹ Data transferred: 3.2 MB
-ℹ Duration: 45.3 seconds
-```
-
-Your site will be live at: `http://mediumblue-chamois-837591.hostingersite.com`
+When returning to this project:
+1. Run `npm run handoff` for status check
+2. Run `npm run deploy:verify` to ensure setup
+3. Check `PROJECT-HANDOFF.md` for session notes
+4. Update credentials if expired
 
 ---
 
-**Need help?** Check the logs in `deployment.log` or run with `DEBUG_MODE=true`
+*Last updated: August 2025*
+*Deployment system version: 2.0*

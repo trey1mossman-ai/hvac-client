@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional laminate flooring installation in Chicago. Affordable wood-look floors with scratch resistance. Perfect for busy families. Licensed & insured. Call 312-210-0606.">
+    <meta name="keywords" content="laminate flooring Chicago, laminate installation Chicago, affordable flooring Chicago, wood-look flooring, laminate floor installer">
+    <title>Professional Laminate Flooring Installation Chicago IL | SupplySide Flooring</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Laminate Flooring Installation Chicago - SupplySide Flooring">
+    <meta property="og:description" content="Affordable laminate flooring with authentic wood look. Scratch-resistant and durable. 80+ years experience. Free estimates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supplysideflooringinstallation.com/laminate-flooring-installation-chicago-il/">
+    <meta property="og:image" content="https://supplysideflooringinstallation.com/images/laminate-og.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Service Page Styles (Same as vinyl page) -->
+    <style>
+        /* Service Hero Section */
+        .service-hero {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--cool-gray) 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><pattern id="wood" patternUnits="userSpaceOnUse" width="300" height="100"><rect width="300" height="20" fill="%23A47551" opacity="0.05"/><rect y="25" width="300" height="20" fill="%23D1A77A" opacity="0.05"/><rect y="50" width="300" height="20" fill="%23A47551" opacity="0.05"/><rect y="75" width="300" height="20" fill="%23D1A77A" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23wood)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .service-hero-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-hero-content {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .service-hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: var(--font-weight-black);
+            color: var(--crisp-white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.1;
+        }
+
+        .service-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--crisp-white);
+            opacity: 0.9;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .service-trust-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .trust-point {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--light-oak);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .trust-point svg {
+            color: var(--olive-green);
+        }
+
+        /* Service Benefits Section */
+        .service-benefits {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .benefit-card {
+            background: var(--crisp-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: all var(--transition-medium);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto var(--spacing-md);
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--crisp-white);
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .benefit-description {
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Service Process Section */
+        .service-process {
+            background-color: var(--cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-2xl);
+            position: relative;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: var(--olive-green);
+            color: var(--crisp-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-black);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% + var(--spacing-xl));
+            background: var(--sage);
+            z-index: 1;
+        }
+
+        .process-content {
+            flex: 1;
+            padding-left: var(--spacing-xl);
+        }
+
+        .process-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .process-description {
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Service Gallery Section */
+        .service-gallery {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            cursor: pointer;
+            transition: all var(--transition-medium);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(28, 31, 42, 0.9) 0%, transparent 100%);
+            color: var(--crisp-white);
+            padding: var(--spacing-lg);
+            transform: translateY(100%);
+            transition: transform var(--transition-medium);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Service Pricing Section */
+        .service-pricing {
+            background-color: var(--cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .pricing-table {
+            background: var(--crisp-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            color: var(--crisp-white);
+            padding: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .pricing-title {
+            font-size: 1.75rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pricing-subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .pricing-content {
+            padding: var(--spacing-xl);
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-label {
+            font-weight: var(--font-weight-semibold);
+            color: var(--deep-navy);
+        }
+
+        .pricing-value {
+            color: var(--olive-green);
+            font-weight: var(--font-weight-bold);
+            font-size: 1.1rem;
+        }
+
+        .pricing-note {
+            background: var(--cream);
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            font-size: 0.95rem;
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Service FAQ Section */
+        .service-faq {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .service-trust-points {
+                justify-content: center;
+            }
+
+            .process-content {
+                padding-left: var(--spacing-md);
+            }
+
+            .process-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Schema Markup for Service Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Laminate Flooring Installation",
+        "description": "Professional laminate flooring installation in Chicago. Affordable wood-look floors with superior durability and scratch resistance.",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "SupplySide Flooring Installation Chicago",
+            "telephone": "312-210-0606",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1111 W 35th Street",
+                "addressLocality": "Chicago",
+                "addressRegion": "IL",
+                "postalCode": "60609"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Chicago"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Laminate Flooring Options",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Basic Laminate",
+                    "description": "7mm thickness with AC3 rating",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "2.50-3.50",
+                        "priceCurrency": "USD",
+                        "unitText": "per square foot installed"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Premium Laminate",
+                    "description": "12mm thickness with AC4+ rating",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "3.50-5.00",
+                        "priceCurrency": "USD",
+                        "unitText": "per square foot installed"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Header (Same as homepage) -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="/" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">SUPPLYSIDE</span>
+                </a>
+            </div>
+            
+            <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="nav-link">Vinyl</a>
+                <a href="/laminate-flooring-installation-chicago-il/" class="nav-link" aria-current="page">Laminate</a>
+                <a href="/hardwood-floor-installation-chicago-il/" class="nav-link">Hardwood</a>
+                <a href="/tile-installation-chicago-il/" class="nav-link">Tile</a>
+                <a href="/shower-tile-installation-chicago-il/" class="nav-link">Showers</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="tel:3122100606" class="header-phone" aria-label="Call us at 312-210-0606">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    312-210-0606
+                </a>
+                <a href="#service-form" class="btn btn-header">Get Free Estimate</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <main id="main">
+        <!-- Service Hero Section -->
+        <section class="service-hero">
+            <div class="service-hero-container">
+                <div class="service-hero-content">
+                    <div class="service-hero-text">
+                        <h1>Professional Laminate Flooring Installation Chicago IL</h1>
+                        <p class="service-hero-subtitle">
+                            Get the beautiful wood look you love at a price that fits your budget. 
+                            Our scratch-resistant laminate flooring is perfect for active Chicago families.
+                        </p>
+                        
+                        <div class="service-trust-points">
+                            <div class="trust-point">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Scratch Resistant</span>
+                            </div>
+                            <div class="trust-point">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Budget Friendly</span>
+                            </div>
+                            <div class="trust-point">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>15-Year Warranty</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-cta-group">
+                            <a href="#service-form" class="btn btn-primary btn-large">
+                                Get Free Estimate
+                            </a>
+                            <a href="#gallery" class="btn btn-secondary btn-large">
+                                View Our Work
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Form (Right Side) -->
+                    <div class="hero-form-wrapper">
+                        <form id="service-form" class="hero-form" novalidate aria-label="Laminate flooring estimate form">
+                            <div class="form-header">
+                                <h2 class="form-title">Get Your Free Quote</h2>
+                                <p class="form-subtitle">Laminate flooring installation estimate</p>
+                            </div>
+                            
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name*</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                    <span class="form-error" id="name-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                                    <span class="form-error" id="phone-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address*</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                    <span class="form-error" id="email-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="zipcode" class="form-label">Zip Code*</label>
+                                    <input type="text" id="zipcode" name="zipcode" class="form-input" required maxlength="5">
+                                    <span class="form-error" id="zipcode-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="sqft" class="form-label">Approx. Square Feet</label>
+                                    <input type="text" id="sqft" name="sqft" class="form-input" placeholder="e.g., 1000">
+                                </div>
+                                
+                                <input type="hidden" name="service-type" value="laminate">
+                                
+                                <button type="submit" class="btn btn-submit btn-large">
+                                    <span class="btn-text">Get Free Quote</span>
+                                    <span class="btn-loader" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="form-footer">
+                                <p class="form-call-text">
+                                    Or call now: 
+                                    <a href="tel:3122100606" class="form-phone-link">312-210-0606</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Benefits Section -->
+        <section class="service-benefits">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Laminate Flooring?</h2>
+                    <p class="section-subtitle">Beautiful, durable floors that won't break the bank</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1.93.66 1.64 2.08 1.64 1.71 0 2.05-.71 2.05-1.44 0-.82-.4-1.41-2.15-1.72-1.8-.32-3.57-1.04-3.57-3.14 0-1.62 1.18-2.85 3.14-3.21V5h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.71 0 .93.7 1.41 2.43 1.71 1.94.36 3.29 1.18 3.29 3.14 0 1.72-.96 2.87-2.99 3.06z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Best Value</h3>
+                        <p class="benefit-description">
+                            Get authentic wood aesthetics at 30-50% less cost than hardwood. Perfect for budget-conscious homeowners who don't want to compromise on style.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Scratch & Dent Resistant</h3>
+                        <p class="benefit-description">
+                            AC4 and AC5 rated laminate handles heavy traffic, pet claws, and active kids. The tough wear layer protects against daily wear and tear.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Realistic Textures</h3>
+                        <p class="benefit-description">
+                            Modern laminate features embossed-in-register technology that perfectly matches wood grain visuals with authentic textures you can feel.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l-5.5 9h11z M12 22l5.5-9h-11z M3.5 9l5.5 9v-11z M20.5 9l-5.5 9v-11z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Quick Installation</h3>
+                        <p class="benefit-description">
+                            Floating floor system installs directly over most existing floors. No glue or nails needed means less mess and faster completion.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Easy Maintenance</h3>
+                        <p class="benefit-description">
+                            Simple sweep and damp mop cleaning. No refinishing, waxing, or special treatments needed. Stain-resistant surface handles spills with ease.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Fade Resistant</h3>
+                        <p class="benefit-description">
+                            UV-resistant coating prevents fading from Chicago's sunny days. Your floors stay looking new even in rooms with large windows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Process Section -->
+        <section class="service-process">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Laminate Installation Process</h2>
+                    <p class="section-subtitle">Professional installation in 4 simple steps</p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Free Consultation & Measurement</h3>
+                            <p class="process-description">
+                                We bring laminate samples to your home, take precise measurements, and help you choose the perfect style, thickness, and AC rating for your needs and budget.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Subfloor Inspection & Prep</h3>
+                            <p class="process-description">
+                                We check for levelness, moisture, and structural issues. Minor imperfections are corrected with self-leveling compound to ensure a smooth, quiet floor.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Expert Installation</h3>
+                            <p class="process-description">
+                                Our certified installers use precision cutting tools and proper expansion gaps. We ensure tight seams, perfect transitions, and professional trim work throughout.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Quality Check & Clean Up</h3>
+                            <p class="process-description">
+                                We inspect every plank, test all transitions, and ensure your satisfaction. Complete cleanup and old flooring disposal included. Your home is move-in ready!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Gallery Section -->
+        <section class="service-gallery" id="gallery">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Laminate Flooring Projects</h2>
+                    <p class="section-subtitle">Quality installations across Chicago</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../images/laminate-project-1.jpg" alt="Laminate flooring installation in Chicago living room">
+                        <div class="gallery-caption">
+                            <h4>River North Townhome</h4>
+                            <p>Oak-look laminate throughout main level</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/laminate-project-2.jpg" alt="Grey laminate flooring in modern apartment">
+                        <div class="gallery-caption">
+                            <h4>Streeterville High-Rise</h4>
+                            <p>Modern grey laminate with soundproofing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/laminate-project-3.jpg" alt="Waterproof laminate in Chicago basement">
+                        <div class="gallery-caption">
+                            <h4>Bridgeport Basement</h4>
+                            <p>Water-resistant laminate for below-grade</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/laminate-project-4.jpg" alt="Wide plank laminate flooring installation">
+                        <div class="gallery-caption">
+                            <h4>Hyde Park Home</h4>
+                            <p>Wide plank hickory-look laminate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/laminate-project-5.jpg" alt="Commercial laminate flooring">
+                        <div class="gallery-caption">
+                            <h4>West Loop Office</h4>
+                            <p>Commercial AC5 rated laminate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/laminate-project-6.jpg" alt="Laminate flooring with custom borders">
+                        <div class="gallery-caption">
+                            <h4>Lakeview Classic</h4>
+                            <p>Traditional style with custom borders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Pricing Section -->
+        <section class="service-pricing">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Laminate Flooring Pricing</h2>
+                    <p class="section-subtitle">Transparent pricing with no hidden costs</p>
+                </div>
+                
+                <div class="pricing-table">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Laminate Installation Costs</h3>
+                        <p class="pricing-subtitle">Average pricing for Chicago installations</p>
+                    </div>
+                    
+                    <div class="pricing-content">
+                        <div class="pricing-row">
+                            <span class="pricing-label">Basic Laminate (7-8mm)</span>
+                            <span class="pricing-value">$2.50 - $3.50/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Premium Laminate (10-12mm)</span>
+                            <span class="pricing-value">$3.50 - $5.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Waterproof Laminate</span>
+                            <span class="pricing-value">$4.00 - $5.50/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Old Floor Removal</span>
+                            <span class="pricing-value">$1.00 - $1.50/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Underlayment Installation</span>
+                            <span class="pricing-value">$0.50 - $1.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Baseboards & Trim</span>
+                            <span class="pricing-value">$4.00 - $8.00/linear ft</span>
+                        </div>
+                        
+                        <div class="pricing-note">
+                            <strong>What's Included:</strong> All prices include professional installation, underlayment, 
+                            transitions, and our 5-year installation warranty. Most homes completed in 1-2 days. 
+                            Free estimates include exact measurements and detailed breakdown of all costs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service FAQ Section -->
+        <section class="service-faq faq-section">
+            <div class="faq-container">
+                <div class="section-header">
+                    <h2 class="section-title">Laminate Flooring FAQs</h2>
+                    <p class="section-subtitle">Everything you need to know about laminate installation</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is laminate flooring waterproof?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Traditional laminate is water-resistant but not waterproof. However, newer waterproof laminate options are available that can handle spills and moisture. For truly waterproof needs (like basements), we often recommend luxury vinyl plank instead, but waterproof laminate is a great middle-ground option.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does laminate flooring last?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Quality laminate flooring typically lasts 15-25 years with proper care. The lifespan depends on the AC rating (wear layer thickness), foot traffic, and maintenance. Commercial-grade AC5 laminate can last 25+ years even in high-traffic areas. Most manufacturers offer 15-30 year warranties.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can laminate be installed over radiant heating?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Most modern laminate flooring is compatible with radiant heating systems. The key is choosing laminate rated for radiant heat and maintaining proper temperature limits (usually under 85°F). We'll ensure proper installation with appropriate underlayment for optimal heat transfer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the difference between laminate and vinyl?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Laminate has a wood fiberboard core with a photographic layer and wear layer on top. It's harder and sounds more like real wood but isn't waterproof. Vinyl is 100% synthetic and waterproof throughout. Laminate is often more affordable and has a more authentic wood feel underfoot.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I need underlayment for laminate flooring?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, underlayment is essential for laminate flooring. It provides moisture protection, sound reduction, and a smooth surface for installation. Some premium laminate comes with attached underlayment, but we'll assess your specific needs. For concrete subfloors, a vapor barrier is also required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2 class="cta-title">Ready for Beautiful Laminate Floors?</h2>
+                <p class="cta-subtitle">Get your free laminate flooring estimate today</p>
+                <div class="cta-buttons">
+                    <a href="#service-form" class="btn btn-secondary btn-large">
+                        Get Free Quote
+                    </a>
+                    <a href="tel:3122100606" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call 312-210-0606
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer (Same as homepage) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-company">
+                    <div class="footer-logo">SUPPLYSIDE</div>
+                    <p class="footer-description">
+                        Chicago's most reliable flooring installation contractor. Family owned and operated since 1976, 
+                        we've built our reputation on showing up on time and doing what we say we'll do.
+                    </p>
+                    <div class="footer-certifications">
+                        <span class="certification-badge">Licensed #104.017557</span>
+                        <span class="certification-badge">Insured $2M</span>
+                        <span class="certification-badge">Bonded</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <div class="footer-links">
+                        <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="footer-link">Vinyl Plank & Tile</a>
+                        <a href="/laminate-flooring-installation-chicago-il/" class="footer-link">Laminate Flooring</a>
+                        <a href="/hardwood-floor-installation-chicago-il/" class="footer-link">Hardwood Installation</a>
+                        <a href="/tile-installation-chicago-il/" class="footer-link">Ceramic & Porcelain</a>
+                        <a href="/shower-tile-installation-chicago-il/" class="footer-link">Shower Installation</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Chicago</a>
+                        <a href="#" class="footer-link">Lincoln Park</a>
+                        <a href="#" class="footer-link">Wicker Park</a>
+                        <a href="#" class="footer-link">Oak Park</a>
+                        <a href="#" class="footer-link">Evanston</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>1111 W 35th Street<br>Chicago, IL 60609</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:3122100606" style="color: inherit;">312-210-0606</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SupplySide Flooring Installation Chicago. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Service page specific scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize FAQ accordion (same as homepage)
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

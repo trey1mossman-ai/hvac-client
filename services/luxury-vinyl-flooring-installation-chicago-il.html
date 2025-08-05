@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional luxury vinyl plank and vinyl tile installation in Chicago. Waterproof, durable flooring solutions perfect for Chicago's climate. Licensed & insured. Call 312-210-0606.">
+    <meta name="keywords" content="vinyl plank flooring Chicago, LVP installation Chicago, luxury vinyl tile Chicago, waterproof flooring Chicago, vinyl flooring installation">
+    <title>Luxury Vinyl Plank & Vinyl Tile Installation Chicago IL | SupplySide Flooring</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Luxury Vinyl Plank Installation Chicago - SupplySide Flooring">
+    <meta property="og:description" content="Waterproof luxury vinyl flooring installation. Perfect for Chicago homes. 80+ years experience. Licensed & insured. Free estimates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supplysideflooringinstallation.com/luxury-vinyl-flooring-installation-chicago-il/">
+    <meta property="og:image" content="https://supplysideflooringinstallation.com/images/vinyl-plank-og.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Service Page Styles -->
+    <style>
+        /* Service Hero Section */
+        .service-hero {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--cool-gray) 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><pattern id="vinyl" patternUnits="userSpaceOnUse" width="200" height="200"><rect width="200" height="40" fill="%23A47551" opacity="0.05"/><rect y="50" width="200" height="40" fill="%23D1A77A" opacity="0.05"/><rect y="100" width="200" height="40" fill="%23A47551" opacity="0.05"/><rect y="150" width="200" height="40" fill="%23D1A77A" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23vinyl)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .service-hero-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-hero-content {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .service-hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: var(--font-weight-black);
+            color: var(--crisp-white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.1;
+        }
+
+        .service-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--crisp-white);
+            opacity: 0.9;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .service-trust-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .trust-point {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--light-oak);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .trust-point svg {
+            color: var(--olive-green);
+        }
+
+        /* Service Benefits Section */
+        .service-benefits {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .benefit-card {
+            background: var(--crisp-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: all var(--transition-medium);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto var(--spacing-md);
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--crisp-white);
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .benefit-description {
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Service Process Section */
+        .service-process {
+            background-color: var(--cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-2xl);
+            position: relative;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: var(--olive-green);
+            color: var(--crisp-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-black);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% + var(--spacing-xl));
+            background: var(--sage);
+            z-index: 1;
+        }
+
+        .process-content {
+            flex: 1;
+            padding-left: var(--spacing-xl);
+        }
+
+        .process-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--deep-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .process-description {
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Service Gallery Section */
+        .service-gallery {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            cursor: pointer;
+            transition: all var(--transition-medium);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(28, 31, 42, 0.9) 0%, transparent 100%);
+            color: var(--crisp-white);
+            padding: var(--spacing-lg);
+            transform: translateY(100%);
+            transition: transform var(--transition-medium);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Service Pricing Section */
+        .service-pricing {
+            background-color: var(--cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .pricing-table {
+            background: var(--crisp-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            background: linear-gradient(135deg, var(--olive-green) 0%, var(--sage) 100%);
+            color: var(--crisp-white);
+            padding: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .pricing-title {
+            font-size: 1.75rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pricing-subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .pricing-content {
+            padding: var(--spacing-xl);
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-label {
+            font-weight: var(--font-weight-semibold);
+            color: var(--deep-navy);
+        }
+
+        .pricing-value {
+            color: var(--olive-green);
+            font-weight: var(--font-weight-bold);
+            font-size: 1.1rem;
+        }
+
+        .pricing-note {
+            background: var(--cream);
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            font-size: 0.95rem;
+            color: var(--cool-gray);
+            line-height: 1.6;
+        }
+
+        /* Service FAQ Section */
+        .service-faq {
+            background-color: var(--soft-taupe);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .service-trust-points {
+                justify-content: center;
+            }
+
+            .process-content {
+                padding-left: var(--spacing-md);
+            }
+
+            .process-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Schema Markup for Service Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Luxury Vinyl Plank & Vinyl Tile Installation",
+        "description": "Professional installation of waterproof luxury vinyl plank and vinyl tile flooring in Chicago. Perfect for homes with pets, kids, or high moisture areas.",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "SupplySide Flooring Installation Chicago",
+            "telephone": "312-210-0606",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1111 W 35th Street",
+                "addressLocality": "Chicago",
+                "addressRegion": "IL",
+                "postalCode": "60609"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Chicago"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Vinyl Flooring Options",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Luxury Vinyl Plank (LVP)",
+                    "description": "Wood-look waterproof planks",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "3.50-7.00",
+                        "priceCurrency": "USD",
+                        "unitText": "per square foot installed"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Luxury Vinyl Tile (LVT)",
+                    "description": "Stone-look waterproof tiles",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "4.00-8.00",
+                        "priceCurrency": "USD",
+                        "unitText": "per square foot installed"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Header (Same as homepage) -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="/" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">SUPPLYSIDE</span>
+                </a>
+            </div>
+            
+            <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="nav-link" aria-current="page">Vinyl</a>
+                <a href="/laminate-flooring-installation-chicago-il/" class="nav-link">Laminate</a>
+                <a href="/hardwood-floor-installation-chicago-il/" class="nav-link">Hardwood</a>
+                <a href="/tile-installation-chicago-il/" class="nav-link">Tile</a>
+                <a href="/shower-tile-installation-chicago-il/" class="nav-link">Showers</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="tel:3122100606" class="header-phone" aria-label="Call us at 312-210-0606">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    312-210-0606
+                </a>
+                <a href="#service-form" class="btn btn-header">Get Free Estimate</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <main id="main">
+        <!-- Service Hero Section -->
+        <section class="service-hero">
+            <div class="service-hero-container">
+                <div class="service-hero-content">
+                    <div class="service-hero-text">
+                        <h1>Luxury Vinyl Plank & Vinyl Tile Installation Chicago IL</h1>
+                        <p class="service-hero-subtitle">
+                            Transform your Chicago home with waterproof, durable luxury vinyl flooring. 
+                            Perfect for busy families, pet owners, and anyone who wants beautiful floors that last.
+                        </p>
+                        
+                        <div class="service-trust-points">
+                            <div class="trust-point">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>100% Waterproof</span>
+                            </div>
+                            <div class="trust-point">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Pet & Kid Friendly</span>
+                            </div>
+                            <div class="trust-point">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>25-Year Warranty</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-cta-group">
+                            <a href="#service-form" class="btn btn-primary btn-large">
+                                Get Free Estimate
+                            </a>
+                            <a href="#gallery" class="btn btn-secondary btn-large">
+                                View Our Work
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Form (Right Side) -->
+                    <div class="hero-form-wrapper">
+                        <form id="service-form" class="hero-form" novalidate aria-label="Vinyl flooring estimate form">
+                            <div class="form-header">
+                                <h2 class="form-title">Get Your Free Quote</h2>
+                                <p class="form-subtitle">Vinyl flooring installation estimate</p>
+                            </div>
+                            
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name*</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                    <span class="form-error" id="name-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                                    <span class="form-error" id="phone-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address*</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                    <span class="form-error" id="email-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="zipcode" class="form-label">Zip Code*</label>
+                                    <input type="text" id="zipcode" name="zipcode" class="form-input" required maxlength="5">
+                                    <span class="form-error" id="zipcode-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="sqft" class="form-label">Approx. Square Feet</label>
+                                    <input type="text" id="sqft" name="sqft" class="form-input" placeholder="e.g., 1000">
+                                </div>
+                                
+                                <input type="hidden" name="service-type" value="vinyl-plank-tile">
+                                
+                                <button type="submit" class="btn btn-submit btn-large">
+                                    <span class="btn-text">Get Free Quote</span>
+                                    <span class="btn-loader" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="form-footer">
+                                <p class="form-call-text">
+                                    Or call now: 
+                                    <a href="tel:3122100606" class="form-phone-link">312-210-0606</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Benefits Section -->
+        <section class="service-benefits">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Luxury Vinyl Flooring?</h2>
+                    <p class="section-subtitle">The perfect solution for Chicago's challenging climate</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">100% Waterproof</h3>
+                        <p class="benefit-description">
+                            Perfect for Chicago's wet springs and snowy winters. Won't warp, swell, or grow mold like traditional hardwood.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4.5 10.5C4.5 12.981 6.519 15 9 15s4.5-2.019 4.5-4.5S11.481 6 9 6s-4.5 2.019-4.5 4.5zm6.5 0c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2zM17.41 17.932c-.297-.15-1.18-.57-1.41-.67l-.5.87c.227.11 1.097.508 1.36.65 1.58.86 1.64 1.44 1.64 1.72v.5H14v2h6v-2.5c0-.57-.11-2.07-2.59-3.37z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Pet & Kid Friendly</h3>
+                        <p class="benefit-description">
+                            Scratch-resistant surface handles claws, toys, and heavy traffic. Easy to clean spills and accidents.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Realistic Wood Look</h3>
+                        <p class="benefit-description">
+                            Advanced printing technology creates authentic wood grain patterns and textures you can feel.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1.93.66 1.64 2.08 1.64 1.71 0 2.05-.71 2.05-1.44 0-.82-.4-1.41-2.15-1.72-1.8-.32-3.57-1.04-3.57-3.14 0-1.62 1.18-2.85 3.14-3.21V5h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.71 0 .93.7 1.41 2.43 1.71 1.94.36 3.29 1.18 3.29 3.14 0 1.72-.96 2.87-2.99 3.06z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Budget-Friendly</h3>
+                        <p class="benefit-description">
+                            Get the luxury look without the luxury price. 50-70% less than hardwood with similar aesthetics.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.12 1.87L2.87 8.12c-1.16 1.16-1.16 3.05 0 4.21l6.25 6.25c1.16 1.16 3.05 1.16 4.21 0l6.25-6.25c1.16-1.16 1.16-3.05 0-4.21l-6.25-6.25c-1.16-1.16-3.05-1.16-4.21 0zM7 10.5C7 9.67 7.67 9 8.5 9S10 9.67 10 10.5 9.33 12 8.5 12 7 11.33 7 10.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Easy Installation</h3>
+                        <p class="benefit-description">
+                            Click-lock system means faster installation and less disruption to your home. Usually done in 1-2 days.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Comfort Underfoot</h3>
+                        <p class="benefit-description">
+                            Warmer and softer than tile, quieter than laminate. Built-in underlayment reduces noise between floors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Process Section -->
+        <section class="service-process">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Installation Process</h2>
+                    <p class="section-subtitle">Professional vinyl flooring installation in 4 simple steps</p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Free In-Home Consultation</h3>
+                            <p class="process-description">
+                                We visit your Chicago home to measure spaces, assess subfloor conditions, and show you vinyl samples. 
+                                We'll discuss your lifestyle needs and recommend the best options for your specific situation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Preparation & Removal</h3>
+                            <p class="process-description">
+                                Our crew removes existing flooring and prepares the subfloor. We handle moisture testing, 
+                                leveling compounds, and ensure everything meets manufacturer specifications for warranty protection.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Professional Installation</h3>
+                            <p class="process-description">
+                                Using precision tools and 48+ years of experience, we install your luxury vinyl flooring 
+                                with perfect seams and transitions. Most rooms completed in just one day.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <div class="process-content">
+                            <h3 class="process-title">Final Inspection & Cleanup</h3>
+                            <p class="process-description">
+                                We walk through every room with you, ensuring perfect installation. Complete cleanup and 
+                                disposal of old materials included. Your home left cleaner than we found it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Gallery Section -->
+        <section class="service-gallery" id="gallery">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Vinyl Flooring Projects</h2>
+                    <p class="section-subtitle">See our work in Chicago homes like yours</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../images/vinyl-project-1.jpg" alt="Luxury vinyl plank installation in Lincoln Park">
+                        <div class="gallery-caption">
+                            <h4>Lincoln Park Condo</h4>
+                            <p>Waterproof LVP throughout 2,000 sq ft</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/vinyl-project-2.jpg" alt="Vinyl tile installation in Chicago kitchen">
+                        <div class="gallery-caption">
+                            <h4>Wicker Park Kitchen</h4>
+                            <p>Stone-look LVT with custom patterns</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/vinyl-project-3.jpg" alt="Commercial vinyl flooring installation">
+                        <div class="gallery-caption">
+                            <h4>Loop Office Building</h4>
+                            <p>Commercial-grade vinyl throughout</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/vinyl-project-4.jpg" alt="Basement vinyl plank flooring">
+                        <div class="gallery-caption">
+                            <h4>Oak Park Basement</h4>
+                            <p>Moisture-resistant vinyl for below-grade</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/vinyl-project-5.jpg" alt="Luxury vinyl in master bedroom">
+                        <div class="gallery-caption">
+                            <h4>Gold Coast Master Suite</h4>
+                            <p>Quiet, warm vinyl plank flooring</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../images/vinyl-project-6.jpg" alt="Pet-friendly vinyl flooring">
+                        <div class="gallery-caption">
+                            <h4>Logan Square Pet Owner</h4>
+                            <p>Scratch-resistant vinyl for active dogs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Pricing Section -->
+        <section class="service-pricing">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Transparent Vinyl Flooring Pricing</h2>
+                    <p class="section-subtitle">No hidden fees, no surprises</p>
+                </div>
+                
+                <div class="pricing-table">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Luxury Vinyl Installation Costs</h3>
+                        <p class="pricing-subtitle">Average pricing for Chicago area homes</p>
+                    </div>
+                    
+                    <div class="pricing-content">
+                        <div class="pricing-row">
+                            <span class="pricing-label">Basic Vinyl Plank (LVP)</span>
+                            <span class="pricing-value">$3.50 - $5.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Premium Vinyl Plank (LVP)</span>
+                            <span class="pricing-value">$5.00 - $7.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Luxury Vinyl Tile (LVT)</span>
+                            <span class="pricing-value">$4.00 - $8.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Removal of Old Flooring</span>
+                            <span class="pricing-value">$1.00 - $2.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Subfloor Preparation</span>
+                            <span class="pricing-value">$0.50 - $2.00/sq ft</span>
+                        </div>
+                        
+                        <div class="pricing-row">
+                            <span class="pricing-label">Transitions & Trim</span>
+                            <span class="pricing-value">$5.00 - $10.00/linear ft</span>
+                        </div>
+                        
+                        <div class="pricing-note">
+                            <strong>What's Included:</strong> All prices include professional installation, disposal of old flooring, 
+                            basic subfloor prep, and our 5-year installation warranty. Stairs, complex patterns, and extensive 
+                            subfloor repairs may incur additional costs. We provide detailed, written estimates before any work begins.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service FAQ Section -->
+        <section class="service-faq faq-section">
+            <div class="faq-container">
+                <div class="section-header">
+                    <h2 class="section-title">Vinyl Flooring FAQs</h2>
+                    <p class="section-subtitle">Common questions about luxury vinyl installation</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the difference between LVP and LVT?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>LVP (Luxury Vinyl Plank) mimics hardwood with long plank shapes and wood grain patterns. LVT (Luxury Vinyl Tile) replicates stone or ceramic tile in square or rectangular shapes. Both are 100% waterproof and use the same click-lock installation system. The choice is purely aesthetic based on your design preferences.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can vinyl flooring be installed over existing floors?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>In many cases, yes! Vinyl can be installed over concrete, plywood, existing vinyl, and even some tile floors if they're level and in good condition. However, we always inspect your subfloor first. Carpet must be removed, and very uneven surfaces need leveling for warranty protection and proper installation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does vinyl flooring last?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Quality luxury vinyl flooring typically lasts 15-25 years with proper care. Commercial-grade options can last even longer. Unlike hardwood, vinyl won't need refinishing and maintains its appearance throughout its lifespan. Most manufacturers offer 20-30 year residential warranties on their products.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is vinyl flooring good for Chicago basements?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Vinyl is ideal for Chicago basements because it's 100% waterproof and won't be damaged by moisture or humidity. Unlike carpet or hardwood, vinyl can handle minor flooding without permanent damage. We always perform moisture tests and may recommend a vapor barrier for below-grade installations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What maintenance does vinyl flooring require?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Vinyl is the easiest flooring to maintain! Regular sweeping or vacuuming and occasional damp mopping with a pH-neutral cleaner is all you need. No waxing, refinishing, or special treatments required. Avoid harsh chemicals and abrasive cleaners. Place mats at entrances to minimize dirt and use furniture pads to prevent scratches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2 class="cta-title">Ready for Beautiful, Waterproof Floors?</h2>
+                <p class="cta-subtitle">Get your free vinyl flooring estimate today</p>
+                <div class="cta-buttons">
+                    <a href="#service-form" class="btn btn-secondary btn-large">
+                        Get Free Quote
+                    </a>
+                    <a href="tel:3122100606" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call 312-210-0606
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer (Same as homepage) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-company">
+                    <div class="footer-logo">SUPPLYSIDE</div>
+                    <p class="footer-description">
+                        Chicago's most reliable flooring installation contractor. Family owned and operated since 1976, 
+                        we've built our reputation on showing up on time and doing what we say we'll do.
+                    </p>
+                    <div class="footer-certifications">
+                        <span class="certification-badge">Licensed #104.017557</span>
+                        <span class="certification-badge">Insured $2M</span>
+                        <span class="certification-badge">Bonded</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <div class="footer-links">
+                        <a href="/luxury-vinyl-flooring-installation-chicago-il/" class="footer-link">Vinyl Plank & Tile</a>
+                        <a href="/laminate-flooring-installation-chicago-il/" class="footer-link">Laminate Flooring</a>
+                        <a href="/hardwood-floor-installation-chicago-il/" class="footer-link">Hardwood Installation</a>
+                        <a href="/tile-installation-chicago-il/" class="footer-link">Ceramic & Porcelain</a>
+                        <a href="/shower-tile-installation-chicago-il/" class="footer-link">Shower Installation</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Chicago</a>
+                        <a href="#" class="footer-link">Lincoln Park</a>
+                        <a href="#" class="footer-link">Wicker Park</a>
+                        <a href="#" class="footer-link">Oak Park</a>
+                        <a href="#" class="footer-link">Evanston</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>1111 W 35th Street<br>Chicago, IL 60609</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:3122100606" style="color: inherit;">312-210-0606</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SupplySide Flooring Installation Chicago. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Service page specific scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize FAQ accordion (same as homepage)
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

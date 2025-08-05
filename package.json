@@ -1,30 +1,59 @@
 {
-  "name": "supplyside-website",
-  "version": "1.0.0",
-  "description": "Professional website for SupplySide Flooring Installation Chicago, built with a trust-first approach emphasizing reliability, professionalism, and 40+ years of experience.",
-  "main": "index.js",
+  "name": "supplyside-flooring-website",
+  "version": "2.0.0",
+  "description": "SupplySide Flooring Installation - Chicago's most reliable flooring installation website with bulletproof Hostinger deployment",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "node deploy.js",
-    "deploy:check": "node deploy.js --check",
-    "deploy:verbose": "DEBUG_MODE=true node deploy.js"
+    "deploy": "node deployment/deploy.js",
+    "deploy:setup": "node deployment/setup-wizard.js",
+    "deploy:test": "node deployment/test-connection.js",
+    "deploy:verify": "node deployment/verify-setup.js", 
+    "deploy:discover": "node deployment/discover-config.js",
+    "deploy:help": "cat DEPLOYMENT.md",
+    "handoff": "node scripts/handoff.js",
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
   },
+  "keywords": [
+    "flooring",
+    "installation", 
+    "chicago",
+    "supplyside",
+    "hostinger",
+    "deployment",
+    "ftp"
+  ],
+  "author": "SupplySide Flooring Installation",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trey1mossman-ai/SupplySide.git"
+    "url": "local"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/trey1mossman-ai/SupplySide/issues"
+  "engines": {
+    "node": ">=14.0.0"
   },
-  "homepage": "https://github.com/trey1mossman-ai/SupplySide#readme",
-  "devDependencies": {
+  "dependencies": {
     "basic-ftp": "^5.0.5",
     "chalk": "^4.1.2",
-    "dotenv": "^17.2.1",
-    "ora": "^8.2.0"
+    "dotenv": "^16.4.5",
+    "glob-promise": "^6.0.7",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {},
+  "config": {
+    "deployment": {
+      "host": "185.212.71.198",
+      "remotePath": "/public_html",
+      "localPath": "./",
+      "backupRetention": 7
+    }
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://supplyside-flooring.com"
+  },
+  "homepage": "https://mediumblue-chamois-837591.hostingersite.com",
+  "bugs": {
+    "url": "mailto:contact@supplyside-flooring.com"
   }
 }
