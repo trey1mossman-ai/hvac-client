@@ -9,18 +9,18 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
     <section className="py-24 md:py-32 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-8 text-center">
             About {service.name}
           </h2>
           
           <div className="bg-crisp-white rounded-xl p-10 shadow-sm mb-12">
-            <p className="text-lg text-cool-gray font-light leading-relaxed mb-8">
+            <p className="text-base text-cool-gray font-light leading-relaxed mb-8">
               {service.detailedDescription || service.description}
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-inter font-medium text-deep-navy mb-4">
+                <h3 className="text-base font-inter font-medium text-deep-navy mb-4">
                   Key Benefits
                 </h3>
                 <ul className="space-y-3">
@@ -34,7 +34,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               </div>
               
               <div>
-                <h3 className="text-lg font-inter font-medium text-deep-navy mb-4">
+                <h3 className="text-base font-inter font-medium text-deep-navy mb-4">
                   Ideal For
                 </h3>
                 <ul className="space-y-3 text-cool-gray font-light">

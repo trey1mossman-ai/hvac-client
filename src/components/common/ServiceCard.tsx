@@ -10,32 +10,32 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Link 
       to={service.url}
-      className="block group service-card shadow-hover transition-all duration-300"
+      className="block group service-card transition-all duration-300 hover:-translate-y-1"
     >
-      <div className="bg-crisp-white rounded-xl shadow-sm h-full overflow-hidden flex flex-col">
-        <div className="h-48 overflow-hidden">
+      <div className="bg-crisp-white rounded-2xl shadow-sm hover:shadow-xl h-full overflow-hidden flex flex-col">
+        <div className="h-64 md:h-72 overflow-hidden relative">
           <LazyImage 
             src={service.image} 
             alt={service.name}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        <div className="p-8 flex flex-col flex-grow">
-          <h3 className="text-lg font-inter font-medium mb-4 text-deep-navy">
+        <div className="p-6 flex flex-col flex-grow">
+          <h3 className="text-xl font-inter font-medium mb-3 text-deep-navy group-hover:text-olive-green transition-colors duration-300">
             {service.name}
           </h3>
-          <p className="text-cool-gray mb-6 font-light leading-relaxed">
+          <p className="text-sm text-cool-gray mb-4 font-light leading-relaxed line-clamp-2">
             {service.description}
           </p>
-          <ul className="space-y-3 mb-8">
-            {service.features.slice(0, 3).map((feature, index) => (
-              <li key={index} className="flex items-center text-sm text-cool-gray">
-                <span className="text-olive-green mr-3 font-medium">✓</span>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {service.features.slice(0, 2).map((feature, index) => (
+              <span key={index} className="text-xs bg-cream px-3 py-1 rounded-full text-warm-wood font-medium">
                 {feature}
-              </li>
+              </span>
             ))}
-          </ul>
-          <button className="w-full bg-olive-green text-crisp-white py-2.5 rounded-md font-inter font-medium text-sm hover:bg-opacity-90 transition-all duration-300 mt-auto">
+          </div>
+          <button className="w-full bg-olive-green text-crisp-white py-2.5 px-6 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 mt-auto">
             Get Free Estimate
           </button>
         </div>

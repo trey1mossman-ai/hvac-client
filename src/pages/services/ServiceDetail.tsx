@@ -104,7 +104,7 @@ export default function ServiceDetail() {
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* Left Side - Service Content */}
             <div>
-              <h1 className="text-3xl md:text-4xl font-inter font-semibold text-deep-navy mb-6 leading-relaxed">
+              <h1 className="text-2xl md:text-3xl font-inter font-semibold text-deep-navy mb-6 leading-relaxed">
                 {service.name} Installation<br />
                 in Chicago
               </h1>
@@ -148,9 +148,12 @@ export default function ServiceDetail() {
 
             {/* Right Side - Form */}
             <div id="service-form" className="bg-crisp-white p-10 rounded-2xl shadow-lg">
-              <h2 className="text-xl font-inter font-medium text-deep-navy mb-8 text-center">
+              <h2 className="text-xl font-inter font-medium text-deep-navy mb-3 text-center">
                 Get Your Free {service.name} Estimate
               </h2>
+              <p className="text-sm text-cool-gray text-center mb-8">
+                Accurate pricing in 30 minutes or less
+              </p>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
@@ -201,6 +204,10 @@ export default function ServiceDetail() {
                 </button>
               </form>
               
+              <p className="text-xs text-cool-gray text-center mt-4">
+                We'll call within 2 hours during business hours
+              </p>
+              
               <div className="text-center mt-6">
                 <p className="text-cool-gray mb-2">Or Call Now:</p>
                 <a
@@ -218,10 +225,10 @@ export default function ServiceDetail() {
       {/* Service Details Section */}
       <ServiceDetails service={service} />
 
-      {/* Why Choose Section */>
+      {/* Why Choose Section */}
       <section className="py-24 md:py-32 bg-cream">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-16 text-center">
             Why Choose {service.name}?
           </h2>
           <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
@@ -247,7 +254,7 @@ export default function ServiceDetail() {
       {/* Our Process */}
       <section className="py-24 md:py-32 bg-soft-taupe">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-16 text-center">
             Our Simple Process
           </h2>
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -268,7 +275,7 @@ export default function ServiceDetail() {
       <section className="py-24 md:py-32 bg-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-12">
+            <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-12">
               What's Included
             </h2>
             <div className="bg-crisp-white p-10 rounded-2xl shadow-sm">
@@ -304,7 +311,7 @@ export default function ServiceDetail() {
       {/* FAQs */}
       <section id="faq" className="py-24 md:py-32 bg-soft-taupe">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-16 text-center">
             Frequently Asked Questions
           </h2>
           <FAQAccordion faqs={faqs} />
@@ -314,7 +321,7 @@ export default function ServiceDetail() {
       {/* CTA Section */}
       <section className="py-24 md:py-32 bg-deep-navy text-crisp-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium mb-8">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium mb-8">
             Ready to Transform Your Space?
           </h2>
           <p className="text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">

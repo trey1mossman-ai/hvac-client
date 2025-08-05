@@ -7,10 +7,10 @@ export default function Services() {
     <section id="services" className="py-24 md:py-32 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-6">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-6">
             Our Flooring Services
           </h2>
-          <p className="text-lg text-cool-gray max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-base text-cool-gray max-w-3xl mx-auto font-light leading-relaxed">
             From luxury vinyl to natural stone, we install it all with precision and care
           </p>
         </div>

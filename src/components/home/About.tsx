@@ -5,13 +5,13 @@ export default function About() {
     <section id="about" className="py-24 md:py-32 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-center mb-16 text-deep-navy">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-navy">
             About SupplySide Flooring
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <h3 className="text-xl font-inter font-medium text-deep-navy mb-6">
+              <h3 className="text-lg font-inter font-medium text-deep-navy mb-6">
                 Chicago's Most Reliable Flooring Installers
               </h3>
               <p className="text-cool-gray mb-6 font-light leading-relaxed">

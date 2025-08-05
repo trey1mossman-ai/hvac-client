@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/home/Hero';
+import TrustBar from '../components/home/TrustBar';
 import Services from '../components/home/Services';
 import About from '../components/home/About';
 import Testimonials from '../components/home/Testimonials';
@@ -26,6 +27,7 @@ export default function Home() {
       </Helmet>
 
       <Hero />
+      <TrustBar />
       <Testimonials />
       <Services />
       <About />

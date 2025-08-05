@@ -6,10 +6,10 @@ export default function Testimonials() {
     <section id="testimonials" className="py-24 md:py-32 bg-cream">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-inter font-medium text-deep-navy mb-6">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-6">
             What Our Customers Say
           </h2>
-          <p className="text-lg text-cool-gray font-light">
+          <p className="text-base text-cool-gray font-light">
             Over 1,000 satisfied customers across Chicagoland
           </p>
         </div>
