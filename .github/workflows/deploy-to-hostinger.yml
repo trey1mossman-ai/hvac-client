@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -19,7 +19,19 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Deploy website files
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js site
+        run: npm run build
+
+      - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -27,25 +39,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: ${{ secrets.FTP_PORT || 21 }}
-          local-dir: ./
+          local-dir: ./out/
           server-dir: public_html/
           state-name: ftp-deploy-sync-state.json
           log-level: verbose
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/.DS_Store
-            **/Thumbs.db
-            **/*.log
-            **/.env*
-            **/node_modules/**
-            **/deployment/**
-            **/backups/**
-            **/scripts/**
-            **/*.md
-            **/package*.json
-            **/tsconfig.json
-            **/webpack.config.js
-            **/*.ts
-            **/test.html
-            **/src/**

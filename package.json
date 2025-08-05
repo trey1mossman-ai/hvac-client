@@ -1,20 +1,13 @@
 {
-  "name": "supplyside-flooring-website",
+  "name": "supplyside-website",
   "version": "2.0.0",
   "description": "SupplySide Flooring Installation - Chicago's most reliable flooring installation website with bulletproof Hostinger deployment",
   "main": "index.html",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
-    "dev": "webpack serve --mode development",
-    "start": "npm run dev",
-    "deploy": "npm run build && echo 'Ready to deploy dist folder'",
-    "deploy:old": "node deployment/deploy.js",
-    "deploy:setup": "node deployment/setup-wizard.js",
-    "deploy:test": "node deployment/test-connection.js",
-    "deploy:verify": "node deployment/verify-setup.js",
-    "deploy:discover": "node deployment/discover-config.js",
-    "deploy:help": "cat DEPLOYMENT.md",
-    "handoff": "node scripts/handoff.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [
     "flooring",
@@ -35,11 +28,19 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "autoprefixer": "^10.4.21",
     "basic-ftp": "^5.0.5",
     "chalk": "^4.1.2",
     "dotenv": "^16.4.5",
     "glob-promise": "^6.0.7",
-    "ora": "^5.4.1"
+    "next": "^15.4.5",
+    "ora": "^5.4.1",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@types/node": "^24.2.0",
