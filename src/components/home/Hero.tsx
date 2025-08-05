@@ -104,8 +104,8 @@ export default function Hero() {
             
             {/* Rotating Text */}
             <div className="mt-8 flex items-baseline">
-              <span className="text-lg md:text-xl font-inter font-medium text-warm-wood">
-                We are{' '}
+              <span className="text-lg md:text-xl font-inter font-medium text-warm-wood mr-2">
+                We are
               </span>
               <div className="rotating-words-container">
                 <div
