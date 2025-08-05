@@ -58,7 +58,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center hero-grid">
           {/* Left Side - 60% */}
           <div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-deep-navy mb-6 leading-relaxed font-inter">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-deep-navy mb-6 leading-relaxed font-inter">
               Chicago's Most Reliable<br />
               Flooring Installation
             </h1>
