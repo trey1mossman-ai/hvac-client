@@ -1,0 +1,41 @@
+name: Clean Deploy to Hostinger
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Create deployment directory
+      run: |
+        mkdir -p deploy_files
+        # Copy only essential website files
+        cp index.html deploy_files/
+        cp about.html deploy_files/
+        cp favicon.ico deploy_files/ || true
+        cp -r services deploy_files/
+        cp -r css deploy_files/
+        cp -r js deploy_files/ || true
+        cp -r images deploy_files/ || true
+        cp -r fonts deploy_files/ || true
+        
+        # List what we're deploying
+        echo "Files to deploy:"
+        find deploy_files -type f | sort
+      
+    - name: Deploy ONLY website files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftp
+        port: 21
+        local-dir: ./deploy_files/
+        server-dir: ./public_html/
+        dangerous-clean-slate: true
