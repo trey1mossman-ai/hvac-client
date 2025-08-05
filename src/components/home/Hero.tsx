@@ -14,7 +14,7 @@ export default function Hero() {
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
 
   const [rotatingText, setRotatingText] = useState(0);
-  const rotatingWords = ['RELIABLE', 'PROFESSIONAL', 'COURTEOUS', 'EXPERIENCED'];
+  const rotatingWords = ['RELIABLE', 'PROFESSIONAL', 'COURTEOUS'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -192,7 +192,7 @@ export default function Hero() {
                   className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-olive-green/20 focus:border-olive-green font-inter bg-gray-50 hover:bg-white transition-all duration-200 text-deep-navy placeholder-gray-400"
                 >
                   <option value="">Select Service Type *</option>
-                  {services.slice(0, 5).map((service) => (
+                  {services.map((service) => (
                     <option key={service.id} value={service.id}>
                       {service.name}
                     </option>

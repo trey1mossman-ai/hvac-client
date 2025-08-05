@@ -10,10 +10,10 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Ziggy',
+    name: 'Ziggy Durda',
     location: 'Property Manager, Refined Realty',
     rating: 5,
-    review: 'We use SupplySide for residential and commercial flooring installations at our Chicago properties. They are always professional, reliable, and transparent. Matt and Don operate at the highest level.',
+    review: 'We use SupplySide for residential and commercial flooring installations at our Chicago properties. They are always professional, reliable, transparent, and very fairly priced. Matt and Don operate at the highest level.',
     service: 'Residential & Commercial Flooring'
   },
   {

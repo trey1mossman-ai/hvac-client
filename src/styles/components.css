@@ -271,25 +271,3 @@
   line-height: 40px;
 }
 
-/* Rotating Text Animation */
-.rotating-words-container {
-  display: inline-block;
-  height: 40px;
-  overflow: hidden;
-  vertical-align: bottom;
-  position: relative;
-  min-width: 280px;
-}
-
-.rotating-words-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.rotating-word {
-  height: 40px;
-  line-height: 40px;
-  display: block;
-}

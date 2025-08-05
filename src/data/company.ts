@@ -1,7 +1,7 @@
 export const companyInfo = {
   name: 'SupplySide Flooring Installation',
   phone: '312-210-0606',
-  email: 'info@supplysidefloors.com',
+  email: 'matt.o.lee@gmail.com',
   address: {
     street: '1111 W 35th Street',
     city: 'Chicago',
