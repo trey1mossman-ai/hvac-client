@@ -2,6 +2,32 @@ import { Link } from 'react-router-dom';
 import { Service } from '../../data/services';
 import LazyImage from './LazyImage';
 
+// Generate specific alt text based on service type
+const getServiceAltText = (service: Service): string => {
+  const baseText = `Professional ${service.name.toLowerCase()} installation in Chicago`;
+  
+  switch (service.id) {
+    case 'vinyl-flooring':
+      return `${baseText} featuring waterproof luxury vinyl plank flooring with realistic wood grain texture and durable wear layer by SupplySide Flooring`;
+    case 'laminate-flooring':
+      return `${baseText} showcasing scratch-resistant laminate flooring with authentic hardwood appearance and seamless finish by SupplySide Flooring`;
+    case 'hardwood-floors':
+      return `${baseText} displaying beautiful solid hardwood floors with natural wood grain patterns and professional finishing by SupplySide Flooring`;
+    case 'tile-installation':
+      return `${baseText} featuring ceramic and porcelain tile work with precise alignment and expert grouting by SupplySide Flooring`;
+    case 'carpet-tile':
+      return `${baseText} showing commercial-grade modular carpet tiles with professional installation and clean edges by SupplySide Flooring`;
+    case 'stone-tile':
+      return `${baseText} displaying natural stone tile installation with marble, granite, or travertine featuring expert cutting and sealing by SupplySide Flooring`;
+    case 'shower-tile':
+      return `${baseText} showcasing waterproof shower tile installation with custom design and professional waterproofing by SupplySide Flooring`;
+    case 'backsplash':
+      return `${baseText} featuring kitchen backsplash tile installation with precise cuts around outlets and seamless finish by SupplySide Flooring`;
+    default:
+      return `${baseText} featuring high-quality materials and expert craftsmanship by SupplySide Flooring`;
+  }
+};
+
 interface ServiceCardProps {
   service: Service;
 }
@@ -16,7 +42,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         <div className="h-64 md:h-72 overflow-hidden relative">
           <LazyImage 
             src={service.image} 
-            alt={service.name}
+            alt={getServiceAltText(service)}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

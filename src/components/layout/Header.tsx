@@ -92,13 +92,22 @@ export default function Header() {
             </a>
           </nav>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-crisp-white"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href="tel:312-210-0606"
+              className="flex items-center justify-center w-11 h-11 bg-burnt-sienna text-crisp-white rounded-full hover:bg-opacity-90 transition-all duration-300"
+              aria-label="Call us at 312-210-0606"
+            >
+              <Phone size={20} />
+            </a>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-crisp-white"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 

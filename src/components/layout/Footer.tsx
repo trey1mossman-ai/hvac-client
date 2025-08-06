@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">SupplySide Flooring</h3>
+            <h3 className="text-xl font-semibold mb-4 text-crisp-white">SupplySide Flooring</h3>
             <p className="mb-4 text-gray-300 font-light">
               Chicago's most reliable flooring installation company. 
               80+ years of combined experience.
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">Our Services</h3>
+            <h3 className="text-xl font-semibold mb-4 text-crisp-white">Our Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 4).map(service => (
                 <li key={service.id}>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">Contact Info</h3>
+            <h3 className="text-xl font-semibold mb-4 text-crisp-white">Contact Info</h3>
             <div className="space-y-3">
               <a 
                 href={`tel:${companyInfo.phone}`}
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">Hours</h3>
+            <h3 className="text-xl font-semibold mb-4 text-crisp-white">Hours</h3>
             <div className="space-y-2 text-gray-300 font-light">
               <div className="flex items-center gap-2">
                 <Clock size={18} />

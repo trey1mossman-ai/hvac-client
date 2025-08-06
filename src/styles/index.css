@@ -49,18 +49,24 @@
   }
   
   h1 {
-    @apply text-deep-charcoal font-extrabold;
-    letter-spacing: -0.02em;
+    @apply text-deep-charcoal;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-size: clamp(2rem, 5vw, 4rem);
   }
   
   h2 {
-    @apply text-deep-charcoal font-bold;
-    letter-spacing: -0.01em;
+    @apply text-deep-charcoal;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    font-size: clamp(1.5rem, 4vw, 3rem);
   }
   
   h3, h4, h5, h6 {
-    @apply text-deep-charcoal font-semibold;
-    letter-spacing: -0.01em;
+    @apply text-deep-charcoal;
+    font-weight: 600;
+    letter-spacing: 0;
+    font-size: clamp(1.125rem, 2.5vw, 1.875rem);
   }
   
   button {

@@ -197,7 +197,7 @@ export default function ServiceDetail() {
             {/* Right Side - Form */}
             <div id="service-form" className="bg-crisp-white/95 backdrop-blur-md p-10 rounded-2xl shadow-2xl border border-white/50">
               <h2 className="text-xl font-inter font-medium text-deep-charcoal mb-3 text-center">
-                Get Your Free {service.name} Estimate
+                Get Free Estimate
               </h2>
               <p className="text-sm text-medium-gray text-center mb-8">
                 Accurate pricing in 30 minutes or less

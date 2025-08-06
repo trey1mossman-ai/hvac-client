@@ -56,7 +56,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/30 via-deep-charcoal/25 to-transparent"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center hero-grid">
+        <div className="flex flex-col md:grid md:grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-center hero-grid">
           {/* Left Side - 60% */}
           <div className="bg-deep-charcoal/80 backdrop-blur-sm rounded-2xl p-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-crisp-white mb-6 leading-relaxed font-inter">
@@ -93,7 +93,7 @@ export default function Hero() {
                 href="#hero-form"
                 className="bg-burnt-sienna text-crisp-white px-6 py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 inline-flex items-center justify-center shadow-lg"
               >
-                Schedule Your Free Consultation
+                Get Free Estimate
               </a>
               <a
                 href="#services"
@@ -127,9 +127,9 @@ export default function Hero() {
           </div>
 
           {/* Right Side - 40% Form */}
-          <div id="hero-form" className="bg-crisp-white/95 backdrop-blur-md p-10 rounded-2xl shadow-2xl hero-form-wrapper border border-white/50">
+          <div id="hero-form" className="w-full bg-crisp-white/95 backdrop-blur-md p-6 md:p-10 rounded-2xl shadow-2xl hero-form-wrapper border border-white/50">
             <h2 className="text-xl font-inter font-medium text-deep-charcoal mb-3 text-center">
-              Get Your Free Estimate
+              Get Free Estimate
             </h2>
             <p className="text-sm text-medium-gray text-center mb-8">
               No obligations. No surprises. Just honest pricing.
@@ -206,7 +206,7 @@ export default function Hero() {
                 type="submit"
                 className="w-full bg-burnt-sienna text-crisp-white py-2.5 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300"
               >
-                Schedule Your Free Consultation
+                Get Free Estimate
               </button>
             </form>
             

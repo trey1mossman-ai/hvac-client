@@ -5,6 +5,14 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Files to exclude from production build
+const excludeFiles = [
+  'download-images.sh',
+  'download-images.ps1',
+  'download-images-curl.sh',
+  'IMAGE-DOWNLOAD-GUIDE.md'
+];
+
 function copyFolderRecursiveSync(source, target) {
   // Create target folder if it doesn't exist
   if (!fs.existsSync(target)) {
@@ -15,6 +23,12 @@ function copyFolderRecursiveSync(source, target) {
   const files = fs.readdirSync(source);
 
   files.forEach(file => {
+    // Skip excluded files
+    if (excludeFiles.includes(file)) {
+      console.log(`⏭️  Skipping development file: ${file}`);
+      return;
+    }
+
     const sourcePath = path.join(source, file);
     const targetPath = path.join(target, file);
 

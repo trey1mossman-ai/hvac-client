@@ -27,7 +27,7 @@ export default function About() {
               <div className="flex items-center gap-4 text-burnt-sienna font-medium mt-8">
                 <img 
                   src="/images/about/team-photo.webp"
-                  alt="Matt and Don"
+                  alt="Matt and Don, founders and master flooring installers at SupplySide Flooring, with 80+ years combined experience serving Chicago homeowners and businesses"
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div>

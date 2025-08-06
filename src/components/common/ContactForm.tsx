@@ -28,8 +28,8 @@ export default function ContactForm() {
     <section id="contact-form" className="py-20 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-montserrat font-extrabold text-center mb-12 text-deep-charcoal uppercase tracking-header">
-            Get Your Free Quote
+          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-center mb-12 text-deep-charcoal" style={{fontSize: 'clamp(2.5rem, 5vw, 5rem)'}}>
+            Get Free Estimate
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -106,14 +106,14 @@ export default function ContactForm() {
               
               <button
                 type="submit"
-                className="w-full bg-burnt-sienna text-crisp-white py-4 rounded-lg font-bold text-lg hover:bg-terracotta transition uppercase tracking-wider"
+                className="w-full bg-burnt-sienna text-crisp-white py-4 rounded-lg font-bold text-lg hover:bg-terracotta transition"
               >
-                Get Free Quote
+                Get Free Estimate
               </button>
             </form>
             
             <div className="bg-soft-beige p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4 text-deep-charcoal uppercase tracking-wider">Why Choose SupplySide?</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-charcoal" style={{fontSize: 'clamp(1.25rem, 3vw, 2rem)'}}>Why Choose SupplySide?</h3>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <span className="text-burnt-sienna mr-2 font-bold">✓</span>

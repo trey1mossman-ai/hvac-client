@@ -6,10 +6,10 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-soft-taupe flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
-        <h1 className="text-6xl md:text-8xl font-black text-deep-charcoal mb-4 font-montserrat uppercase tracking-header">
+        <h1 className="text-6xl md:text-8xl font-extrabold text-deep-charcoal mb-4 font-montserrat" style={{fontSize: 'clamp(4rem, 8vw, 8rem)'}}>
           404
         </h1>
-        <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-6 font-montserrat uppercase">
+        <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-6 font-montserrat" style={{fontSize: 'clamp(1.5rem, 4vw, 3rem)'}}>
           Page Not Found
         </h2>
         <p className="text-xl text-medium-gray mb-8 font-light">
@@ -19,7 +19,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link
             to="/"
-            className="bg-burnt-sienna text-crisp-white px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-terracotta transition inline-flex items-center justify-center gap-2 uppercase tracking-header"
+            className="bg-burnt-sienna text-crisp-white px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-terracotta transition inline-flex items-center justify-center gap-2"
           >
             <Home size={20} />
             Go to Homepage
@@ -34,7 +34,7 @@ export default function NotFound() {
         </div>
         
         <div className="text-left bg-crisp-white rounded-lg p-6 shadow-md">
-          <h3 className="text-lg font-bold text-deep-charcoal mb-4 uppercase">Popular Services:</h3>
+          <h3 className="text-lg font-semibold text-deep-charcoal mb-4" style={{fontSize: 'clamp(1rem, 2vw, 1.125rem)'}}>Popular Services:</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/luxury-vinyl-flooring-installation-chicago-il" className="text-burnt-sienna hover:text-terracotta transition">
@@ -53,7 +53,7 @@ export default function NotFound() {
             </li>
             <li>
               <Link to="/contact" className="text-burnt-sienna hover:text-terracotta transition">
-                → Contact Us for Free Quote
+                → Get Free Estimate
               </Link>
             </li>
           </ul>
