@@ -274,7 +274,7 @@ export default function ServiceDetail() {
       <ServiceDetails service={service} />
 
       {/* Why Choose Section */}
-      <section className="py-24 md:py-32 bg-soft-beige">
+      <section className="py-24 md:py-32 bg-light-gray">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-charcoal mb-16 text-center">
             Why Choose {service.name}?
@@ -300,7 +300,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* Our Process */}
-      <section className="py-24 md:py-32 bg-soft-taupe">
+      <section className="py-24 md:py-32 bg-crisp-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-charcoal mb-16 text-center">
             Our Simple Process
@@ -320,7 +320,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-24 md:py-32 bg-soft-beige">
+      <section className="py-24 md:py-32 bg-light-gray">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-charcoal mb-12">
@@ -357,7 +357,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* FAQs */}
-      <section id="faq" className="py-24 md:py-32 bg-soft-taupe">
+      <section id="faq" className="py-24 md:py-32 bg-crisp-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-charcoal mb-16 text-center">
             Frequently Asked Questions

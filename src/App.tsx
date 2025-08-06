@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
+import FAQ from './pages/FAQ'
 import ServiceDetail from './pages/services/ServiceDetail'
 import NotFound from './pages/NotFound'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="faq" element={<FAQ />} />
           {/* Direct service routes without /services/ prefix */}
           <Route path="luxury-vinyl-flooring-installation-chicago-il" element={<ServiceDetail />} />
           <Route path="laminate-flooring-installation-chicago-il" element={<ServiceDetail />} />

@@ -40,7 +40,7 @@ export default function Header() {
     { name: 'Tile', url: '/tile-installation-chicago-il' },
     { name: 'Showers', url: '/shower-tile-installation-chicago-il' },
     { name: 'About', url: '#about', isAnchor: true },
-    { name: 'FAQ', url: '#faq', isAnchor: true },
+    { name: 'FAQ', url: '/faq' },
   ];
 
   return (
