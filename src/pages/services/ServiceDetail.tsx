@@ -319,7 +319,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 bg-midnight-navy text-crisp-white">
+      <section className="py-24 md:py-32 bg-deep-charcoal text-crisp-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-inter font-medium mb-8">
             Ready to Transform Your Space?

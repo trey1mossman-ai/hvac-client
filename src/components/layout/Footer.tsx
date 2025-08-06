@@ -10,12 +10,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">SupplySide Flooring</h3>
-            <p className="mb-4 text-terracotta font-light">
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">SupplySide Flooring</h3>
+            <p className="mb-4 text-gray-300 font-light">
               Chicago's most reliable flooring installation company. 
               80+ years of combined experience.
             </p>
-            <p className="text-sm text-terracotta/80">
+            <p className="text-sm text-gray-400">
               Licensed & Insured<br />
               Family Owned & Operated
             </p>
@@ -23,13 +23,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Our Services</h3>
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">Our Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 4).map(service => (
                 <li key={service.id}>
                   <Link 
                     to={service.url}
-                    className="text-terracotta hover:text-dusty-gold transition font-light"
+                    className="text-gray-300 hover:text-crisp-white transition font-light"
                   >
                     {service.name}
                   </Link>
@@ -40,23 +40,23 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Contact Info</h3>
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">Contact Info</h3>
             <div className="space-y-3">
               <a 
                 href={`tel:${companyInfo.phone}`}
-                className="flex items-center gap-2 text-terracotta hover:text-dusty-gold transition font-light"
+                className="flex items-center gap-2 text-gray-300 hover:text-crisp-white transition font-light"
               >
                 <Phone size={18} />
                 {companyInfo.phone}
               </a>
               <a 
                 href={`mailto:${companyInfo.email}`}
-                className="flex items-center gap-2 text-terracotta hover:text-dusty-gold transition font-light"
+                className="flex items-center gap-2 text-gray-300 hover:text-crisp-white transition font-light"
               >
                 <Mail size={18} />
                 {companyInfo.email}
               </a>
-              <div className="flex items-start gap-2 text-terracotta font-light">
+              <div className="flex items-start gap-2 text-gray-300 font-light">
                 <MapPin size={18} className="mt-1" />
                 <div>
                   {companyInfo.address.street}<br />
@@ -68,8 +68,8 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Hours</h3>
-            <div className="space-y-2 text-terracotta font-light">
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-crisp-white">Hours</h3>
+            <div className="space-y-2 text-gray-300 font-light">
               <div className="flex items-center gap-2">
                 <Clock size={18} />
                 <span>Hours of Operation</span>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-terracotta/20 mt-8 pt-8 text-center text-terracotta/60">
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
           <p>&copy; 2025 SupplySide Flooring Installation. All rights reserved.</p>
         </div>
       </div>
