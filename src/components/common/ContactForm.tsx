@@ -125,7 +125,7 @@ export default function ContactForm() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-burnt-sienna mr-2 font-bold">✓</span>
-                  <span className="text-medium-gray">5-year installation warranty</span>
+                  <span className="text-medium-gray">Expert craftsmanship guarantee</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-burnt-sienna mr-2 font-bold">✓</span>
@@ -133,7 +133,7 @@ export default function ContactForm() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-burnt-sienna mr-2 font-bold">✓</span>
-                  <span className="text-medium-gray">Financing available</span>
+                  <span className="text-medium-gray">Transparent pricing</span>
                 </li>
               </ul>
               

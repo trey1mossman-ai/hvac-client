@@ -2,18 +2,18 @@ export default function GoogleMap() {
   return (
     <section className="py-16 bg-soft-beige">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-deep-charcoal mb-8 text-center uppercase tracking-wider">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-6 text-center">
             Service Area
           </h2>
-          <p className="text-xl text-medium-gray text-center mb-8 font-light">
+          <p className="text-lg text-medium-gray text-center mb-8">
             Proudly serving Chicago and surrounding suburbs
           </p>
-          <div className="rounded-2xl overflow-hidden shadow-xl">
+          <div className="rounded-xl overflow-hidden shadow-lg mx-auto" style={{ maxWidth: '800px' }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.33858294147!2d-87.87204703418557!3d41.83390367061417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1704240000000!5m2!1sen!2sus"
               width="100%"
-              height="450"
+              height="350"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

@@ -9,8 +9,8 @@ export default function TrustBar() {
     },
     {
       icon: Award,
-      title: '5-Year Warranty',
-      description: 'On all installations'
+      title: 'Expert Craftsmanship',
+      description: 'Meticulous attention to detail'
     },
     {
       icon: Clock,

@@ -14,12 +14,12 @@ export default function Hero() {
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
 
   const [rotatingText, setRotatingText] = useState(0);
-  const rotatingWords = ['RELIABLE', 'PROFESSIONAL', 'COURTEOUS'];
+  const rotatingWords = ['EXPERIENCED', 'PROFESSIONAL', 'COURTEOUS', 'TRANSPARENT', 'THOROUGH', 'SKILLED'];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRotatingText((prev) => (prev + 1) % rotatingWords.length);
-    }, 2000);
+    }, 2500);
     
     // Preload hero image
     const img = new Image();
@@ -62,7 +62,7 @@ export default function Hero() {
               Chicago's Most Reliable<br />
               Flooring Installation
             </h1>
-            <p className="text-base md:text-lg text-medium-gray mb-8 font-inter font-light leading-relaxed">
+            <p className="text-base md:text-lg text-medium-gray mb-8 font-normal leading-relaxed">
               Combined 80+ Years of Professional Installation Across Chicagoland
             </p>
             
@@ -115,7 +115,7 @@ export default function Hero() {
                   {rotatingWords.map((word) => (
                     <span
                       key={word}
-                      className="rotating-word text-lg md:text-xl font-inter font-medium text-burnt-sienna whitespace-nowrap"
+                      className="rotating-word text-lg md:text-xl font-bold text-burnt-sienna whitespace-nowrap"
                     >
                       {word}
                     </span>

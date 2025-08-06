@@ -50,7 +50,7 @@ export default function Header() {
           <a 
             href="#hero"
             onClick={(e) => handleSmoothScroll(e, 'hero')}
-            className="text-3xl font-black text-crisp-white font-montserrat uppercase tracking-header hover:text-terracotta transition cursor-pointer"
+            className="text-3xl font-black text-crisp-white font-logo uppercase tracking-header hover:text-terracotta transition cursor-pointer"
           >
             SupplySide
           </a>
@@ -62,7 +62,7 @@ export default function Header() {
                   key={item.name}
                   href={item.url}
                   onClick={(e) => handleSmoothScroll(e, item.url.substring(1))}
-                  className="text-crisp-white hover:text-terracotta transition font-inter font-medium text-sm nav-item"
+                  className="text-crisp-white hover:text-terracotta transition font-semibold text-sm nav-item"
                 >
                   {item.name}
                 </a>
@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="text-crisp-white hover:text-terracotta transition font-inter font-medium text-sm nav-item"
+                  className="text-crisp-white hover:text-terracotta transition font-semibold text-sm nav-item"
                 >
                   {item.name}
                 </Link>

@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: 'What happens after installation?',
-    answer: 'We\'ll walk through everything with you, ensure you\'re 100% satisfied, and provide care instructions. You\'ll have our direct number for any questions. Plus, our 5-year warranty means we\'re always here if you need us.'
+    answer: 'We\'ll walk through everything with you, ensure you\'re 100% satisfied, and provide care instructions. You\'ll have our direct number for any questions. Plus, our commitment to expert craftsmanship means we\'re always here if you need us.'
   },
   {
     question: 'Why should I trust SupplySide with my home?',
@@ -37,7 +37,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 md:py-32 bg-soft-taupe">
+    <section id="faq" className="py-24 md:py-32 bg-crisp-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-charcoal">

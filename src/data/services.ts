@@ -16,7 +16,7 @@ export const services: Service[] = [
     url: '/luxury-vinyl-flooring-installation-chicago-il',
     name: 'Vinyl Plank & Vinyl Tile',
     description: 'Waterproof flooring perfect for Chicago homes. Looks like real wood or stone.',
-    features: ['100% Waterproof', 'Pet-Friendly', '25-Year Warranty', 'Scratch Resistant'],
+    features: ['100% Waterproof', 'Pet-Friendly', 'Professional Installation', 'Scratch Resistant'],
     image: '/images/services/vinyl-preview.webp',
     detailedDescription: 'Transform your space with luxury vinyl plank (LVP) or luxury vinyl tile (LVT). Perfect for kitchens, bathrooms, and basements.'
   },
@@ -76,7 +76,7 @@ export const services: Service[] = [
     url: '/shower-tile-installation-chicago-il',
     name: 'Shower Installation',
     description: 'Waterproof shower installations with beautiful tile work.',
-    features: ['Fully Waterproof', 'Custom Designs', 'Built-in Shelves', 'Lifetime Warranty'],
+    features: ['Fully Waterproof', 'Custom Designs', 'Built-in Shelves', 'Licensed & Insured'],
     image: '/images/services/shower-preview.webp',
     detailedDescription: 'Complete shower renovations with proper waterproofing and stunning tile designs. We handle everything from simple updates to luxury spa showers.'
   },

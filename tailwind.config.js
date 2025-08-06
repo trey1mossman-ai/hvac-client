@@ -43,8 +43,9 @@ export default {
         'soft-taupe': '#F5F1EC',     // Alias for warm-taupe
       },
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif'], // Keep for logo only
+        'sans': ['Inter', 'system-ui', 'sans-serif'], // Default for everything
+        'inter': ['Inter', 'system-ui', 'sans-serif'], // Modern primary font
+        'logo': ['Montserrat', 'sans-serif'], // Logo ONLY
       },
       fontWeight: {
         'light': 300,

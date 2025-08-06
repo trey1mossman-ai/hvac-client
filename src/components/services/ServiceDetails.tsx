@@ -1,10 +1,12 @@
 import { Service } from '../../data/services';
+import { serviceDescriptions } from '../../data/serviceDescriptions';
 
 interface ServiceDetailsProps {
   service: Service;
 }
 
 export default function ServiceDetails({ service }: ServiceDetailsProps) {
+  const descriptions = serviceDescriptions[service.id];
   return (
     <section className="py-24 md:py-32 bg-soft-taupe">
       <div className="container mx-auto px-4">
@@ -14,9 +16,20 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           </h2>
           
           <div className="bg-crisp-white rounded-xl p-10 shadow-sm mb-12">
-            <p className="text-base text-medium-gray font-light leading-relaxed mb-8">
-              {service.detailedDescription || service.description}
-            </p>
+            {descriptions ? (
+              <>
+                <p className="text-base text-medium-gray font-normal leading-relaxed mb-6">
+                  {descriptions.paragraph1}
+                </p>
+                <p className="text-base text-medium-gray font-normal leading-relaxed mb-8">
+                  {descriptions.paragraph2}
+                </p>
+              </>
+            ) : (
+              <p className="text-base text-medium-gray font-normal leading-relaxed mb-8">
+                {service.detailedDescription || service.description}
+              </p>
+            )}
             
             <div className="grid md:grid-cols-2 gap-8">
               <div>

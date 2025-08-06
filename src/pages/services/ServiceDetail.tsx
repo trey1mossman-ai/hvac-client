@@ -48,7 +48,7 @@ export default function ServiceDetail() {
     { step: '1', title: 'Free Consultation', description: 'Schedule your free in-home estimate' },
     { step: '2', title: 'Professional Measurement', description: 'Accurate measurements for perfect fit' },
     { step: '3', title: 'Material Selection', description: 'Choose from premium flooring options' },
-    { step: '4', title: 'Expert Installation', description: 'Professional installation with warranty' }
+    { step: '4', title: 'Expert Installation', description: 'Professional installation with meticulous attention to detail' }
   ];
 
   const serviceFaqs = getServiceFAQs(service.id);
@@ -68,12 +68,12 @@ export default function ServiceDetail() {
       answer: 'Yes, we offer professional furniture moving services as part of our comprehensive installation package to ensure a smooth, hassle-free experience.' 
     },
     { 
-      question: 'What warranty do you offer?', 
-      answer: 'We provide a 5-year installation warranty on all flooring projects, plus manufacturer warranties on materials. Your investment is fully protected.' 
+      question: 'What guarantees do you provide?', 
+      answer: 'We guarantee professional installation with meticulous attention to detail on all flooring projects. Our expert craftsmanship ensures your investment is protected with quality workmanship.' 
     },
     { 
-      question: 'Do you offer financing?', 
-      answer: 'Yes, we offer flexible financing options with approved credit, making it easy to get the beautiful floors you want with manageable monthly payments.' 
+      question: 'What about pricing and payment?', 
+      answer: 'We provide transparent pricing with free, no-obligation quotes. No hidden costs - you\'ll know exactly what you\'re paying upfront with our straightforward pricing structure.' 
     }
   ];
   
@@ -125,7 +125,7 @@ export default function ServiceDetail() {
                 <span>•</span>
                 <span className="flex items-center gap-2">
                   <Shield className="w-5 h-5" />
-                  5-Year Warranty
+                  Expert Craftsmanship
                 </span>
               </div>
               
@@ -239,8 +239,8 @@ export default function ServiceDetail() {
             </div>
             <div className="text-center">
               <Shield className="w-16 h-16 text-burnt-sienna mx-auto mb-4" />
-              <h3 className="text-lg font-inter font-medium text-deep-charcoal mb-3">Lifetime Warranty</h3>
-              <p className="text-medium-gray">Our installations are backed by comprehensive warranty coverage</p>
+              <h3 className="text-lg font-inter font-medium text-deep-charcoal mb-3">Expert Craftsmanship</h3>
+              <p className="text-medium-gray">Our installations are backed by meticulous attention to detail and professional expertise</p>
             </div>
             <div className="text-center">
               <Clock className="w-16 h-16 text-burnt-sienna mx-auto mb-4" />

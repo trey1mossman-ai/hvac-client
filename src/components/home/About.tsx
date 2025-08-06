@@ -2,7 +2,7 @@ import { Shield, Users, Award, Clock } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-soft-taupe">
+    <section id="about" className="py-24 md:py-32 bg-warm-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-charcoal">
@@ -15,9 +15,9 @@ export default function About() {
                 Chicago's Most Reliable Flooring Installers
               </h3>
               <p className="text-medium-gray mb-6 font-light leading-relaxed">
-                For over 80 years combined, Matt and Don have been transforming Chicago homes and businesses 
-                with quality flooring installations. As a family-owned business, we treat every project 
-                like it's our own home.
+                With 80+ years combined experience, Matt and Don have been transforming Chicago homes and businesses 
+                with quality flooring installations. Don brings 48 years as lead installer. As a family-owned business, 
+                we treat every project like it's our own home.
               </p>
               <p className="text-medium-gray mb-6 font-light leading-relaxed">
                 We've built our reputation on three simple principles: show up on time, do what we say 
@@ -50,13 +50,13 @@ export default function About() {
               </div>
               <div className="bg-crisp-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow duration-300">
                 <Shield className="w-12 h-12 text-burnt-sienna mx-auto mb-3" />
-                <h4 className="font-inter font-medium text-deep-charcoal mb-2">Fully Insured</h4>
-                <p className="text-medium-gray text-sm">Licensed & bonded</p>
+                <h4 className="font-semibold text-deep-charcoal mb-2">Trustworthy</h4>
+                <p className="text-medium-gray text-sm">Licensed, insured & reliable</p>
               </div>
               <div className="bg-crisp-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow duration-300">
                 <Award className="w-12 h-12 text-burnt-sienna mx-auto mb-3" />
-                <h4 className="font-inter font-medium text-deep-charcoal mb-2">5-Star Rated</h4>
-                <p className="text-medium-gray text-sm">1000+ happy customers</p>
+                <h4 className="font-semibold text-deep-charcoal mb-2">Excellence</h4>
+                <p className="text-medium-gray text-sm">Consistent 5-star reviews</p>
               </div>
             </div>
           </div>

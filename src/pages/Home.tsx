@@ -5,6 +5,7 @@ import Services from '../components/home/Services';
 import About from '../components/home/About';
 import Testimonials from '../components/home/Testimonials';
 import FAQ from '../components/home/FAQ';
+import CTASection from '../components/home/CTASection';
 import ContactForm from '../components/common/ContactForm';
 import GoogleMap from '../components/common/GoogleMap';
 import { localBusinessSchema } from '../data/company';
@@ -29,6 +30,7 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <Testimonials />
+      <CTASection />
       <Services />
       <About />
       <FAQ />
