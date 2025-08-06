@@ -53,7 +53,7 @@ export default function Hero() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-soft-beige/70 to-soft-beige/85"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-deep-charcoal/40 to-deep-charcoal/60"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center hero-grid">
           {/* Left Side - 60% */}

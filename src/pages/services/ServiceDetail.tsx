@@ -93,7 +93,7 @@ export default function ServiceDetail() {
       <section 
         className="bg-soft-beige py-24 md:py-32 relative"
         style={{
-          backgroundImage: `url(${service.image})`,
+          backgroundImage: `url(${service.heroImage || service.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay',
