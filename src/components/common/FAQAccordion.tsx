@@ -18,42 +18,40 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
   };
 
   return (
-    <div className="space-y-4 max-w-3xl mx-auto">
+    <div className="space-y-2 max-w-3xl mx-auto">
       {faqs.map((faq, index) => (
         <div
           key={index}
-          className={`bg-crisp-white rounded-lg overflow-hidden transition-all duration-300 ${
-            openIndex === index ? 'shadow-md' : 'shadow-sm'
-          }`}
+          className="border-b border-gray-200 last:border-0 transition-all duration-300"
         >
           <button
             onClick={() => toggleAccordion(index)}
-            className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+            className="w-full py-6 text-left flex justify-between items-center group hover:text-burnt-sienna transition-colors duration-200"
           >
-            <h3 className="font-inter font-medium text-deep-charcoal pr-4">
+            <h3 className="font-inter font-normal text-lg text-deep-charcoal group-hover:text-burnt-sienna pr-4 transition-colors">
               {faq.question}
             </h3>
             <div
-              className={`transition-transform duration-300 ${
+              className={`transition-all duration-300 flex-shrink-0 ${
                 openIndex === index ? 'rotate-180' : ''
               }`}
             >
               {openIndex === index ? (
-                <Minus className="w-5 h-5 text-burnt-sienna" />
+                <Minus className="w-4 h-4 text-burnt-sienna" />
               ) : (
-                <Plus className="w-5 h-5 text-burnt-sienna" />
+                <Plus className="w-4 h-4 text-gray-400 group-hover:text-burnt-sienna transition-colors" />
               )}
             </div>
           </button>
           
           <div
-            className={`px-6 transition-all duration-300 ease-in-out ${
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
               openIndex === index
-                ? 'max-h-96 py-5 border-t border-gray-100'
+                ? 'max-h-96 pb-6'
                 : 'max-h-0'
             }`}
           >
-            <p className="text-medium-gray font-light leading-relaxed">
+            <p className="text-gray-600 font-light leading-relaxed text-base">
               {faq.answer}
             </p>
           </div>

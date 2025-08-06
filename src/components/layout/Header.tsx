@@ -70,7 +70,9 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="text-crisp-white hover:text-terracotta transition font-semibold text-sm nav-item"
+                  className={`hover:text-terracotta transition font-semibold text-sm nav-item ${
+                    location.pathname === item.url ? 'text-terracotta border-b-2 border-terracotta pb-1' : 'text-crisp-white'
+                  }`}
                 >
                   {item.name}
                 </Link>

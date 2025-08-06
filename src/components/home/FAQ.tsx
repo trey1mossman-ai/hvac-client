@@ -37,12 +37,15 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 md:py-32 bg-crisp-white">
+    <section id="faq" className="py-20 md:py-24 bg-light-gray">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-charcoal">
-            Frequently Asked Questions
+          <h2 className="text-2xl md:text-3xl font-inter font-semibold text-center mb-4 text-deep-charcoal">
+            Common Questions
           </h2>
+          <p className="text-center text-medium-gray mb-12 text-base">
+            Everything you need to know about our flooring services
+          </p>
           
           <FAQAccordion faqs={faqs} />
         </div>

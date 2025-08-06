@@ -28,9 +28,12 @@ export default function ContactForm() {
     <section id="contact-form" className="py-20 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-center mb-12 text-deep-charcoal" style={{fontSize: 'clamp(2.5rem, 5vw, 5rem)'}}>
-            Get Free Estimate
+          <h2 className="text-2xl md:text-3xl font-inter font-bold text-center mb-8 text-deep-charcoal">
+            Ready to get started?
           </h2>
+          <p className="text-center text-medium-gray mb-12 text-lg">
+            Get your free estimate today - no obligations, just honest pricing.
+          </p>
           
           <div className="grid md:grid-cols-2 gap-8">
             <form onSubmit={handleSubmit} className="space-y-4">
