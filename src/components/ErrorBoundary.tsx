@@ -29,16 +29,16 @@ export default class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen bg-soft-taupe flex items-center justify-center px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <AlertTriangle className="w-16 h-16 text-warm-wood mx-auto mb-4" />
-            <h1 className="text-3xl font-bold text-deep-navy mb-4 font-montserrat uppercase tracking-header">
+            <AlertTriangle className="w-16 h-16 text-burnt-sienna mx-auto mb-4" />
+            <h1 className="text-3xl font-bold text-deep-charcoal mb-4 font-montserrat uppercase tracking-header">
               Something went wrong
             </h1>
-            <p className="text-lg text-cool-gray mb-8">
+            <p className="text-lg text-medium-gray mb-8">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-olive-green text-crisp-white px-8 py-3 rounded-lg font-montserrat font-bold hover:bg-sage transition uppercase tracking-header"
+              className="bg-burnt-sienna text-crisp-white px-8 py-3 rounded-lg font-montserrat font-bold hover:bg-terracotta transition uppercase tracking-header"
             >
               Refresh Page
             </button>

@@ -44,13 +44,13 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-deep-navy shadow-lg sticky top-0 z-50">
+    <header className="bg-midnight-navy shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a 
             href="#hero"
             onClick={(e) => handleSmoothScroll(e, 'hero')}
-            className="text-3xl font-black text-crisp-white font-montserrat uppercase tracking-header hover:text-sage transition cursor-pointer"
+            className="text-3xl font-black text-crisp-white font-montserrat uppercase tracking-header hover:text-terracotta transition cursor-pointer"
           >
             SupplySide
           </a>
@@ -62,7 +62,7 @@ export default function Header() {
                   key={item.name}
                   href={item.url}
                   onClick={(e) => handleSmoothScroll(e, item.url.substring(1))}
-                  className="text-crisp-white hover:text-sage transition font-inter font-medium text-sm nav-item"
+                  className="text-crisp-white hover:text-terracotta transition font-inter font-medium text-sm nav-item"
                 >
                   {item.name}
                 </a>
@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="text-crisp-white hover:text-sage transition font-inter font-medium text-sm nav-item"
+                  className="text-crisp-white hover:text-terracotta transition font-inter font-medium text-sm nav-item"
                 >
                   {item.name}
                 </Link>
@@ -79,13 +79,13 @@ export default function Header() {
             <a
               href="#hero-form"
               onClick={(e) => handleSmoothScroll(e, 'hero-form')}
-              className="bg-olive-green text-crisp-white px-6 py-2.5 rounded-md hover:bg-opacity-90 transition-all duration-300 font-inter font-medium text-sm"
+              className="bg-burnt-sienna text-crisp-white px-6 py-2.5 rounded-md hover:bg-opacity-90 transition-all duration-300 font-inter font-medium text-sm"
             >
               Get Free Estimate
             </a>
             <a 
               href={`tel:${companyInfo.phone}`} 
-              className="flex items-center gap-2 text-sage hover:text-light-oak transition font-inter font-medium"
+              className="flex items-center gap-2 text-terracotta hover:text-dusty-gold transition font-inter font-medium"
             >
               <Phone size={18} />
               {companyInfo.phone}
@@ -104,7 +104,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <nav className="lg:hidden bg-deep-navy border-t border-sage/20">
+        <nav className="lg:hidden bg-midnight-navy border-t border-terracotta/20">
           <div className="px-4 py-2 space-y-2">
             {navigationItems.map((item) => (
               item.isAnchor ? (
@@ -115,7 +115,7 @@ export default function Header() {
                     handleSmoothScroll(e, item.url.substring(1));
                     setIsOpen(false);
                   }}
-                  className="block py-2 text-crisp-white hover:text-sage font-inter font-medium"
+                  className="block py-2 text-crisp-white hover:text-terracotta font-inter font-medium"
                 >
                   {item.name}
                 </a>
@@ -123,7 +123,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.url}
-                  className="block py-2 text-crisp-white hover:text-sage font-inter font-medium"
+                  className="block py-2 text-crisp-white hover:text-terracotta font-inter font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -136,13 +136,13 @@ export default function Header() {
                 handleSmoothScroll(e, 'hero-form');
                 setIsOpen(false);
               }}
-              className="block py-2 text-olive-green font-inter font-medium"
+              className="block py-2 text-burnt-sienna font-inter font-medium"
             >
               Get Free Estimate
             </a>
             <a 
               href={`tel:${companyInfo.phone}`} 
-              className="block py-3 text-sage font-inter font-medium text-lg"
+              className="block py-3 text-terracotta font-inter font-medium text-lg"
             >
               Call: {companyInfo.phone}
             </a>

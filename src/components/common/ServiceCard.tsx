@@ -22,20 +22,20 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-xl font-inter font-medium mb-3 text-deep-navy group-hover:text-olive-green transition-colors duration-300">
+          <h3 className="text-xl font-inter font-medium mb-3 text-deep-charcoal group-hover:text-burnt-sienna transition-colors duration-300">
             {service.name}
           </h3>
-          <p className="text-sm text-cool-gray mb-4 font-light leading-relaxed line-clamp-2">
+          <p className="text-sm text-medium-gray mb-4 font-light leading-relaxed line-clamp-2">
             {service.description}
           </p>
           <div className="flex flex-wrap gap-2 mb-6">
             {service.features.slice(0, 2).map((feature, index) => (
-              <span key={index} className="text-xs bg-cream px-3 py-1 rounded-full text-warm-wood font-medium">
+              <span key={index} className="text-xs bg-soft-beige px-3 py-1 rounded-full text-burnt-sienna font-medium">
                 {feature}
               </span>
             ))}
           </div>
-          <button className="w-full bg-olive-green text-crisp-white py-2.5 px-6 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 mt-auto">
+          <button className="w-full bg-burnt-sienna text-crisp-white py-2.5 px-6 rounded-md font-inter font-medium text-base hover:bg-opacity-90 transition-all duration-300 mt-auto">
             Get Free Estimate
           </button>
         </div>

@@ -40,7 +40,7 @@ export default function FAQ() {
     <section id="faq" className="py-24 md:py-32 bg-soft-taupe">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-navy">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-charcoal">
             Frequently Asked Questions
           </h2>
           

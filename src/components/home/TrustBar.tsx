@@ -32,11 +32,11 @@ export default function TrustBar() {
             const Icon = item.icon;
             return (
               <div key={index} className="text-center">
-                <Icon className="w-12 h-12 text-olive-green mx-auto mb-3" />
-                <h3 className="font-inter font-medium text-deep-navy text-base mb-1">
+                <Icon className="w-12 h-12 text-burnt-sienna mx-auto mb-3" />
+                <h3 className="font-inter font-medium text-deep-charcoal text-base mb-1">
                   {item.title}
                 </h3>
-                <p className="text-sm text-cool-gray font-light">
+                <p className="text-sm text-medium-gray font-light">
                   {item.description}
                 </p>
               </div>

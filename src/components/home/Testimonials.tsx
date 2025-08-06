@@ -3,13 +3,13 @@ import { testimonials } from '../../data/testimonials';
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-cream">
+    <section id="testimonials" className="py-24 md:py-32 bg-soft-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-navy mb-6">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-deep-charcoal mb-6">
             What Our Customers Say
           </h2>
-          <p className="text-base text-cool-gray font-light">
+          <p className="text-base text-medium-gray font-light">
             Over 1,000 satisfied customers across Chicagoland
           </p>
         </div>
@@ -25,15 +25,15 @@ export default function Testimonials() {
                   <Star
                     key={i}
                     size={20}
-                    className="fill-light-oak text-light-oak"
+                    className="fill-dusty-gold text-dusty-gold"
                   />
                 ))}
               </div>
-              <p className="text-cool-gray mb-6 italic font-light leading-relaxed flex-grow line-clamp-4">"{testimonial.review}"</p>
-              <div className="border-t border-sage/20 pt-4 mt-auto">
-                <p className="font-medium text-deep-navy">{testimonial.name}</p>
-                <p className="text-sm text-cool-gray">{testimonial.location}</p>
-                <p className="text-sm text-olive-green mt-2 font-medium">{testimonial.service}</p>
+              <p className="text-medium-gray mb-6 italic font-light leading-relaxed flex-grow line-clamp-4">"{testimonial.review}"</p>
+              <div className="border-t border-terracotta/20 pt-4 mt-auto">
+                <p className="font-medium text-deep-charcoal">{testimonial.name}</p>
+                <p className="text-sm text-medium-gray">{testimonial.location}</p>
+                <p className="text-sm text-burnt-sienna mt-2 font-medium">{testimonial.service}</p>
               </div>
             </div>
           ))}

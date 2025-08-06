@@ -1,12 +1,12 @@
 export default function GoogleMap() {
   return (
-    <section className="py-16 bg-cream">
+    <section className="py-16 bg-soft-beige">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-deep-navy mb-8 text-center uppercase tracking-wider">
+          <h2 className="text-3xl md:text-4xl font-black text-deep-charcoal mb-8 text-center uppercase tracking-wider">
             Service Area
           </h2>
-          <p className="text-xl text-cool-gray text-center mb-8 font-light">
+          <p className="text-xl text-medium-gray text-center mb-8 font-light">
             Proudly serving Chicago and surrounding suburbs
           </p>
           <div className="rounded-2xl overflow-hidden shadow-xl">
@@ -22,7 +22,7 @@ export default function GoogleMap() {
             />
           </div>
           <div className="mt-8 text-center">
-            <p className="text-lg text-cool-gray mb-4">
+            <p className="text-lg text-medium-gray mb-4">
               We serve all of Chicago and the following suburbs:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -32,7 +32,7 @@ export default function GoogleMap() {
                 'Berwyn', 'Cicero', 'Des Plaines', 'Mount Prospect',
                 'Palatine', 'Hoffman Estates', 'Bolingbrook', 'Downers Grove'
               ].map((area) => (
-                <span key={area} className="text-cool-gray font-light">
+                <span key={area} className="text-medium-gray font-light">
                   • {area}
                 </span>
               ))}

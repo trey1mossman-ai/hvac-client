@@ -30,7 +30,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             onClick={() => toggleAccordion(index)}
             className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
           >
-            <h3 className="font-inter font-medium text-deep-navy pr-4">
+            <h3 className="font-inter font-medium text-deep-charcoal pr-4">
               {faq.question}
             </h3>
             <div
@@ -39,9 +39,9 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
               }`}
             >
               {openIndex === index ? (
-                <Minus className="w-5 h-5 text-olive-green" />
+                <Minus className="w-5 h-5 text-burnt-sienna" />
               ) : (
-                <Plus className="w-5 h-5 text-olive-green" />
+                <Plus className="w-5 h-5 text-burnt-sienna" />
               )}
             </div>
           </button>
@@ -53,7 +53,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
                 : 'max-h-0'
             }`}
           >
-            <p className="text-cool-gray font-light leading-relaxed">
+            <p className="text-medium-gray font-light leading-relaxed">
               {faq.answer}
             </p>
           </div>

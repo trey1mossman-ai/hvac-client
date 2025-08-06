@@ -4,6 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Custom Properties for dynamic theming */
+:root {
+  /* Primary Colors */
+  --deep-charcoal: #1A1A1A;
+  --midnight-navy: #1B2838;
+  --slate-gray: #2E3A47;
+  
+  /* Background Colors */
+  --warm-taupe: #F5F1EC;
+  --light-gray: #F8F8F8;
+  --crisp-white: #FFFFFF;
+  
+  /* Accent Colors */
+  --burnt-sienna: #A0522D;
+  --terracotta: #C67544;
+  --dusty-gold: #D4A574;
+  
+  /* Supporting Colors */
+  --medium-gray: #5A5A5A;
+  --light-charcoal: #404040;
+  --soft-beige: #E8E2DA;
+  
+  /* Functional Colors */
+  --success-green: #4A7C59;
+  --error-red: #B85450;
+  --info-blue: #4A6FA5;
+}
+
 @layer base {
   /* Smooth scrolling */
   html {
@@ -17,19 +45,19 @@
   }
   
   body {
-    @apply bg-soft-taupe text-cool-gray font-normal;
+    @apply bg-warm-taupe text-medium-gray font-normal;
   }
   
   h1 {
-    @apply text-deep-navy font-semibold;
+    @apply text-deep-charcoal font-semibold;
   }
   
   h2 {
-    @apply text-deep-navy font-medium;
+    @apply text-deep-charcoal font-medium;
   }
   
   h3, h4, h5, h6 {
-    @apply text-deep-navy font-medium;
+    @apply text-deep-charcoal font-medium;
   }
   
   button {
@@ -47,7 +75,7 @@
   
   /* Selection color */
   ::selection {
-    @apply bg-olive-green text-white;
+    @apply bg-burnt-sienna text-white;
   }
   
   /* Scrollbar styling */

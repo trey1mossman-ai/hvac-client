@@ -5,17 +5,17 @@ import { services } from '../../data/services';
 
 export default function Footer() {
   return (
-    <footer className="bg-deep-navy text-crisp-white">
+    <footer className="bg-midnight-navy text-crisp-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">SupplySide Flooring</h3>
-            <p className="mb-4 text-sage font-light">
+            <p className="mb-4 text-terracotta font-light">
               Chicago's most reliable flooring installation company. 
               80+ years of combined experience.
             </p>
-            <p className="text-sm text-sage/80">
+            <p className="text-sm text-terracotta/80">
               Licensed & Insured<br />
               Family Owned & Operated
             </p>
@@ -29,7 +29,7 @@ export default function Footer() {
                 <li key={service.id}>
                   <Link 
                     to={service.url}
-                    className="text-sage hover:text-light-oak transition font-light"
+                    className="text-terracotta hover:text-dusty-gold transition font-light"
                   >
                     {service.name}
                   </Link>
@@ -44,19 +44,19 @@ export default function Footer() {
             <div className="space-y-3">
               <a 
                 href={`tel:${companyInfo.phone}`}
-                className="flex items-center gap-2 text-sage hover:text-light-oak transition font-light"
+                className="flex items-center gap-2 text-terracotta hover:text-dusty-gold transition font-light"
               >
                 <Phone size={18} />
                 {companyInfo.phone}
               </a>
               <a 
                 href={`mailto:${companyInfo.email}`}
-                className="flex items-center gap-2 text-sage hover:text-light-oak transition font-light"
+                className="flex items-center gap-2 text-terracotta hover:text-dusty-gold transition font-light"
               >
                 <Mail size={18} />
                 {companyInfo.email}
               </a>
-              <div className="flex items-start gap-2 text-sage font-light">
+              <div className="flex items-start gap-2 text-terracotta font-light">
                 <MapPin size={18} className="mt-1" />
                 <div>
                   {companyInfo.address.street}<br />
@@ -69,7 +69,7 @@ export default function Footer() {
           {/* Hours */}
           <div>
             <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Hours</h3>
-            <div className="space-y-2 text-sage font-light">
+            <div className="space-y-2 text-terracotta font-light">
               <div className="flex items-center gap-2">
                 <Clock size={18} />
                 <span>Hours of Operation</span>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-sage/20 mt-8 pt-8 text-center text-sage/60">
+        <div className="border-t border-terracotta/20 mt-8 pt-8 text-center text-terracotta/60">
           <p>&copy; 2025 SupplySide Flooring Installation. All rights reserved.</p>
         </div>
       </div>
