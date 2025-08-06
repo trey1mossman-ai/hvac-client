@@ -7,7 +7,7 @@ export default function CTASection() {
     <section className="py-12 md:py-16 bg-deep-navy text-crisp-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-crisp-white">
             Ready to Transform Your Space?
           </h2>
           <p className="text-base md:text-lg mb-8 text-gray-300">
