@@ -21,9 +21,9 @@ export default function Hero() {
       setRotatingText((prev) => (prev + 1) % rotatingWords.length);
     }, 2500);
     
-    // Preload hero image
+    // Preload hero image with cache busting
     const img = new Image();
-    img.src = '/images/hero/homepage-hero.webp';
+    img.src = `/images/hero/homepage-hero.webp?v=${Date.now()}`;
     img.onload = () => setHeroImageLoaded(true);
     
     return () => clearInterval(interval);
@@ -47,7 +47,7 @@ export default function Hero() {
       id="hero"
       className={`bg-soft-beige py-24 md:py-32 relative transition-opacity duration-700 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{
-        backgroundImage: 'url(/images/hero/homepage-hero.webp)',
+        backgroundImage: `url(/images/hero/homepage-hero.webp?v=${Date.now()})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

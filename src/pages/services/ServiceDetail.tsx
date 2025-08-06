@@ -91,15 +91,15 @@ export default function ServiceDetail() {
 
       {/* Hero Section with 60/40 Split */}
       <section 
-        className="bg-soft-beige py-24 md:py-32 relative"
+        className="py-24 md:py-32 relative"
         style={{
-          backgroundImage: `url(${service.heroImage || service.image})`,
+          backgroundImage: `url(${service.heroImage || service.image}?v=${Date.now()})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-soft-beige/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-deep-charcoal/50 to-deep-charcoal/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* Left Side - Service Content */}
