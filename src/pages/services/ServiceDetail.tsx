@@ -99,20 +99,20 @@ export default function ServiceDetail() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/80 via-deep-charcoal/70 to-deep-charcoal/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/30 via-deep-charcoal/25 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* Left Side - Service Content */}
-            <div>
-              <h1 className="text-2xl md:text-3xl font-inter font-bold text-crisp-white mb-6 leading-relaxed drop-shadow-lg">
+            <div className="bg-deep-charcoal/80 backdrop-blur-sm rounded-2xl p-8">
+              <h1 className="text-2xl md:text-3xl font-inter font-bold text-crisp-white mb-6 leading-relaxed">
                 {service.name} Installation<br />
                 in Chicago
               </h1>
-              <p className="text-lg text-crisp-white mb-8 font-medium leading-relaxed drop-shadow-md">
+              <p className="text-lg text-gray-100 mb-8 font-medium leading-relaxed">
                 {service.description}
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-10 text-crisp-white font-medium bg-deep-charcoal/60 backdrop-blur-sm rounded-lg p-3 inline-flex">
+              <div className="flex flex-wrap gap-4 mb-10 text-crisp-white font-medium">
                 <span className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
                   Licensed & Insured

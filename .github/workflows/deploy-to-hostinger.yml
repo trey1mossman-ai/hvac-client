@@ -40,6 +40,6 @@ jobs:
           protocol: ftp
           port: ${{ secrets.FTP_PORT || 21 }}
           local-dir: ./dist/
-          server-dir: public_html/
+          server-dir: ./
           state-name: ftp-deploy-sync-state.json
           log-level: verbose
