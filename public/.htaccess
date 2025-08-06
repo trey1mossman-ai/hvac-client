@@ -1,26 +1,55 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
-</IfModule>
+# Hostinger .htaccess configuration for React SPA with proper image handling
 
-# Compression
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS (uncomment if SSL is enabled)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Serve existing files directly (images, CSS, JS)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Serve existing directories directly  
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Handle React Router - send all other requests to index.html
+RewriteRule ^(.*)$ /index.html [L]
+
+# Set proper MIME types for images
+AddType image/webp .webp
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/svg+xml .svg
+
+# Enable GZIP compression for better performance
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# Browser Caching
+# Browser caching for static assets
 <IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Handle 404 errors with React app
+ErrorDocument 404 /index.html

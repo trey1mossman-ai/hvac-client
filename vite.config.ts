@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -16,7 +17,9 @@ export default defineConfig({
           ui: ['lucide-react', 'react-helmet-async']
         }
       }
-    }
+    },
+    // Ensure images are included in build
+    copyPublicDir: true
   },
   server: {
     port: 3000,

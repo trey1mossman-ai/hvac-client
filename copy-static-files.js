@@ -29,12 +29,23 @@ function copyFolderRecursiveSync(source, target) {
 }
 
 // Copy images from public to dist
-const source = path.join(__dirname, 'public', 'images');
-const destination = path.join(__dirname, 'dist', 'images');
+const imagesSource = path.join(__dirname, 'public', 'images');
+const imagesDestination = path.join(__dirname, 'dist', 'images');
+
+// Copy .htaccess file
+const htaccessSource = path.join(__dirname, 'public', '.htaccess');
+const htaccessDestination = path.join(__dirname, 'dist', '.htaccess');
 
 try {
-  copyFolderRecursiveSync(source, destination);
+  // Copy images
+  copyFolderRecursiveSync(imagesSource, imagesDestination);
   console.log('✅ Images copied successfully to dist folder');
+  
+  // Copy .htaccess if it exists
+  if (fs.existsSync(htaccessSource)) {
+    fs.copyFileSync(htaccessSource, htaccessDestination);
+    console.log('✅ .htaccess file copied to dist folder');
+  }
 } catch (err) {
-  console.error('❌ Error copying images:', err);
+  console.error('❌ Error copying files:', err);
 }
