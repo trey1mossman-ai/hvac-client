@@ -93,26 +93,26 @@ export default function ServiceDetail() {
       <section 
         className="py-24 md:py-32 relative"
         style={{
-          backgroundImage: `url(${service.heroImage || service.image}?v=${Date.now()})`,
+          backgroundImage: `url(${service.image}?v=2025-01-06)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-deep-charcoal/50 to-deep-charcoal/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/80 via-deep-charcoal/70 to-deep-charcoal/60"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* Left Side - Service Content */}
             <div>
-              <h1 className="text-2xl md:text-3xl font-inter font-semibold text-deep-charcoal mb-6 leading-relaxed">
+              <h1 className="text-2xl md:text-3xl font-inter font-bold text-crisp-white mb-6 leading-relaxed drop-shadow-lg">
                 {service.name} Installation<br />
                 in Chicago
               </h1>
-              <p className="text-lg text-medium-gray mb-8 font-light leading-relaxed">
+              <p className="text-lg text-crisp-white mb-8 font-medium leading-relaxed drop-shadow-md">
                 {service.description}
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-10 text-burnt-sienna font-medium">
+              <div className="flex flex-wrap gap-4 mb-10 text-crisp-white font-medium bg-deep-charcoal/60 backdrop-blur-sm rounded-lg p-3 inline-flex">
                 <span className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
                   Licensed & Insured
@@ -147,7 +147,7 @@ export default function ServiceDetail() {
             </div>
 
             {/* Right Side - Form */}
-            <div id="service-form" className="bg-crisp-white p-10 rounded-2xl shadow-lg">
+            <div id="service-form" className="bg-crisp-white/95 backdrop-blur-md p-10 rounded-2xl shadow-2xl border border-white/50">
               <h2 className="text-xl font-inter font-medium text-deep-charcoal mb-3 text-center">
                 Get Your Free {service.name} Estimate
               </h2>
