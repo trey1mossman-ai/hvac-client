@@ -26,7 +26,7 @@ export default function About() {
               </p>
               <div className="flex items-center gap-4 text-warm-wood font-medium mt-8">
                 <img 
-                  src="/images/about/team-photo.jpg"
+                  src="/images/about/team-photo.webp"
                   alt="Matt and Don"
                   className="w-20 h-20 rounded-full object-cover"
                 />

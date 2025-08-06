@@ -23,7 +23,7 @@ export default function Hero() {
     
     // Preload hero image
     const img = new Image();
-    img.src = '/images/hero/homepage-hero.jpg';
+    img.src = '/images/hero/homepage-hero.webp';
     img.onload = () => setHeroImageLoaded(true);
     
     return () => clearInterval(interval);
@@ -47,7 +47,7 @@ export default function Hero() {
       id="hero"
       className={`bg-cream py-24 md:py-32 relative transition-opacity duration-700 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{
-        backgroundImage: 'url(/images/hero/homepage-hero.jpg)',
+        backgroundImage: 'url(/images/hero/homepage-hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center bottom',
         backgroundBlendMode: 'overlay',
