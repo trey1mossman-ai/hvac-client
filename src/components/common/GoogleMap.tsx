@@ -1,6 +1,6 @@
 export default function GoogleMap() {
   return (
-    <section className="py-16 bg-soft-beige">
+    <section className="py-16 bg-crisp-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-6 text-center">

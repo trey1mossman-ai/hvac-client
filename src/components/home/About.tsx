@@ -2,24 +2,24 @@ import { Shield, Users, Award, Clock } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-warm-taupe">
+    <section id="about" className="py-24 md:py-32 bg-deep-navy">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-deep-charcoal">
+          <h2 className="text-2xl md:text-3xl font-inter font-medium text-center mb-16 text-crisp-white">
             About SupplySide Flooring
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <h3 className="text-lg font-inter font-medium text-deep-charcoal mb-6">
+              <h3 className="text-lg font-inter font-medium text-crisp-white mb-6">
                 Chicago's Most Reliable Flooring Installers
               </h3>
-              <p className="text-medium-gray mb-6 font-light leading-relaxed">
+              <p className="text-gray-300 mb-6 font-light leading-relaxed">
                 With 80+ years combined experience, Matt and Don have been transforming Chicago homes and businesses 
                 with quality flooring installations. Don brings 48 years as lead installer. As a family-owned business, 
                 we treat every project like it's our own home.
               </p>
-              <p className="text-medium-gray mb-6 font-light leading-relaxed">
+              <p className="text-gray-300 mb-6 font-light leading-relaxed">
                 We've built our reputation on three simple principles: show up on time, do what we say 
                 we'll do, and deliver exceptional results. It's why property managers, contractors, and 
                 homeowners consistently choose SupplySide for their flooring needs.
@@ -31,8 +31,8 @@ export default function About() {
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-deep-charcoal font-medium">Matt & Don</p>
-                  <p className="text-sm">Founders & Master Installers</p>
+                  <p className="text-crisp-white font-medium">Matt & Don</p>
+                  <p className="text-sm text-gray-300">Founders & Master Installers</p>
                 </div>
               </div>
             </div>
