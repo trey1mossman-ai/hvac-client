@@ -101,3 +101,45 @@
     @apply bg-sage;
   }
 }
+
+@layer utilities {
+  /* Smooth image loading */
+  .hero-image-loading {
+    filter: blur(20px);
+    transform: scale(1.1);
+    transition: filter 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .hero-image-loaded {
+    filter: blur(0);
+    transform: scale(1);
+  }
+
+  /* Skeleton loading animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      #2C2C2C 0%,
+      #3C3C3C 50%,
+      #2C2C2C 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Optimized image rendering */
+  .hero-section {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}

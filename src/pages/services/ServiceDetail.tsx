@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Phone, Clock, Shield, Award } from 'lucide-react';
@@ -26,6 +26,45 @@ export default function ServiceDetail() {
     zipCode: '',
     serviceType: service?.id || ''
   });
+
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+  const [heroImageError, setHeroImageError] = useState(false);
+
+  // Preload hero image with minimum display time
+  useEffect(() => {
+    if (service?.image) {
+      const startTime = Date.now();
+      const minDisplayTime = 300; // Minimum 300ms to prevent flash
+      
+      const img = new Image();
+      img.src = `${service.image}?v=2025-01-06`;
+      
+      const handleImageLoad = () => {
+        const elapsed = Date.now() - startTime;
+        const delay = Math.max(0, minDisplayTime - elapsed);
+        
+        setTimeout(() => {
+          setHeroImageLoaded(true);
+          setHeroImageError(false);
+        }, delay);
+      };
+      
+      img.onload = handleImageLoad;
+      img.onerror = () => {
+        setHeroImageError(true);
+        setHeroImageLoaded(true); // Still set loaded to show fallback
+      };
+      
+      // Also set a maximum wait time
+      const maxWaitTimeout = setTimeout(() => {
+        if (!heroImageLoaded) {
+          setHeroImageLoaded(true);
+        }
+      }, 3000); // Max 3 seconds wait
+      
+      return () => clearTimeout(maxWaitTimeout);
+    }
+  }, [service?.image]);
 
   if (!service) {
     return <Navigate to="/" replace />;
@@ -91,14 +130,23 @@ export default function ServiceDetail() {
 
       {/* Hero Section with 60/40 Split */}
       <section 
-        className="py-24 md:py-32 relative"
+        className={`py-24 md:py-32 relative transition-all duration-700 ${
+          heroImageLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{
-          backgroundImage: `url(${service.image}?v=2025-01-06)`,
+          backgroundImage: heroImageError 
+            ? 'linear-gradient(135deg, #2C2C2C 0%, #1B2838 100%)' 
+            : `url(${service.image}?v=2025-01-06)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          backgroundColor: '#2C2C2C', // Fallback color while loading
         }}
       >
+        {/* Loading skeleton */}
+        {!heroImageLoaded && (
+          <div className="absolute inset-0 bg-deep-charcoal skeleton-shimmer"></div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/30 via-deep-charcoal/25 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
