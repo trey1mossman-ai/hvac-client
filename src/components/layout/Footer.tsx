@@ -5,7 +5,7 @@ import { services } from '../../data/services';
 
 export default function Footer() {
   return (
-    <footer className="bg-midnight-navy text-crisp-white">
+    <footer className="bg-deep-charcoal text-crisp-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}

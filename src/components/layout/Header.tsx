@@ -44,7 +44,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-midnight-navy shadow-lg sticky top-0 z-50">
+    <header className="bg-deep-charcoal shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a 
@@ -104,7 +104,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <nav className="lg:hidden bg-midnight-navy border-t border-terracotta/20">
+        <nav className="lg:hidden bg-deep-charcoal border-t border-terracotta/20">
           <div className="px-4 py-2 space-y-2">
             {navigationItems.map((item) => (
               item.isAnchor ? (
