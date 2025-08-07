@@ -26,14 +26,14 @@ npm run deploy:discover
 ## 🔧 Hostinger Configuration
 
 ### Hosting Details
-- **Website URL**: https://mediumblue-chamois-837591.hostingersite.com
-- **Server IP**: 185.212.71.198
-- **Server Name**: server648
-- **Server Location**: North America (USA AZ)
+- **Website URL**: https://peachpuff-caterpillar-314202.hostingersite.com
+- **Server IP**: TBD (get from Hostinger FTP settings)
+- **Server Name**: TBD
+- **Server Location**: North America (USA)
 
 ### FTP Access Points
-- **Primary FTP IP**: 185.212.71.198
-- **FTP Hostname**: ftp://mediumblue-chamois-837591.hostingersite.com
+- **Primary FTP IP**: TBD (get from Hostinger FTP settings)
+- **FTP Hostname**: ftp://peachpuff-caterpillar-314202.hostingersite.com
 - **FTP Port**: 21
 - **SFTP Port**: 65002 (Premium plans only)
 

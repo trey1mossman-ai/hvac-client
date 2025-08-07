@@ -1,7 +1,7 @@
 {
-  "name": "supplyside-website",
-  "version": "2.0.0",
-  "description": "SupplySide Flooring Installation - Chicago's most reliable flooring installation website with bulletproof Hostinger deployment",
+  "name": "winterrowd-hvac-website",
+  "version": "1.0.0",
+  "description": "Winterrowd HVAC Website - Professional HVAC services website with Hostinger deployment",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
@@ -9,18 +9,20 @@
     "copy-images": "node copy-static-files.js",
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
-    "optimize-images": "node optimize-images.js"
+    "optimize-images": "node optimize-images.js",
+    "deploy": "./deploy.sh",
+    "deploy:test": "node -e \"console.log('Testing FTP connection...'); require('fs').readFileSync('.env', 'utf8').split('\\n').forEach(line => { if(line.startsWith('FTP_')) console.log(line.split('=')[0] + '=' + (line.includes('PASS') ? '***' : line.split('=')[1])); });\""
   },
   "keywords": [
-    "flooring",
-    "installation",
-    "chicago",
-    "supplyside",
+    "hvac",
+    "heating",
+    "cooling",
+    "winterrowd",
     "hostinger",
     "deployment",
     "ftp"
   ],
-  "author": "SupplySide Flooring Installation",
+  "author": "Winterrowd HVAC",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -49,7 +51,7 @@
     "vite": "^7.0.6",
     "vite-plugin-compression": "^0.5.1"
   },
-  "homepage": "https://supplysideflooringinstallation.com",
+  "homepage": "https://peachpuff-caterpillar-314202.hostingersite.com",
   "bugs": {
     "url": "https://github.com/trey1mossman-ai/SupplySide/issues"
   },

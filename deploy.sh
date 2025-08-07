@@ -6,20 +6,18 @@ npm run build
 
 # Create deployment directory
 echo "Creating deployment package..."
-mkdir -p supplyside-deploy
+mkdir -p hvac-deploy
 
-# Copy only necessary files
-cp -r dist supplyside-deploy/
-cp .htaccess supplyside-deploy/
-cp package.json supplyside-deploy/
-cp -r public supplyside-deploy/
-cp -r src supplyside-deploy/
+# Copy built files
+cp -r dist/* hvac-deploy/
+cp -r public/* hvac-deploy/ 2>/dev/null || true
 
 # Create zip file
-zip -r supplyside-deploy.zip supplyside-deploy
+zip -r hvac-deploy.zip hvac-deploy
 
 # Clean up
-rm -rf supplyside-deploy
+rm -rf hvac-deploy
 
-echo "Deployment package created: supplyside-deploy.zip"
-echo "Upload this entire zip to Hostinger and extract it in public_html"
+echo "Deployment package created: hvac-deploy.zip"
+echo "Upload this to Hostinger at: https://peachpuff-caterpillar-314202.hostingersite.com"
+echo "Extract it in the public_html directory"
