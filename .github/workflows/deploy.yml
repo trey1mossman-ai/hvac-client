@@ -37,8 +37,7 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         local-dir: './dist/'
-        server-dir: 'public_html/'
-        state-name: '.ftp-deploy-sync-state.json'
+        server-dir: './public_html/'
         exclude: |
           **/.git*
           **/.git*/**
