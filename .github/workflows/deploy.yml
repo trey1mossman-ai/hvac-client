@@ -33,6 +33,7 @@ jobs:
         password: ${{ secrets.FTP_PASS }}
         local-dir: './dist/'
         server-dir: './'
+        dry-run: false
         exclude: |
           **/.git*
           **/.git*/**
